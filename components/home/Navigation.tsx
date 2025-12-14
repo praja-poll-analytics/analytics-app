@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 const navItems = [
@@ -22,8 +23,9 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-slate-900/90 backdrop-blur-md shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-purple-400">Praja Poll</h1>
+          <div className="flex-shrink-0 flex flex-row items-center gap-4">
+            <Image src="/assets/logo.svg" alt="Praja Poll Analytics" width={50} height={50} className="rounded" />
+            <h1 className="text-2xl font-bold text-purple-400">Praja Poll Analytics</h1>
           </div>
 
           {/* Desktop Navigation */}

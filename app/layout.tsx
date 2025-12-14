@@ -10,7 +10,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: 'Praja Poll',
+  title: 'Praja Poll Analytics',
   description: 'Poll analytics & predictions',
 };
 
@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/logo.svg" type="image/svg" />
+      </head>
       <body className={`${quicksand.variable} antialiased`}>{children}</body>
     </html>
   );
