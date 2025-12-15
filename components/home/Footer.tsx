@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
+import { ReactSVG } from 'react-svg';
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -26,9 +28,9 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('about')} className="hover:text-purple-400 transition-colors">
+                <Link href="/about" className="hover:text-purple-400 transition-colors">
                   About
-                </button>
+                </Link>
               </li>
               <li>
                 <button onClick={() => scrollToSection('services')} className="hover:text-purple-400 transition-colors">
@@ -47,33 +49,15 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center">
-                <Image
-                  src="/assets/icons/email.svg"
-                  alt="Email"
-                  width={16}
-                  height={16}
-                  className="mr-2 text-gray-400"
-                />
+                <ReactSVG src="/assets/icons/email.svg" className="size-4 mr-2 text-gray-400" />
                 prajapollsanalytics@gmail.com
               </li>
               <li className="flex items-center">
-                <Image
-                  src="/assets/icons/phone.svg"
-                  alt="Phone"
-                  width={16}
-                  height={16}
-                  className="mr-2 text-gray-400"
-                />
+                <ReactSVG src="/assets/icons/phone.svg" className="size-4 mr-2 text-gray-400" />
                 +91 99811 92939
               </li>
               <li className="flex items-center">
-                <Image
-                  src="/assets/icons/location.svg"
-                  alt="Location"
-                  width={16}
-                  height={16}
-                  className="mr-2 text-gray-400"
-                />
+                <ReactSVG src="/assets/icons/location.svg" className="min-w-4 mr-2 text-gray-400" />
                 <p>126, SLV Green Meadows, Near IRR, Ramavarappadu, Vijayawada, NTR District, Andhra Pradesh, India</p>
               </li>
             </ul>
