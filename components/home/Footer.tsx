@@ -33,14 +33,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="hover:text-purple-400 transition-colors">
-                  Services
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('contact')} className="hover:text-purple-400 transition-colors">
-                  Contact
-                </button>
+                <Link href="/polls" className="hover:text-purple-400 transition-colors">
+                  Polls
+                </Link>
               </li>
             </ul>
           </div>
