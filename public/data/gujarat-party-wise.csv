@@ -1,0 +1,6 @@
+party,expected_votes,actual_votes,percentage_change
+BJP,42000000,44000000,+4.8%
+Congress,28000000,26000000,-7.1%
+AAP,15000000,18000000,+20.0%
+NCP,5000000,4500000,-10.0%
+AIMIM,2000000,2500000,+25.0%
