@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
+import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 
 interface PartyWiseResult {
   party: string;
@@ -168,6 +169,7 @@ export default function StateDetailPage({ state }: { state: StateData }) {
             </div>
           </div>
         </div>
+        <PartyVoteDistributionChart partyWiseData={partyWiseData} formatVotes={formatVotes} />
 
         {/* Constituency-wise Results Table */}
         <div>
