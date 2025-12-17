@@ -1,6 +1,11 @@
+'use client';
+
 import Footer from '@/components/home/Footer';
 import Navigation from '@/components/home/Navigation';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import IndiaMapChart from './maps/IndiaMapChart';
+import { statesMapping } from './maps/data';
 
 interface StateData {
   id: string;
@@ -43,6 +48,15 @@ const statesData: StateData[] = [
 ];
 
 export default function PollsPage() {
+  const router = useRouter();
+
+  const onStateSelected = (stateName: string) => {
+    const id = statesData.find((state) => state.name === stateName)?.id;
+    if (id) {
+      router.push(`/polls/states/${id}`);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -55,6 +69,11 @@ export default function PollsPage() {
               Explore comprehensive poll analytics and predictions for upcoming state elections across India
             </p>
           </div>
+
+          <IndiaMapChart
+            distinctStates={Object.entries(statesMapping).map((state) => state[0])}
+            onStateSelected={onStateSelected}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {statesData.map((state) => (
