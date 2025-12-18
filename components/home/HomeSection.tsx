@@ -48,7 +48,7 @@ export default function HomeSection() {
       </div>
 
       {/* Bottom Section - 80% height with Carousel */}
-      <div className="h-[calc(80vh-4rem)] relative bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900">
+      <div className="lg:h-[calc(80vh-4rem)] h-60 relative bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay, Navigation, Pagination]}
@@ -72,7 +72,7 @@ export default function HomeSection() {
           {carouselImages.map((image, index) => (
             <SwiperSlide key={index} className="relative">
               <div className="absolute inset-0 bg-black/40" />
-              <Image src={image} alt={`Carousel slide ${index + 1}`} fill className="object-cover p-16" />
+              <Image src={image} alt={`Carousel slide ${index + 1}`} fill className="object-cover p-0 lg:p-16" />
             </SwiperSlide>
           ))}
         </Swiper>
