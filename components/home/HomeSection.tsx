@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ElectionResults from './ElectionResults';
 
 const carouselImages = [
   'https://indianpac.s3.ap-south-1.amazonaws.com/wp-content/uploads/2025/05/21113732/IMPACT_Delhi_2.webp',
@@ -18,11 +19,6 @@ const carouselImages = [
 
 export default function HomeSection() {
   const swiperRef = useRef(null);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section id="home" className="min-h-screen flex flex-col pt-16">
@@ -97,7 +93,7 @@ export default function HomeSection() {
         <div className="swiper-pagination absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10" />
 
         {/* Call to Action Overlay */}
-        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-center z-10">
+        {/* <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-center z-10">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollToSection('about')}
@@ -112,7 +108,12 @@ export default function HomeSection() {
               Get Started
             </button>
           </div>
-        </div>
+        </div> */}
+      </div>
+
+      {/* Election Results Section */}
+      <div className="bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900">
+        <ElectionResults />
       </div>
     </section>
   );
