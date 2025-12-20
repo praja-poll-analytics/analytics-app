@@ -105,8 +105,8 @@ export default function StateDetailPage({ state }: { state: StateData }) {
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400"></div>
-            <p className="mt-4 text-gray-300">Loading election data...</p>
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            <p className="mt-4 text-neutral-600">Loading election data...</p>
           </div>
         </div>
       </main>
@@ -120,43 +120,45 @@ export default function StateDetailPage({ state }: { state: StateData }) {
         <div className="mb-8">
           <Link
             href="/polls"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-4 transition-colors"
+            className="inline-flex items-center text-primary hover:text-primary-light mb-4 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Polls
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">{state.name}</h1>
-          <p className="text-gray-300 text-lg">{state.electionName}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{state.name}</h1>
+          <p className="text-neutral-600 text-lg">{state.electionName}</p>
         </div>
 
         {/* Party-wise Results Table */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Party-wise Results</h2>
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-6">Party-wise Results</h2>
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-neutral-200 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-slate-700/50">
+                <thead className="bg-neutral-100">
                   <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Party</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Predicted Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Actual Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Change</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-700">Party</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Predicted Votes</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Actual Votes</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Change</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-700">
+                <tbody className="divide-y divide-neutral-200">
                   {partyWiseData.map((row, index) => (
-                    <tr key={index} className="hover:bg-slate-700/30 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-white">{row.party}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{formatVotes(row.predictedVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{formatVotes(row.actualVotes)}</td>
+                    <tr key={index} className="hover:bg-neutral-50 transition-colors">
+                      <td className="px-6 py-4 text-sm font-medium text-neutral-900">{row.party}</td>
+                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">
+                        {formatVotes(row.predictedVotes)}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">{formatVotes(row.actualVotes)}</td>
                       <td className="px-6 py-4 text-sm text-right">
                         <span
                           className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
                             row.percentageChange.startsWith('+')
-                              ? 'bg-green-500/20 text-green-400'
-                              : 'bg-red-500/20 text-red-400'
+                              ? 'bg-success/20 text-success'
+                              : 'bg-error/20 text-error'
                           }`}
                         >
                           {row.percentageChange}
@@ -173,31 +175,33 @@ export default function StateDetailPage({ state }: { state: StateData }) {
 
         {/* Constituency-wise Results Table */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-6">Constituency-wise Results</h2>
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-6">Constituency-wise Results</h2>
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-neutral-200 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-slate-700/50">
+                <thead className="bg-neutral-100">
                   <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Constituency</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Winning Party</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Predicted Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Actual Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Winner Margin</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Total Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-300">Turnout</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-700">Constituency</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-700">Winning Party</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Predicted Votes</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Actual Votes</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Winner Margin</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Total Votes</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Turnout</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-700">
+                <tbody className="divide-y divide-neutral-200">
                   {constituencyWiseData.map((row, index) => (
-                    <tr key={index} className="hover:bg-slate-700/30 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-white">{row.constituencyName}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300">{row.party}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{formatVotes(row.predictedVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{formatVotes(row.actualVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{formatVotes(row.winnerMargin)}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{formatVotes(row.totalVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-gray-300 text-right">{row.turnoutPercentage}</td>
+                    <tr key={index} className="hover:bg-neutral-50 transition-colors">
+                      <td className="px-6 py-4 text-sm font-medium text-neutral-900">{row.constituencyName}</td>
+                      <td className="px-6 py-4 text-sm text-neutral-600">{row.party}</td>
+                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">
+                        {formatVotes(row.predictedVotes)}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">{formatVotes(row.actualVotes)}</td>
+                      <td className="px-6 py-4 text-sm text-neutral-600 text-right">{formatVotes(row.winnerMargin)}</td>
+                      <td className="px-6 py-4 text-sm text-neutral-600 text-right">{formatVotes(row.totalVotes)}</td>
+                      <td className="px-6 py-4 text-sm text-neutral-600 text-right">{row.turnoutPercentage}</td>
                     </tr>
                   ))}
                 </tbody>

@@ -23,15 +23,15 @@ export default function HomeSection() {
   return (
     <section id="home" className="min-h-screen flex flex-col pt-16">
       {/* Top Section - 20% height */}
-      <div className="min-h-[calc(20vh-4rem)] flex items-center bg-gradient-to-r from-slate-900 to-purple-900/50 py-4">
+      <div className="min-h-[calc(20vh-4rem)] flex items-center bg-gradient-to-r from-neutral-50 to-primary/10 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
             {/* Left side - Name and Description */}
             <div className="flex-1 text-center md:text-left order-2 md:order-1">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 md:mb-3">
-                Welcome to <span className="text-purple-400">Praja Poll Analytics</span>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-2 md:mb-3">
+                Welcome to <span className="text-primary">Praja Poll Analytics</span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-full md:max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600 max-w-full md:max-w-2xl">
                 Specialized agency in conducting surveys, opinion polls, and advising political parties on strategies to
                 gain voters&apos; confidence in winning elections
               </p>
@@ -39,7 +39,7 @@ export default function HomeSection() {
 
             {/* Right side - Leader Photo */}
             <div className="flex-shrink-0 order-1 md:order-2">
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-purple-400 shadow-xl">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-xl">
                 <Image src="/assets/images/kmohanrao.jpeg" alt="" fill className="object-cover" />
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function HomeSection() {
       </div>
 
       {/* Bottom Section - 80% height with Carousel */}
-      <div className="lg:h-[calc(80vh-4rem)] h-60 relative bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900">
+      <div className="lg:h-[calc(80vh-4rem)] h-60 relative bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay, Navigation, Pagination]}
@@ -78,12 +78,12 @@ export default function HomeSection() {
         </Swiper>
 
         {/* Carousel Controls */}
-        <button className="swiper-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors z-10 cursor-pointer">
+        <button className="swiper-prev absolute left-4 top-1/2 -translate-y-1/2 bg-neutral-800/80 backdrop-blur-sm text-white p-3 rounded-full hover:bg-neutral-700 transition-colors z-10 cursor-pointer">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button className="swiper-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors z-10 cursor-pointer">
+        <button className="swiper-next absolute right-4 top-1/2 -translate-y-1/2 bg-neutral-800/80 backdrop-blur-sm text-white p-3 rounded-full hover:bg-neutral-700 transition-colors z-10 cursor-pointer">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
@@ -112,7 +112,7 @@ export default function HomeSection() {
       </div>
 
       {/* Election Results Section */}
-      <div className="bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900">
+      <div className="bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
         <ElectionResults />
       </div>
     </section>

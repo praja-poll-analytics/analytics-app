@@ -1,8 +1,40 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1f2937;
+
+  /* Political Analysis Theme Colors - Light Theme */
+  --primary: #2563eb; /* Professional blue */
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --accent: #dc2626; /* Strong red for emphasis */
+  --accent-light: #ef4444;
+  --accent-dark: #b91c1c;
+
+  /* Neutral Colors - Light Theme */
+  --neutral-50: #ffffff;
+  --neutral-100: #f9fafb;
+  --neutral-200: #f3f4f6;
+  --neutral-300: #e5e7eb;
+  --neutral-400: #d1d5db;
+  --neutral-500: #9ca3af;
+  --neutral-600: #6b7280;
+  --neutral-700: #4b5563;
+  --neutral-800: #374151;
+  --neutral-900: #1f2937;
+
+  /* Party Colors (for data visualization) */
+  --party-bjp: #ff9933; /* Saffron */
+  --party-inc: #0066cc; /* Deep blue */
+  --party-aap: #00a86b; /* Green */
+  --party-other: #6b7280; /* Gray */
+
+  /* Status Colors */
+  --success: #059669;
+  --warning: #d97706;
+  --info: #0891b2;
+  --error: #dc2626;
 }
 
 @theme inline {
@@ -13,8 +45,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f8fafc;
+
+    /* Dark theme adjustments */
+    --primary: #3b82f6;
+    --primary-light: #60a5fa;
+    --primary-dark: #2563eb;
+    --accent: #ef4444;
+    --accent-light: #f87171;
+    --accent-dark: #dc2626;
   }
 }
 
@@ -22,4 +62,195 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-quicksand), Arial, Helvetica, sans-serif;
+}
+
+/* Political Theme Utility Classes */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+.bg-accent-dark {
+  background-color: var(--accent-dark);
+}
+
+.bg-neutral-50 {
+  background-color: var(--neutral-50);
+}
+.bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+.bg-neutral-200 {
+  background-color: var(--neutral-200);
+}
+.bg-neutral-300 {
+  background-color: var(--neutral-300);
+}
+.bg-neutral-400 {
+  background-color: var(--neutral-400);
+}
+.bg-neutral-500 {
+  background-color: var(--neutral-500);
+}
+.bg-neutral-600 {
+  background-color: var(--neutral-600);
+}
+.bg-neutral-700 {
+  background-color: var(--neutral-700);
+}
+.bg-neutral-800 {
+  background-color: var(--neutral-800);
+}
+.bg-neutral-900 {
+  background-color: var(--neutral-900);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+.text-primary-light {
+  color: var(--primary-light);
+}
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+.text-accent {
+  color: var(--accent);
+}
+.text-accent-light {
+  color: var(--accent-light);
+}
+.text-accent-dark {
+  color: var(--accent-dark);
+}
+
+.text-neutral-50 {
+  color: var(--neutral-50);
+}
+.text-neutral-100 {
+  color: var(--neutral-100);
+}
+.text-neutral-200 {
+  color: var(--neutral-200);
+}
+.text-neutral-300 {
+  color: var(--neutral-300);
+}
+.text-neutral-400 {
+  color: var(--neutral-400);
+}
+.text-neutral-500 {
+  color: var(--neutral-500);
+}
+.text-neutral-600 {
+  color: var(--neutral-600);
+}
+.text-neutral-700 {
+  color: var(--neutral-700);
+}
+.text-neutral-800 {
+  color: var(--neutral-800);
+}
+.text-neutral-900 {
+  color: var(--neutral-900);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+.border-accent {
+  border-color: var(--accent);
+}
+.border-neutral-200 {
+  border-color: var(--neutral-200);
+}
+.border-neutral-300 {
+  border-color: var(--neutral-300);
+}
+.border-neutral-400 {
+  border-color: var(--neutral-400);
+}
+.border-neutral-500 {
+  border-color: var(--neutral-500);
+}
+.border-neutral-600 {
+  border-color: var(--neutral-600);
+}
+.border-neutral-700 {
+  border-color: var(--neutral-700);
+}
+.border-neutral-800 {
+  border-color: var(--neutral-800);
+}
+
+/* Party Colors for Charts */
+.party-bjp {
+  color: var(--party-bjp);
+}
+.party-bjp-bg {
+  background-color: var(--party-bjp);
+}
+.party-inc {
+  color: var(--party-inc);
+}
+.party-inc-bg {
+  background-color: var(--party-inc);
+}
+.party-aap {
+  color: var(--party-aap);
+}
+.party-aap-bg {
+  background-color: var(--party-aap);
+}
+.party-other {
+  color: var(--party-other);
+}
+.party-other-bg {
+  background-color: var(--party-other);
+}
+
+/* Status Colors */
+.text-success {
+  color: var(--success);
+}
+.text-warning {
+  color: var(--warning);
+}
+.text-info {
+  color: var(--info);
+}
+.text-error {
+  color: var(--error);
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+.bg-warning {
+  background-color: var(--warning);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.bg-error {
+  background-color: var(--error);
+}
+
+/* Gradient Utilities */
+.bg-gradient-political {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.bg-gradient-neutral {
+  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 50%, var(--neutral-900) 100%);
 }

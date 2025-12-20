@@ -84,13 +84,13 @@ const electionResultsData: ElectionResult[] = [
 const getStatusColor = (status: ElectionResult['status']) => {
   switch (status) {
     case 'completed':
-      return 'bg-green-500/20 text-green-400 border-green-500/30';
+      return 'bg-success/20 text-success border-success/30';
     case 'ongoing':
-      return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+      return 'bg-warning/20 text-warning border-warning/30';
     case 'upcoming':
-      return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+      return 'bg-info/20 text-info border-info/30';
     default:
-      return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
+      return 'bg-neutral-500/20 text-neutral-400 border-neutral-500/30';
   }
 };
 
@@ -132,19 +132,19 @@ export default function ElectionResults() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Latest Election Results</h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Latest Election Results</h2>
+          <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
             Stay updated with the most recent election outcomes and upcoming polls across India
           </p>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 p-1">
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg border border-neutral-200 p-1 shadow-sm">
             <button
               onClick={() => setSelectedTab('latest')}
               className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
-                selectedTab === 'latest' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'
+                selectedTab === 'latest' ? 'bg-primary text-white shadow-sm' : 'text-neutral-600 hover:text-neutral-900'
               }`}
             >
               Latest Results
@@ -152,7 +152,9 @@ export default function ElectionResults() {
             <button
               onClick={() => setSelectedTab('upcoming')}
               className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
-                selectedTab === 'upcoming' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'
+                selectedTab === 'upcoming'
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-neutral-600 hover:text-neutral-900'
               }`}
             >
               Upcoming Elections
@@ -165,20 +167,20 @@ export default function ElectionResults() {
           {(selectedTab === 'latest' ? latestResults : upcomingElections).map((result) => (
             <div
               key={result.id}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden hover:border-purple-500 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20"
+              className="bg-white/80 backdrop-blur-sm rounded-xl border border-neutral-200 overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
             >
               {/* Header */}
-              <div className="p-6 border-b border-slate-700">
+              <div className="p-6 border-b border-neutral-200">
                 <div className="flex items-center justify-between mb-3">
                   <div>
-                    <h3 className="text-xl font-bold text-white">{result.state}</h3>
-                    <p className="text-gray-400 text-sm">{result.electionType}</p>
+                    <h3 className="text-xl font-bold text-neutral-900">{result.state}</h3>
+                    <p className="text-neutral-400 text-sm">{result.electionType}</p>
                   </div>
                   <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(result.status)}`}>
                     {getStatusText(result.status)}
                   </div>
                 </div>
-                <div className="flex items-center text-gray-300 text-sm">
+                <div className="flex items-center text-neutral-600 text-sm">
                   <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                       strokeLinecap="round"
@@ -199,16 +201,16 @@ export default function ElectionResults() {
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-white font-medium">{result.leadingParty}</span>
-                          <span className="text-purple-400 font-bold">{result.leadingPartyPercentage}%</span>
+                          <span className="text-neutral-900 font-medium">{result.leadingParty}</span>
+                          <span className="text-primary font-bold">{result.leadingPartyPercentage}%</span>
                         </div>
-                        <div className="w-full bg-slate-700 rounded-full h-2">
+                        <div className="w-full bg-neutral-200 rounded-full h-2">
                           <div
-                            className="bg-purple-500 h-2 rounded-full transition-all duration-1000"
+                            className="bg-primary h-2 rounded-full transition-all duration-1000"
                             style={{ width: `${result.leadingPartyPercentage}%` }}
                           />
                         </div>
-                        <p className="text-gray-400 text-sm mt-1">{formatVotes(result.leadingPartyVotes)} votes</p>
+                        <p className="text-neutral-400 text-sm mt-1">{formatVotes(result.leadingPartyVotes)} votes</p>
                       </div>
                     </div>
 
@@ -216,26 +218,26 @@ export default function ElectionResults() {
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-white font-medium">{result.trailingParty}</span>
-                          <span className="text-blue-400 font-bold">{result.trailingPartyPercentage}%</span>
+                          <span className="text-neutral-900 font-medium">{result.trailingParty}</span>
+                          <span className="text-accent font-bold">{result.trailingPartyPercentage}%</span>
                         </div>
-                        <div className="w-full bg-slate-700 rounded-full h-2">
+                        <div className="w-full bg-neutral-200 rounded-full h-2">
                           <div
-                            className="bg-blue-500 h-2 rounded-full transition-all duration-1000"
+                            className="bg-accent h-2 rounded-full transition-all duration-1000"
                             style={{ width: `${result.trailingPartyPercentage}%` }}
                           />
                         </div>
-                        <p className="text-gray-400 text-sm mt-1">{formatVotes(result.trailingPartyVotes)} votes</p>
+                        <p className="text-neutral-400 text-sm mt-1">{formatVotes(result.trailingPartyVotes)} votes</p>
                       </div>
                     </div>
 
                     {/* Seat Information */}
-                    <div className="pt-3 border-t border-slate-700">
+                    <div className="pt-3 border-t border-neutral-200">
                       <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">
+                        <span className="text-neutral-400">
                           Seats: {result.resultsDeclared}/{result.totalSeats}
                         </span>
-                        <button className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
+                        <button className="text-primary hover:text-primary-light font-medium transition-colors">
                           View Details →
                         </button>
                       </div>
@@ -243,8 +245,8 @@ export default function ElectionResults() {
                   </div>
                 ) : (
                   <div className="text-center py-8">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-500/20 rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-info/20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -253,11 +255,11 @@ export default function ElectionResults() {
                         />
                       </svg>
                     </div>
-                    <p className="text-gray-300 mb-2">Election Scheduled</p>
-                    <p className="text-gray-400 text-sm mb-4">
+                    <p className="text-neutral-600 mb-2">Election Scheduled</p>
+                    <p className="text-neutral-400 text-sm mb-4">
                       {formatDate(result.date)} • {result.totalSeats} seats
                     </p>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                    <button className="bg-info hover:bg-info/80 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                       Set Reminder
                     </button>
                   </div>
@@ -269,7 +271,7 @@ export default function ElectionResults() {
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-purple-500/25">
+          <button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-primary/25">
             View All Election Results
           </button>
         </div>

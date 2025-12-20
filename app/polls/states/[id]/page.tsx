@@ -26,7 +26,7 @@ export default async function StatePage({ params }: { params: Promise<{ id: stri
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <StateDetailPage state={state} />
       <Footer />

@@ -58,14 +58,14 @@ export default function PollsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
       <Navigation />
 
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">State Polls Analysis</h1>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">State Polls Analysis</h1>
+            <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
               Explore comprehensive poll analytics and predictions for upcoming state elections across India
             </p>
           </div>
@@ -78,17 +78,12 @@ export default function PollsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {statesData.map((state) => (
               <Link key={state.id} href={`/polls/states/${state.id}`}>
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden hover:border-purple-500 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-neutral-200 overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 cursor-pointer">
                   {/* Map Placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+                  <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-24 h-24 mx-auto mb-3 bg-slate-700 rounded-lg flex items-center justify-center">
-                        <svg
-                          className="w-12 h-12 text-purple-400"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
+                      <div className="w-24 h-24 mx-auto mb-3 bg-neutral-200 rounded-lg flex items-center justify-center">
+                        <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -97,17 +92,17 @@ export default function PollsPage() {
                           />
                         </svg>
                       </div>
-                      <p className="text-gray-400 text-sm">{state.mapPlaceholder}</p>
+                      <p className="text-neutral-500 text-sm">{state.mapPlaceholder}</p>
                     </div>
                   </div>
 
                   {/* State Information */}
                   <div className="p-6">
-                    <h2 className="text-2xl font-bold text-white mb-2">{state.name}</h2>
-                    <p className="text-gray-300 mb-4">{state.electionName}</p>
+                    <h2 className="text-2xl font-bold text-neutral-900 mb-2">{state.name}</h2>
+                    <p className="text-neutral-600 mb-4">{state.electionName}</p>
 
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-400">
+                      <div className="text-sm text-neutral-500">
                         <span className="inline-flex items-center">
                           <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -120,7 +115,7 @@ export default function PollsPage() {
                           Analysis Available
                         </span>
                       </div>
-                      <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2">
+                      <button className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2">
                         View Analysis
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
