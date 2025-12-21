@@ -37,17 +37,23 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full items-center lg:h-100 min-h-[400px] bg-white">
+      <div className="flex flex-col lg:flex-row w-full items-center lg:h-100 min-h-[500px] bg-white gap-4 p-4">
         <div className="w-full lg:w-[40%] h-100 lg:h-full">
-          <ImageCarousel />
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-full overflow-hidden">
+            <ImageCarousel />
+          </div>
         </div>
 
-        <div className="w-full lg:flex-1 py-4 lg:py-0">
-          <LogoSection />
+        <div className="w-full h-full lg:flex-1 py-4 lg:py-0">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4 h-full">
+            <LogoSection />
+          </div>
         </div>
 
         <div className="w-full lg:w-[40%] h-100 lg:h-full">
-          <WhatsNewSection />
+          <div className=" bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100 rounded-2xl shadow-lg border border-gray-200 p-4 h-full">
+            <WhatsNewSection />
+          </div>
         </div>
       </div>
 
