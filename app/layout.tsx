@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Quicksand } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 
-const quicksand = Quicksand({
+const primaryFont = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-quicksand',
+  variable: '--font-primary',
   display: 'swap',
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/logo.svg" type="image/svg" />
       </head>
-      <body className={`${quicksand.variable} antialiased`}>{children}</body>
+      <body className={`${primaryFont.variable} antialiased`}>{children}</body>
     </html>
   );
 }
