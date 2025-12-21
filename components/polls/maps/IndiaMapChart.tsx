@@ -1,36 +1,14 @@
 import React from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-
-interface GeographyProperties {
-  name: string;
-}
-
-interface Geography {
-  rsmKey: string;
-  properties: GeographyProperties;
-}
-
-interface GeographiesRenderProps {
-  geographies: Geography[];
-}
-
-interface IndiaMapChartProps {
-  onStateSelected: (stateName: string) => void;
-  distinctStates: string[] | null;
-  width?: number;
-  height: number;
-  scale: number;
-  defaultColorMapping?: Record<string, string>;
-  onHoverStateChange?: (stateName: string | null) => void;
-}
+import { GeographiesRenderProps, Geography as GeographyType, IndiaMapChartProps } from './types';
 
 const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
-  onStateSelected,
   width,
   height,
   scale,
   defaultColorMapping,
   onHoverStateChange,
+  onEntrySelected,
 }) => {
   return (
     <ComposableMap
@@ -41,7 +19,7 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
     >
       <Geographies geography={'/topoJsons/india.json'}>
         {({ geographies }: GeographiesRenderProps) =>
-          geographies.map((geo: Geography) => {
+          geographies.map((geo: GeographyType) => {
             const { name } = geo.properties;
             return (
               <React.Fragment key={geo.rsmKey}>
@@ -50,7 +28,7 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
                   onMouseEnter={() => onHoverStateChange?.(name)}
                   onMouseLeave={() => onHoverStateChange?.(null)}
                   onClick={() => {
-                    onStateSelected(`${name}`);
+                    onEntrySelected(`${name}`);
                   }}
                   data-tooltip-id="map-tooltip"
                   data-tooltip-content={name}

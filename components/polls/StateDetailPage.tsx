@@ -2,7 +2,9 @@
 
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
+import StateMapChart from './maps/StateMapChart';
 
 interface PartyWiseResult {
   party: string;
@@ -130,6 +132,9 @@ export default function StateDetailPage({ state }: { state: StateData }) {
           <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{state.name}</h1>
           <p className="text-neutral-600 text-lg">{state.electionName}</p>
         </div>
+
+        <StateMapChart name={state.id} height={300} scale={2000} onEntrySelected={console.log} />
+        <Tooltip id="district-tooltip" />
 
         {/* Party-wise Results Table */}
         <div className="mb-12">

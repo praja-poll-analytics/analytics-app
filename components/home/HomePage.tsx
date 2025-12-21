@@ -51,7 +51,7 @@ export default function HomePage() {
         </div>
 
         <div className="w-full lg:w-[40%] h-100 lg:h-full">
-          <div className=" bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100 rounded-2xl shadow-lg border border-gray-200 p-4 h-full">
+          <div className="bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100 rounded-2xl shadow-lg border border-gray-200 p-4 h-full">
             <WhatsNewSection />
           </div>
         </div>

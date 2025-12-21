@@ -1,7 +1,6 @@
 'use client';
 
 import { Tooltip } from 'react-tooltip';
-import { statesMapping } from '../polls/maps/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
 
 import 'react-tooltip/dist/react-tooltip.css';
@@ -20,8 +19,7 @@ export default function ElectionResults() {
       <div className="flex-col lg:flex-row">
         <div className="lg:w-180">
           <IndiaMapChart
-            distinctStates={Object.entries(statesMapping).map((state) => state[0])}
-            onStateSelected={onStateSelected}
+            onEntrySelected={onStateSelected}
             width={500}
             height={500}
             scale={800}

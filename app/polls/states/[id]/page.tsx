@@ -10,7 +10,7 @@ interface StateData {
 }
 
 const statesData: StateData[] = [
-  { id: 'up', name: 'Uttar Pradesh', electionName: 'Assembly Elections 2027' },
+  { id: 'uttarpradesh', name: 'Uttar Pradesh', electionName: 'Assembly Elections 2027' },
   { id: 'gujarat', name: 'Gujarat', electionName: 'Assembly Elections 2027' },
   { id: 'punjab', name: 'Punjab', electionName: 'Assembly Elections 2027' },
   { id: 'rajasthan', name: 'Rajasthan', electionName: 'Assembly Elections 2028' },
