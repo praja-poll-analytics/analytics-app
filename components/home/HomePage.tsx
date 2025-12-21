@@ -4,6 +4,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import ExpertiseSection from './ExpertiseSection';
 import { ImageCarousel } from './ImageCarousel';
 import LogoSection from './LogoSection';
 import WhatsNewSection from './WhatsNewSection';
@@ -35,7 +36,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full items-center lg:h-[calc(80vh-4rem)] min-h-[400px] bg-white">
+      <div className="flex flex-col lg:flex-row w-full items-center lg:h-100 min-h-[400px] bg-white">
         <div className="w-full lg:w-[40%] h-100 lg:h-full">
           <ImageCarousel />
         </div>
@@ -48,6 +49,8 @@ export default function HomePage() {
           <WhatsNewSection />
         </div>
       </div>
+
+      <ExpertiseSection />
     </section>
   );
 }

@@ -37,11 +37,11 @@ export default function WhatsNewSection() {
   };
 
   return (
-    <div className="w-full h-full py-3 lg:py-8 px-4 lg:px-8 bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
+    <div className="w-full h-full py-3 lg:py-4 px-4 lg:px-8 bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
       <div className="max-w-7xl mx-auto flex flex-col h-full">
-        <div className="mb-4 lg:mb-8">
-          <h2 className="text-xl lg:text-3xl md:text-4xl font-bold text-neutral-900 mb-2 lg:mb-4">What&apos;s New</h2>
-          <p className="text-sm lg:text-lg text-neutral-600 max-w-2xl mx-auto">
+        <div className="mb-4">
+          <h2 className="text-xl lg:text-2xl md:text-4xl font-bold text-neutral-900 mb-2">What&apos;s New</h2>
+          <p className="text-sm lg:text text-neutral-600 max-w-2xl mx-auto">
             Stay updated with our latest election analysis, research findings, and platform improvements
           </p>
         </div>
