@@ -69,10 +69,11 @@ export default function PollsPage() {
               Explore comprehensive poll analytics and predictions for upcoming state elections across India
             </p>
           </div>
-
           <IndiaMapChart
             distinctStates={Object.entries(statesMapping).map((state) => state[0])}
             onStateSelected={onStateSelected}
+            height={500}
+            scale={800}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

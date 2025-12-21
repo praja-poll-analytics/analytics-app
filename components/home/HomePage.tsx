@@ -4,6 +4,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import ElectionResults from './ElectionResults';
 import ExpertiseSection from './ExpertiseSection';
 import { ImageCarousel } from './ImageCarousel';
 import LogoSection from './LogoSection';
@@ -51,6 +52,7 @@ export default function HomePage() {
       </div>
 
       <ExpertiseSection />
+      <ElectionResults />
     </section>
   );
 }
