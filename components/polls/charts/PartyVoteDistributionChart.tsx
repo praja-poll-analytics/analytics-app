@@ -1,28 +1,22 @@
 'use client';
 
+import { formatVotes } from '@/lib/utils/string';
 import { useCallback } from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { PartyWiseEntry } from '../tables/types';
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#06b6d4', '#84cc16'];
 
-interface PartyWiseResult {
-  party: string;
-  predictedVotes: string;
-  actualVotes: string;
-  percentageChange: string;
-}
-
 interface PartyVoteDistributionChartProps {
-  partyWiseData: PartyWiseResult[];
-  formatVotes: (votes: string) => string;
+  partyWiseData: PartyWiseEntry[];
 }
 
-export default function PartyVoteDistributionChart({ partyWiseData, formatVotes }: PartyVoteDistributionChartProps) {
+export default function PartyVoteDistributionChart({ partyWiseData }: PartyVoteDistributionChartProps) {
   const getPieChartData = useCallback(
     (type: 'predicted' | 'actual') => {
       return partyWiseData.map((item, index) => ({
-        name: item.party,
-        value: parseInt(item[type === 'predicted' ? 'predictedVotes' : 'actualVotes']),
+        name: item.partyName,
+        value: parseInt(type === 'predicted' ? item.estimatedSeatsAfter : item.actualSeatsReceived),
         color: COLORS[index % COLORS.length],
       }));
     },
@@ -53,7 +47,7 @@ export default function PartyVoteDistributionChart({ partyWiseData, formatVotes 
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value: number | undefined) => (value ? formatVotes(value.toString()) : '0')}
+                formatter={(value: number | undefined) => (value ? formatVotes(value) : '0')}
                 contentStyle={{
                   backgroundColor: 'white',
                   border: '1px solid rgba(148, 163, 184, 0.2)',
@@ -88,7 +82,7 @@ export default function PartyVoteDistributionChart({ partyWiseData, formatVotes 
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value: number | undefined) => (value ? formatVotes(value.toString()) : '0')}
+                formatter={(value: number | undefined) => (value ? formatVotes(value) : '0')}
                 contentStyle={{
                   backgroundColor: 'white',
                   border: '1px solid rgba(148, 163, 184, 0.2)',

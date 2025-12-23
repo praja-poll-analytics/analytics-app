@@ -5,13 +5,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import StateMapChart from './maps/StateMapChart';
-
-interface PartyWiseResult {
-  party: string;
-  predictedVotes: string;
-  actualVotes: string;
-  percentageChange: string;
-}
+import { PartyVoteDistributionTable } from './tables/PartyWiseDistributionTable';
+import { PartyWiseEntry } from './tables/types';
 
 interface ConstituencyWiseResult {
   constituencyName: string;
@@ -30,7 +25,7 @@ interface StateData {
 }
 
 export default function StateDetailPage({ state }: { state: StateData }) {
-  const [partyWiseData, setPartyWiseData] = useState<PartyWiseResult[]>([]);
+  const [partyWiseData, setPartyWiseData] = useState<PartyWiseEntry[]>([]);
   const [constituencyWiseData, setConstituencyWiseData] = useState<ConstituencyWiseResult[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -42,10 +37,11 @@ export default function StateDetailPage({ state }: { state: StateData }) {
       const data = lines.slice(1).map((line) => {
         const values = line.split(',');
         return {
-          party: values[0],
-          predictedVotes: values[1],
-          actualVotes: values[2],
-          percentageChange: values[3],
+          partyName: values[0],
+          estimatedSeatsBefore: values[1],
+          estimatedPlusMinus: values[2],
+          estimatedSeatsAfter: values[3],
+          actualSeatsReceived: values[4],
         };
       });
       setPartyWiseData(data);
@@ -54,28 +50,7 @@ export default function StateDetailPage({ state }: { state: StateData }) {
     }
   }, [state.id]);
 
-  const fetchConstituencyWiseData = useCallback(async () => {
-    try {
-      const response = await fetch(`/data/${state.id}-constituency-wise.csv`);
-      const text = await response.text();
-      const lines = text.split('\n').filter((line) => line.trim());
-      const data = lines.slice(1).map((line) => {
-        const values = line.split(',');
-        return {
-          constituencyName: values[0],
-          party: values[1],
-          predictedVotes: values[2],
-          actualVotes: values[3],
-          winnerMargin: values[4],
-          totalVotes: values[5],
-          turnoutPercentage: values[6],
-        };
-      });
-      setConstituencyWiseData(data);
-    } catch (error) {
-      console.error('Error fetching constituency-wise data:', error);
-    }
-  }, [state.id]);
+  const fetchConstituencyWiseData = useCallback(async () => {}, [state.id]);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -89,18 +64,6 @@ export default function StateDetailPage({ state }: { state: StateData }) {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
-
-  const formatVotes = useCallback((votes: string) => {
-    const num = parseInt(votes);
-    if (num >= 10000000) {
-      return `${(num / 10000000).toFixed(1)} Cr`;
-    } else if (num >= 100000) {
-      return `${(num / 100000).toFixed(1)} L`;
-    } else if (num >= 1000) {
-      return `${(num / 1000).toFixed(1)} K`;
-    }
-    return votes;
-  }, []);
 
   if (loading) {
     return (
@@ -132,88 +95,11 @@ export default function StateDetailPage({ state }: { state: StateData }) {
           <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{state.name}</h1>
           <p className="text-neutral-600 text-lg">{state.electionName}</p>
         </div>
-
+        <PartyVoteDistributionTable partyWiseData={partyWiseData} />
         <StateMapChart name={state.id} height={300} scale={2000} onEntrySelected={console.log} />
         <Tooltip id="district-tooltip" />
 
-        {/* Party-wise Results Table */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-neutral-900 mb-6">Party-wise Results</h2>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-neutral-200 overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-neutral-100">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-700">Party</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Predicted Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Actual Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Change</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-200">
-                  {partyWiseData.map((row, index) => (
-                    <tr key={index} className="hover:bg-neutral-50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-neutral-900">{row.party}</td>
-                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">
-                        {formatVotes(row.predictedVotes)}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">{formatVotes(row.actualVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-right">
-                        <span
-                          className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                            row.percentageChange.startsWith('+')
-                              ? 'bg-success/20 text-success'
-                              : 'bg-error/20 text-error'
-                          }`}
-                        >
-                          {row.percentageChange}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <PartyVoteDistributionChart partyWiseData={partyWiseData} formatVotes={formatVotes} />
-
-        {/* Constituency-wise Results Table */}
-        <div>
-          <h2 className="text-2xl font-bold text-neutral-900 mb-6">Constituency-wise Results</h2>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-neutral-200 overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-neutral-100">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-700">Constituency</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-700">Winning Party</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Predicted Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Actual Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Winner Margin</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Total Votes</th>
-                    <th className="px-6 py-4 text-right text-sm font-semibold text-neutral-700">Turnout</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-200">
-                  {constituencyWiseData.map((row, index) => (
-                    <tr key={index} className="hover:bg-neutral-50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-neutral-900">{row.constituencyName}</td>
-                      <td className="px-6 py-4 text-sm text-neutral-600">{row.party}</td>
-                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">
-                        {formatVotes(row.predictedVotes)}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-neutral-700 text-right">{formatVotes(row.actualVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-neutral-600 text-right">{formatVotes(row.winnerMargin)}</td>
-                      <td className="px-6 py-4 text-sm text-neutral-600 text-right">{formatVotes(row.totalVotes)}</td>
-                      <td className="px-6 py-4 text-sm text-neutral-600 text-right">{row.turnoutPercentage}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+        <PartyVoteDistributionChart partyWiseData={partyWiseData} />
       </div>
     </main>
   );

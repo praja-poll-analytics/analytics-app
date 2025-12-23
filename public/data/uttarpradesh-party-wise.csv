@@ -1,7 +1,6 @@
-party,expected_votes,actual_votes,percentage_change
-BJP,45000000,48000000,+6.7%
-SP,38000000,35000000,-7.9%
-Congress,25000000,28000000,+12.0%
-BSP,15000000,12000000,-20.0%
-RLD,8000000,9000000,+12.5%
-AAP,6000000,7500000,+25.0%
+Party Name,Estimated Seats before 09-03-2017,Estimated plus minus,Estimates on 09-03-2017 after calculations,Actual seats received on 11-03-2017
+BJP,275,(+-)25,300,312
+BSP,40,(+-)10,30,19
+SP,55,(+-)10,45,47
+Congress,15,(+-)05,10,7
+Others,18,(+-)05,18,18
