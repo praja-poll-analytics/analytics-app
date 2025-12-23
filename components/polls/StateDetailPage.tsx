@@ -5,18 +5,9 @@ import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import StateMapChart from './maps/StateMapChart';
-import { PartyVoteDistributionTable } from './tables/PartyWiseDistributionTable';
-import { PartyWiseEntry } from './tables/types';
-
-interface ConstituencyWiseResult {
-  constituencyName: string;
-  party: string;
-  predictedVotes: string;
-  actualVotes: string;
-  winnerMargin: string;
-  totalVotes: string;
-  turnoutPercentage: string;
-}
+import { ResultTable } from './tables/ResultsTable';
+import { constituencyWiseColumns, partyWisecolumns } from './tables/columns';
+import { ConstituencyWiseEntry, PartyWiseEntry } from './tables/types';
 
 interface StateData {
   id: string;
@@ -26,7 +17,7 @@ interface StateData {
 
 export default function StateDetailPage({ state }: { state: StateData }) {
   const [partyWiseData, setPartyWiseData] = useState<PartyWiseEntry[]>([]);
-  const [constituencyWiseData, setConstituencyWiseData] = useState<ConstituencyWiseResult[]>([]);
+  const [constituencyWiseData, setConstituencyWiseData] = useState<ConstituencyWiseEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchPartyWiseData = useCallback(async () => {
@@ -50,7 +41,26 @@ export default function StateDetailPage({ state }: { state: StateData }) {
     }
   }, [state.id]);
 
-  const fetchConstituencyWiseData = useCallback(async () => {}, [state.id]);
+  const fetchConstituencyWiseData = useCallback(async () => {
+    try {
+      const response = await fetch(`/data/${state.id}-constituency-wise.csv`);
+      const text = await response.text();
+      const lines = text.split('\n').filter((line) => line.trim());
+      const data: ConstituencyWiseEntry[] = lines.slice(1).map((line) => {
+        const values = line.split(',');
+        return {
+          district: values[0],
+          constituency: values[1],
+          partyName: values[2],
+          estimatedVotes: values[3],
+          actualVotes: values[4],
+        };
+      });
+      setConstituencyWiseData(data);
+    } catch (error) {
+      console.error('Error fetching constituency-wise data:', error);
+    }
+  }, [state.id]);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -95,11 +105,11 @@ export default function StateDetailPage({ state }: { state: StateData }) {
           <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{state.name}</h1>
           <p className="text-neutral-600 text-lg">{state.electionName}</p>
         </div>
-        <PartyVoteDistributionTable partyWiseData={partyWiseData} />
+        <ResultTable data={partyWiseData} columns={partyWisecolumns} />
+        <PartyVoteDistributionChart partyWiseData={partyWiseData} />
+        <ResultTable data={constituencyWiseData} columns={constituencyWiseColumns} />
         <StateMapChart name={state.id} height={300} scale={2000} onEntrySelected={console.log} />
         <Tooltip id="district-tooltip" />
-
-        <PartyVoteDistributionChart partyWiseData={partyWiseData} />
       </div>
     </main>
   );

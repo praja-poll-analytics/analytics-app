@@ -1,17 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { flexRender, getCoreRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
-import { columns } from './columns/partyWise';
-import { PartyWiseEntry } from './types';
+import { ColumnDef, flexRender, getCoreRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
 
-interface PartyVoteDistributionTableProps {
-  partyWiseData: PartyWiseEntry[];
+interface ResultTableProps<T> {
+  data: T[];
+  columns: ColumnDef<T>[];
 }
 
-export const PartyVoteDistributionTable = ({ partyWiseData }: PartyVoteDistributionTableProps) => {
+export function ResultTable<T>({ data, columns }: ResultTableProps<T>) {
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
-    data: partyWiseData,
+    data,
     columns: columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
@@ -26,7 +25,7 @@ export const PartyVoteDistributionTable = ({ partyWiseData }: PartyVoteDistribut
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id} className="text-white">
+                    <TableHead key={header.id} className="text-white text-center">
                       {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                     </TableHead>
                   );
@@ -39,7 +38,9 @@ export const PartyVoteDistributionTable = ({ partyWiseData }: PartyVoteDistribut
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
+                    <TableCell key={cell.id} className="border-r">
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
                   ))}
                 </TableRow>
               ))
@@ -70,4 +71,4 @@ export const PartyVoteDistributionTable = ({ partyWiseData }: PartyVoteDistribut
       </div>
     </div>
   );
-};
+}
