@@ -1,5 +1,5 @@
-import PollsPage from '@/components/polls/PollsPage';
+import PollsListingPage from '@/components/polls/PollsListingPage';
 
 export default function Polls() {
-  return <PollsPage />;
+  return <PollsListingPage />;
 }

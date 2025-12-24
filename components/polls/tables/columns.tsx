@@ -1,5 +1,5 @@
 import { ColumnDef } from '@tanstack/react-table';
-import { ConstituencyWiseEntry, PartyWiseEntry } from './types';
+import { ConstituencyWiseEntry, PartyWiseEntry } from '../types';
 import { partyColorMapping } from './utils/colorMapping';
 
 export const partyWisecolumns: ColumnDef<PartyWiseEntry>[] = [
@@ -9,7 +9,7 @@ export const partyWisecolumns: ColumnDef<PartyWiseEntry>[] = [
     cell: ({ row }) => (
       <div className="capitalize text-center">
         <span
-          className="px-4 rounded-sm text-white font-semibold"
+          className="px-4 py-1 rounded-sm text-white font-semibold"
           style={{ background: partyColorMapping[row.getValue('partyName') as string] }}
         >
           {row.getValue('partyName')}
@@ -56,7 +56,7 @@ export const constituencyWiseColumns: ColumnDef<ConstituencyWiseEntry>[] = [
     cell: ({ row }) => (
       <div className="capitalize text-center">
         <span
-          className="px-4 rounded-sm text-white font-semibold"
+          className="px-4 py-1 rounded-sm text-white font-semibold"
           style={{ background: partyColorMapping[row.getValue('partyName') as string] ?? partyColorMapping['Others'] }}
         >
           {row.getValue('partyName')}

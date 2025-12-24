@@ -4,25 +4,27 @@ import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
+import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
 import { constituencyWiseColumns, partyWisecolumns } from './tables/columns';
-import { ConstituencyWiseEntry, PartyWiseEntry } from './tables/types';
+import { ConstituencyWiseEntry, ElectionType, PartyWiseEntry } from './types';
 
-interface StateData {
-  id: string;
-  name: string;
-  electionName: string;
-}
-
-export default function StateDetailPage({ state }: { state: StateData }) {
+export default function StateDetailPage({ stateId }: { stateId: string }) {
   const [partyWiseData, setPartyWiseData] = useState<PartyWiseEntry[]>([]);
   const [constituencyWiseData, setConstituencyWiseData] = useState<ConstituencyWiseEntry[]>([]);
   const [loading, setLoading] = useState(true);
+  const config = electionData[stateId];
+  const [currentElection] = useState(config?.availableElections[0]);
+  const electionKey = !!currentElection
+    ? currentElection.type === ElectionType.Assembly
+      ? 'assembly'
+      : 'loksabha'
+    : null;
 
   const fetchPartyWiseData = useCallback(async () => {
     try {
-      const response = await fetch(`/data/${state.id}-party-wise.csv`);
+      const response = await fetch(`/data/${stateId}/${electionKey}-party-wise.csv`);
       const text = await response.text();
       const lines = text.split('\n').filter((line) => line.trim());
       const data = lines.slice(1).map((line) => {
@@ -39,11 +41,11 @@ export default function StateDetailPage({ state }: { state: StateData }) {
     } catch (error) {
       console.error('Error fetching party-wise data:', error);
     }
-  }, [state.id]);
+  }, [stateId, electionKey]);
 
   const fetchConstituencyWiseData = useCallback(async () => {
     try {
-      const response = await fetch(`/data/${state.id}-constituency-wise.csv`);
+      const response = await fetch(`/data/${stateId}/${electionKey}-constituency-wise.csv`);
       const text = await response.text();
       const lines = text.split('\n').filter((line) => line.trim());
       const data: ConstituencyWiseEntry[] = lines.slice(1).map((line) => {
@@ -60,7 +62,7 @@ export default function StateDetailPage({ state }: { state: StateData }) {
     } catch (error) {
       console.error('Error fetching constituency-wise data:', error);
     }
-  }, [state.id]);
+  }, [stateId, electionKey]);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -74,6 +76,10 @@ export default function StateDetailPage({ state }: { state: StateData }) {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  if (!currentElection) {
+    return null;
+  }
 
   if (loading) {
     return (
@@ -102,13 +108,13 @@ export default function StateDetailPage({ state }: { state: StateData }) {
             </svg>
             Back to Polls
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{state.name}</h1>
-          <p className="text-neutral-600 text-lg">{state.electionName}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{config.stateName}</h1>
+          <p className="text-neutral-600 text-lg">{currentElection.name}</p>
         </div>
         <ResultTable data={partyWiseData} columns={partyWisecolumns} />
         <PartyVoteDistributionChart partyWiseData={partyWiseData} />
         <ResultTable data={constituencyWiseData} columns={constituencyWiseColumns} />
-        <StateMapChart name={state.id} height={300} scale={2000} onEntrySelected={console.log} />
+        <StateMapChart name={stateId} height={300} scale={2000} onEntrySelected={console.log} />
         <Tooltip id="district-tooltip" />
       </div>
     </main>

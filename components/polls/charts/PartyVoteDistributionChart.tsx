@@ -3,7 +3,7 @@
 import { formatVotes } from '@/lib/utils/string';
 import { useCallback } from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-import { PartyWiseEntry } from '../tables/types';
+import { PartyWiseEntry } from '../types';
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#06b6d4', '#84cc16'];
 

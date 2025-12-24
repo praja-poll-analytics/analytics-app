@@ -13,3 +13,18 @@ export interface ConstituencyWiseEntry {
   estimatedVotes: string;
   actualVotes: string;
 }
+
+export enum ElectionType {
+  Assembly,
+  LokSabha,
+}
+
+export interface StateElectionData {
+  stateName: string;
+  availableElections: {
+    name: string;
+    type: ElectionType;
+    surveyDate?: string;
+    electionDate?: string;
+  }[];
+}
