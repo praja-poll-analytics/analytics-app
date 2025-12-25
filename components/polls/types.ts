@@ -28,3 +28,7 @@ export interface StateElectionData {
     electionDate?: string;
   }[];
 }
+export interface CSVData {
+  data: Record<string, string>[];
+  headers: string[];
+}

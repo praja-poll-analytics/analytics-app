@@ -1,92 +1,37 @@
-import { ColumnDef } from '@tanstack/react-table';
-import { ConstituencyWiseEntry, PartyWiseEntry } from '../types';
+import { formatVotes } from '@/lib/utils/string';
+import { ColumnDef, Row } from '@tanstack/react-table';
+import { CSVData } from '../types';
 import { partyColorMapping } from './utils/colorMapping';
 
-export const partyWisecolumns: ColumnDef<PartyWiseEntry>[] = [
-  {
-    accessorKey: 'partyName',
-    header: 'Party Name',
-    cell: ({ row }) => (
-      <div className="capitalize text-center">
-        <span
-          className="px-4 py-1 rounded-sm text-white font-semibold"
-          style={{ background: partyColorMapping[row.getValue('partyName') as string] }}
-        >
-          {row.getValue('partyName')}
-        </span>
-      </div>
-    ),
-  },
-  {
-    accessorKey: 'estimatedSeatsBefore',
-    header: 'Estimated Seats before 09-03-2017',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('estimatedSeatsBefore')}</div>,
-  },
-  {
-    accessorKey: 'estimatedPlusMinus',
-    header: 'Estimated Plus Minus',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('estimatedPlusMinus')}</div>,
-  },
-  {
-    accessorKey: 'estimatedSeatsAfter',
-    header: 'Estimates on 09-03-2017 after calculations',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('estimatedSeatsAfter')}</div>,
-  },
-  {
-    accessorKey: 'actualSeatsReceived',
-    header: 'Actual seats received on 11-03-2017',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('actualSeatsReceived')}</div>,
-  },
-];
+export const getTableData = (
+  csvData: CSVData
+): { data: Record<string, string>[]; columns: ColumnDef<Record<string, string>>[] } => {
+  const columns: ColumnDef<Record<string, string>>[] = csvData.headers.map((header) => ({
+    accessorKey: header,
+    header,
+    cell: ({ row }) =>
+      header === 'Party Name' ? <PartyNameCell row={row} /> : <DefaultCell row={row} header={header} />,
+  }));
+  return { data: csvData.data, columns };
+};
 
-export const constituencyWiseColumns: ColumnDef<ConstituencyWiseEntry>[] = [
-  {
-    accessorKey: 'district',
-    header: 'District',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('district')}</div>,
-  },
-  {
-    accessorKey: 'constituency',
-    header: 'Constituency',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('constituency')}</div>,
-  },
-  {
-    accessorKey: 'partyName',
-    header: 'Party Name',
-    cell: ({ row }) => (
-      <div className="capitalize text-center">
-        <span
-          className="px-4 py-1 rounded-sm text-white font-semibold"
-          style={{ background: partyColorMapping[row.getValue('partyName') as string] ?? partyColorMapping['Others'] }}
-        >
-          {row.getValue('partyName')}
-        </span>
-      </div>
-    ),
-  },
-  {
-    accessorKey: 'estimatedVotes',
-    header: 'Estimated Votes (09-03-2017)',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('estimatedVotes')}</div>,
-  },
-  {
-    accessorKey: 'actualVotes',
-    header: 'Actual Votes (11-03-2017)',
-    cell: ({ row }) => <div className="capitalize text-center">{row.getValue('actualVotes')}</div>,
-  },
-  {
-    accessorKey: 'difference',
-    header: 'Difference',
-    cell: ({ row }) => {
-      const estimated = parseInt(row.getValue('estimatedVotes'));
-      const actual = parseInt(row.getValue('actualVotes'));
-      const difference = actual - estimated;
-      return (
-        <div className="capitalize text-center">
-          {difference >= 0 ? '+' : '-'}
-          {difference}
-        </div>
-      );
-    },
-  },
-];
+const PartyNameCell = ({ row }: { row: Row<Record<string, string>> }) => {
+  const partyName = row.getValue('Party Name') as string;
+  return (
+    <div className="capitalize text-center">
+      <span
+        className="px-4 py-1 rounded-sm text-white font-semibold"
+        style={{ background: partyColorMapping[partyName] ?? partyColorMapping['Others'] }}
+      >
+        {partyName}
+      </span>
+    </div>
+  );
+};
+
+const DefaultCell = ({ row, header }: { row: Row<Record<string, string>>; header: string }) => {
+  const value = row.getValue(header);
+  const isNumber = !isNaN(Number(value));
+  const displayValue = isNumber ? formatVotes(Number(value)) : (value as string);
+  return <div className="capitalize text-center">{displayValue}</div>;
+};
