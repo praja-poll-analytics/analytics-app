@@ -3,24 +3,24 @@
 import { formatVotes } from '@/lib/utils/string';
 import { useCallback } from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-import { PartyWiseEntry } from '../types';
+import { PartyChartData } from '../types';
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#06b6d4', '#84cc16'];
 
 interface PartyVoteDistributionChartProps {
-  partyWiseData: PartyWiseEntry[];
+  data: PartyChartData[];
 }
 
-export default function PartyVoteDistributionChart({ partyWiseData }: PartyVoteDistributionChartProps) {
+export default function PartyVoteDistributionChart({ data }: PartyVoteDistributionChartProps) {
   const getPieChartData = useCallback(
     (type: 'predicted' | 'actual') => {
-      return partyWiseData.map((item, index) => ({
+      return data.map((item, index) => ({
         name: item.partyName,
-        value: parseInt(type === 'predicted' ? item.estimatedSeatsAfter : item.actualSeatsReceived),
+        value: parseInt((type === 'predicted' ? item.estimated : item.actual).toString()),
         color: COLORS[index % COLORS.length],
       }));
     },
-    [partyWiseData]
+    [data]
   );
 
   return (

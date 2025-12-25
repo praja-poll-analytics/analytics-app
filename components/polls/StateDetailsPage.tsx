@@ -3,11 +3,12 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
+import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
 import { getTableData } from './tables/columns';
-import { mapCSV } from './tables/utils/csvMapper';
+import { getChartData, mapCSV } from './tables/utils/csvMapper';
 import { CSVData, ElectionType } from './types';
 
 export default function StateDetailPage({ stateId }: { stateId: string }) {
@@ -92,7 +93,11 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
           <p className="text-neutral-600 text-lg">{currentElection.name}</p>
         </div>
         {partyWiseData && <ResultTable {...getTableData(partyWiseData)} />}
-        {/* {partyWiseData && <PartyVoteDistributionChart partyWiseData={partyWiseData} />} */}
+        {partyWiseData && (
+          <PartyVoteDistributionChart
+            data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
+          />
+        )}
         {constituencyWiseData && <ResultTable {...getTableData(constituencyWiseData)} />}
         <StateMapChart name={stateId} height={300} scale={2000} onEntrySelected={console.log} />
         <Tooltip id="district-tooltip" />

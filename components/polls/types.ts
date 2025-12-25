@@ -26,9 +26,17 @@ export interface StateElectionData {
     type: ElectionType;
     surveyDate?: string;
     electionDate?: string;
+    estimatedColumn: string;
+    actualColumn: string;
   }[];
 }
 export interface CSVData {
   data: Record<string, string>[];
   headers: string[];
+}
+
+export interface PartyChartData {
+  partyName: string;
+  estimated: number;
+  actual: number;
 }

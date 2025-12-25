@@ -8,6 +8,8 @@ export const electionData: Record<string, StateElectionData> = {
         name: 'Uttar Pradesh Assembly General Election 2017',
         type: ElectionType.Assembly,
         surveyDate: '11-03-2017',
+        estimatedColumn: 'Estimates on 09-03-2017 after calculations',
+        actualColumn: 'Actual seats received on 11-03-2017',
       },
     ],
   },
@@ -17,6 +19,8 @@ export const electionData: Record<string, StateElectionData> = {
       {
         name: 'Bihar Legislative Assembly Election 2025',
         type: ElectionType.Assembly,
+        estimatedColumn: '',
+        actualColumn: '',
       },
     ],
   },
@@ -26,11 +30,14 @@ export const electionData: Record<string, StateElectionData> = {
       {
         name: 'Andhra Pradesh Assembly Election 2024',
         type: ElectionType.Assembly,
+        estimatedColumn: 'Expected Seats',
+        actualColumn: 'Actual Seats',
       },
       {
         name: 'Andhra Pradesh Lok Sabha Election 2024',
         type: ElectionType.LokSabha,
-        electionDate: '06-06-2024',
+        estimatedColumn: '',
+        actualColumn: '',
       },
     ],
   },
