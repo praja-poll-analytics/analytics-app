@@ -1,5 +1,6 @@
 'use client';
 
+import axios from 'axios';
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
@@ -25,23 +26,23 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
 
   const fetchPartyWiseData = useCallback(async () => {
     try {
-      const response = await fetch(`/data/${stateId}/${electionKey}-party-wise.csv`);
-      const text = await response.text();
+      const response = await axios.get(`/data/${stateId}/${electionKey}-party-wise.csv`);
+      const text = response.data;
       const data = mapCSV(text);
       setPartyWiseData(data);
     } catch (error) {
-      console.error('Error fetching party-wise data:', error);
+      console.log('Error fetching party-wise data:', error);
     }
   }, [stateId, electionKey]);
 
   const fetchConstituencyWiseData = useCallback(async () => {
     try {
-      const response = await fetch(`/data/${stateId}/${electionKey}-constituency-wise.csv`);
-      const text = await response.text();
+      const response = await axios.get(`/data/${stateId}/${electionKey}-constituency-wise.csv`);
+      const text = response.data;
       const data = mapCSV(text);
       setConstituencyWiseData(data);
     } catch (error) {
-      console.error('Error fetching constituency-wise data:', error);
+      console.log('Error fetching constituency-wise data:', error);
     }
   }, [stateId, electionKey]);
 

@@ -29,7 +29,7 @@ export default function PartyVoteDistributionChart({ data }: PartyVoteDistributi
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Predicted Votes Pie Chart */}
         <div className="bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100 backdrop-blur-sm rounded-xl border p-6">
-          <h3 className="text-lg font-semibold text-white mb-4">Predicted Votes</h3>
+          <h3 className="text-lg font-semibold mb-4">Predicted Votes</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -64,7 +64,7 @@ export default function PartyVoteDistributionChart({ data }: PartyVoteDistributi
 
         {/* Actual Votes Pie Chart */}
         <div className="bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100 backdrop-blur-sm rounded-xl border p-6">
-          <h3 className="text-lg font-semibold text-white mb-4">Actual Votes</h3>
+          <h3 className="text-lg font-semibold mb-4">Actual Votes</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
