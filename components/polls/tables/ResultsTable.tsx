@@ -100,8 +100,8 @@ export function ResultTable<T>({ data, columns }: ResultTableProps<T>) {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between w-full items-center mb-2">
-        <div className="mb-4 text-sm text-neutral-600">
+      <div className="flex flex-row justify-between w-full items-center mb-4">
+        <div className="text-sm text-neutral-600">
           Showing {table.getState().pagination.pageIndex * pageSize + 1} to{' '}
           {Math.min((table.getState().pagination.pageIndex + 1) * pageSize, table.getFilteredRowModel().rows.length)} of{' '}
           {table.getFilteredRowModel().rows.length} entries
