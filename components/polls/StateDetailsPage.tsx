@@ -3,6 +3,7 @@
 import axios from 'axios';
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
+import { ReactSVG } from 'react-svg';
 import { Tooltip } from 'react-tooltip';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import { electionData } from './data';
@@ -10,7 +11,7 @@ import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
 import { getTableData } from './tables/columns';
 import { getChartData, mapCSV } from './tables/utils/csvMapper';
-import { CSVData, ElectionType } from './types';
+import { CSVData, ElectionConfig, ElectionType } from './types';
 
 export default function StateDetailPage({ stateId }: { stateId: string }) {
   const [partyWiseData, setPartyWiseData] = useState<CSVData | null>(null);
@@ -67,19 +68,6 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
     return null;
   }
 
-  if (loading) {
-    return (
-      <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-            <p className="mt-4 text-neutral-600">Loading election data...</p>
-          </div>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
@@ -100,53 +88,15 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
 
         {/* Election Type Selector */}
         {config.availableElections.length > 1 && (
-          <div>
-            <h2 className="text-xl font-semibold text-neutral-800 mb-4">Select Election Type</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {config.availableElections.map((election) => (
-                <div
-                  key={election.name}
-                  onClick={() => handleElectionChange(election)}
-                  className={`relative p-6 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
-                    currentElection.name === election.name
-                      ? 'border-primary bg-primary/5 shadow-lg scale-105'
-                      : 'border-neutral-200 bg-white hover:border-primary/50 hover:shadow-md'
-                  }`}
-                >
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span
-                        className={`text-sm font-medium px-3 py-1 rounded-full ${
-                          election.type === ElectionType.Assembly
-                            ? 'bg-blue-100 text-blue-800'
-                            : 'bg-green-100 text-green-800'
-                        }`}
-                      >
-                        {election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha'}
-                      </span>
-                      {currentElection.name === election.name && (
-                        <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center">
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                    <h3 className="text-lg font-semibold text-neutral-900">{election.name}</h3>
-                    {election.surveyDate && (
-                      <p className="text-sm text-neutral-600">Survey Date: {election.surveyDate}</p>
-                    )}
-                    {election.electionDate && (
-                      <p className="text-sm text-neutral-600">Election Date: {election.electionDate}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <ElectionSelector
+            availableElections={config.availableElections}
+            currentElection={currentElection}
+            onElectionChange={handleElectionChange}
+          />
+        )}
+        {loading && (
+          <div className="flex items-center justify-center h-screen">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
           </div>
         )}
         {partyWiseData && <ResultTable {...getTableData(partyWiseData)} />}
@@ -162,3 +112,56 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
     </main>
   );
 }
+
+const ElectionSelector = ({
+  availableElections,
+  currentElection,
+  onElectionChange,
+}: {
+  availableElections: ElectionConfig[];
+  currentElection: ElectionConfig;
+  onElectionChange: (election: ElectionConfig) => void;
+}) => {
+  return (
+    <div>
+      <h2 className="text-xl font-semibold text-neutral-800 mb-4">Select Election Type</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {availableElections.map((election) => (
+          <div
+            key={election.name}
+            onClick={() => onElectionChange(election)}
+            className={`relative p-6 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
+              currentElection.name === election.name
+                ? 'border-primary bg-primary/5 shadow-lg scale-105'
+                : 'border-neutral-200 bg-white hover:border-primary/50 hover:shadow-md'
+            }`}
+          >
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-center justify-between">
+                <span
+                  className={`text-sm font-medium px-3 py-1 rounded-full ${
+                    election.type === ElectionType.Assembly
+                      ? 'bg-blue-100 text-blue-800'
+                      : 'bg-green-100 text-green-800'
+                  }`}
+                >
+                  {election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha'}
+                </span>
+                {currentElection.name === election.name && (
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center">
+                    <ReactSVG src="/assets/icons/check.svg" className="size-3 text-white" />
+                  </div>
+                )}
+              </div>
+              <h3 className="text-lg font-semibold text-neutral-900">{election.name}</h3>
+              {election.surveyDate && <p className="text-sm text-neutral-600">Survey Date: {election.surveyDate}</p>}
+              {election.electionDate && (
+                <p className="text-sm text-neutral-600">Election Date: {election.electionDate}</p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};

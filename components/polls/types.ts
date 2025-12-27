@@ -21,15 +21,18 @@ export enum ElectionType {
 
 export interface StateElectionData {
   stateName: string;
-  availableElections: {
-    name: string;
-    type: ElectionType;
-    surveyDate?: string;
-    electionDate?: string;
-    estimatedColumn: string;
-    actualColumn: string;
-  }[];
+  availableElections: ElectionConfig[];
 }
+
+export interface ElectionConfig {
+  name: string;
+  type: ElectionType;
+  surveyDate?: string;
+  electionDate?: string;
+  estimatedColumn: string;
+  actualColumn: string;
+}
+
 export interface CSVData {
   data: Record<string, string>[];
   headers: string[];

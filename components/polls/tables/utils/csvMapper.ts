@@ -14,7 +14,6 @@ export const mapCSV = (csv: string): CSVData => {
 };
 
 export const getChartData = (csvData: CSVData, estimatedColumn: string, actualColumn: string): PartyChartData[] => {
-  console.log(csvData);
   return csvData.data.map((item) => ({
     partyName: item['Party Name'],
     estimated: Number(item[estimatedColumn]),
