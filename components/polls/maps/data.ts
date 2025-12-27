@@ -143,7 +143,7 @@ export const statesMapConfig: Record<string, { name: string; scaleMap?: number; 
   },
   uttarpradesh: {
     name: 'UttarPradesh',
-    scaleMap: 1000,
+    scaleMap: 2000,
     centerMap: [80.5, 27],
   },
   westbengal: {
