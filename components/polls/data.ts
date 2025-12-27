@@ -19,8 +19,8 @@ export const electionData: Record<string, StateElectionData> = {
       {
         name: 'Bihar Legislative Assembly Election 2025',
         type: ElectionType.Assembly,
-        estimatedColumn: '',
-        actualColumn: '',
+        estimatedColumn: 'Estimated Seats Prediction',
+        actualColumn: 'Actual Seats After Results on 14-11-2025',
       },
     ],
   },
@@ -36,8 +36,8 @@ export const electionData: Record<string, StateElectionData> = {
       {
         name: 'Andhra Pradesh Lok Sabha Election 2024',
         type: ElectionType.LokSabha,
-        estimatedColumn: '',
-        actualColumn: '',
+        estimatedColumn: 'Expected Total Seats / Predicted Seats',
+        actualColumn: 'Actual Results 2024',
       },
     ],
   },
