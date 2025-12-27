@@ -1,4 +1,4 @@
-export const statesMapping: Record<string, { name: string; scaleMap: number; centerMap: [number, number] }> = {
+export const statesMapConfig: Record<string, { name: string; scaleMap?: number; centerMap: [number, number] }> = {
   andamannicobar: {
     name: 'Andaman and Nicobar Islands',
     scaleMap: 1500,
@@ -6,7 +6,7 @@ export const statesMapping: Record<string, { name: string; scaleMap: number; cen
   },
   andhrapradesh: {
     name: 'Andhra Pradesh',
-    scaleMap: 800,
+    scaleMap: 2000,
     centerMap: [80, 17],
   },
   arunachalpradesh: {
@@ -21,7 +21,7 @@ export const statesMapping: Record<string, { name: string; scaleMap: number; cen
   },
   bihar: {
     name: 'Bihar',
-    scaleMap: 1300,
+    scaleMap: 4000,
     centerMap: [85.5, 26],
   },
   chhattisgarh: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import { statesMapping } from './data';
+import { statesMapConfig } from './data';
 import { GeographiesRenderProps, Geography as GeographyType, StateMapChartProps } from './types';
 
 const StateMapChart: React.FC<StateMapChartProps> = ({
@@ -13,14 +13,14 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
   onEntrySelected,
 }) => {
   const json = `/topoJsons/states/${name}.json`;
-  const config = statesMapping[name];
+  const config = statesMapConfig[name];
   if (!config) {
     return null;
   }
   return (
     <ComposableMap
       projection="geoMercator"
-      projectionConfig={{ scale: scale ?? config.scaleMap, center: config.centerMap }}
+      projectionConfig={{ scale: config.scaleMap ?? scale, center: config.centerMap }}
       height={height}
       width={width}
     >
