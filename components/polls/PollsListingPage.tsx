@@ -3,6 +3,7 @@
 import Footer from '@/components/home/Footer';
 import Navigation from '@/components/home/Navigation';
 import { useRouter } from 'next/navigation';
+import { Tooltip } from 'react-tooltip';
 import { electionData } from './data';
 import IndiaMapChart from './maps/IndiaMapChart';
 
@@ -29,9 +30,9 @@ export default function PollsListingPage() {
             </p>
           </div>
           <IndiaMapChart onEntrySelected={onStateSelected} height={500} scale={800} />
+          <Tooltip id="map-tooltip" />
         </div>
       </main>
-
       <Footer />
     </div>
   );

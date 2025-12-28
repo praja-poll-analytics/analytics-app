@@ -32,6 +32,7 @@ const PartyNameCell = ({ row }: { row: Row<Record<string, string>> }) => {
 const DefaultCell = ({ row, header }: { row: Row<Record<string, string>>; header: string }) => {
   const value = row.getValue(header);
   const isNumber = !isNaN(Number(value));
-  const displayValue = isNumber ? formatVotes(Number(value)) : (value as string);
+  const isPositive = (value as string).startsWith('+');
+  const displayValue = isNumber ? (isPositive ? '+' : '') + formatVotes(Number(value)) : (value as string);
   return <div className="capitalize text-center">{displayValue}</div>;
 };

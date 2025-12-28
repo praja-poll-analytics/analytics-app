@@ -1,12 +1,18 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
+import { electionData } from '../polls/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
 
-import 'react-tooltip/dist/react-tooltip.css';
 export default function ElectionResults() {
-  const onStateSelected = (state: string) => {
-    console.log(state);
+  const router = useRouter();
+  const onStateSelected = (stateName: string) => {
+    const key = stateName.toLowerCase().replaceAll(' ', '');
+    if (!!electionData[key]) {
+      router.push(`/polls/states/${key}`);
+    }
   };
 
   return (
@@ -16,14 +22,14 @@ export default function ElectionResults() {
           Latest Results
         </h2>
       </div>
-      <div className="flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row justify-center">
         <div className="lg:w-180">
           <IndiaMapChart
             onEntrySelected={onStateSelected}
             width={500}
             height={500}
             scale={800}
-            defaultColorMapping={{ Maharashtra: 'red', Bihar: 'green' }}
+            defaultColorMapping={{ 'Andhra Pradesh': '#243073', Bihar: '#243073', 'Uttar Pradesh': '#243073' }}
           />
           <Tooltip id="map-tooltip" />
         </div>

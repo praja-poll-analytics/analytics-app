@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { ReactSVG } from 'react-svg';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -19,10 +19,12 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 flex flex-row items-center gap-4">
-            <Image src="/assets/logo.svg" alt="Praja Poll Analytics" width={50} height={50} className="rounded" />
-            <h1 className="text-2xl font-bold text-primary">Praja Poll Analytics</h1>
-          </div>
+          <Link href="/">
+            <div className="flex-shrink-0 flex flex-row items-center gap-4">
+              <ReactSVG src="/assets/logo.svg" className="rounded size-12" />
+              <h1 className="text-2xl font-bold text-primary">Praja Poll Analytics</h1>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -47,7 +49,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-neutral-600 hover:text-primary p-2">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
