@@ -20,7 +20,7 @@ const pageSizes = [10, 25, 50, 100];
 
 export function ResultTable<T>({ data, columns }: ResultTableProps<T>) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [pageSize, setPageSize] = useState(pageSizes[0]);
+  const [pageSize, setPageSize] = useState(25);
 
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
