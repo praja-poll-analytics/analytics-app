@@ -9,6 +9,7 @@ const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Polls', href: '/polls' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navigation() {
