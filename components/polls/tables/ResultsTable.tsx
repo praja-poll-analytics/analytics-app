@@ -10,51 +10,43 @@ import {
 } from '@tanstack/react-table';
 import { ReactNode, useState } from 'react';
 import { ReactSVG } from 'react-svg';
+import { CSVData } from '../types';
 
 interface ResultTableProps<T> {
   title: string;
-  data: T[];
+  csvData: CSVData;
   columns: ColumnDef<T>[];
   scrollable?: boolean;
-  mergeCells?: Array<{
-    columnKey: string;
-    startRow: number;
-    rowSpan: number;
-    value: string;
-  }>;
   subComponent?: ReactNode;
 }
 
 const pageSizes = [10, 25, 50, 100];
 
-export function ResultTable<T>({
-  title,
-  data,
-  columns,
-  scrollable = false,
-  mergeCells = [],
-  subComponent,
-}: ResultTableProps<T>) {
+export function ResultTable<T>({ title, csvData, columns, scrollable = false, subComponent }: ResultTableProps<T>) {
+  const { data, mergeCells } = csvData;
   const [searchQuery, setSearchQuery] = useState('');
   const [pageSize, setPageSize] = useState(25);
 
   // Helper function to check if a cell should be hidden (part of a merged cell)
   const shouldHideCell = (rowIndex: number, columnKey: string): boolean => {
-    return mergeCells.some(
-      (merge) => merge.columnKey === columnKey && rowIndex > merge.startRow && rowIndex < merge.startRow + merge.rowSpan
+    return (
+      mergeCells?.some(
+        (merge) =>
+          merge.columnKey === columnKey && rowIndex > merge.startRow && rowIndex < merge.startRow + merge.rowSpan
+      ) ?? false
     );
   };
 
   // Helper function to get rowspan for a cell
   const getCellRowSpan = (rowIndex: number, columnKey: string): number => {
-    const merge = mergeCells.find((m) => m.columnKey === columnKey && m.startRow === rowIndex);
-    return merge ? merge.rowSpan : 1;
+    const merge = mergeCells?.find((m) => m.columnKey === columnKey && m.startRow === rowIndex);
+    return merge?.rowSpan ?? 1;
   };
 
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
-    data,
-    columns: columns,
+    data: data as T[],
+    columns,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),

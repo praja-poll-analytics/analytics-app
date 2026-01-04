@@ -3,16 +3,14 @@ import { ColumnDef, Row } from '@tanstack/react-table';
 import { CSVData } from '../types';
 import { partyColorMapping } from './utils/colorMapping';
 
-export const getTableData = (
-  csvData: CSVData
-): { data: Record<string, string>[]; columns: ColumnDef<Record<string, string>>[]; mergeCells?: CSVData['mergeCells'] } => {
+export const getTableColumns = (csvData: CSVData): ColumnDef<Record<string, string>>[] => {
   const columns: ColumnDef<Record<string, string>>[] = csvData.headers.map((header) => ({
     accessorKey: header,
     header,
     cell: ({ row }) =>
       header === 'Party Name' ? <PartyNameCell row={row} /> : <DefaultCell row={row} header={header} />,
   }));
-  return { data: csvData.data, columns, mergeCells: csvData.mergeCells };
+  return columns;
 };
 
 const PartyNameCell = ({ row }: { row: Row<Record<string, string>> }) => {

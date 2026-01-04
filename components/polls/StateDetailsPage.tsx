@@ -10,7 +10,7 @@ import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
-import { getTableData } from './tables/columns';
+import { getTableColumns } from './tables/columns';
 import { getChartData, mapCSV, recalculateMergeCells } from './tables/utils/csvMapper';
 import { CSVData, ElectionType } from './types';
 
@@ -164,7 +164,13 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
           </div>
         )}
-        {partyWiseData && <ResultTable {...getTableData(partyWiseData)} title="Party-wise Prediction Analysis" />}
+        {partyWiseData && (
+          <ResultTable
+            csvData={partyWiseData}
+            columns={getTableColumns(partyWiseData)}
+            title="Party-wise Prediction Analysis"
+          />
+        )}
         {partyWiseData && (
           <PartyVoteDistributionChart
             data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
@@ -173,7 +179,8 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
         <div className="">
           {currentDistrictData && (
             <ResultTable
-              {...getTableData(currentDistrictData)}
+              csvData={currentDistrictData}
+              columns={getTableColumns(currentDistrictData)}
               scrollable
               title="Constituency-wise Survey Report"
               subComponent={<DistrictSelector />}
