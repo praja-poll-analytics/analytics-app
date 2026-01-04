@@ -31,6 +31,7 @@ export interface ElectionConfig {
   electionDate?: string;
   estimatedColumn: string;
   actualColumn: string;
+  scrollableTable?: boolean;
 }
 
 export interface CSVData {

@@ -105,7 +105,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
           />
         )}
-        {constituencyWiseData && <ResultTable {...getTableData(constituencyWiseData)} />}
+        {constituencyWiseData && <ResultTable {...getTableData(constituencyWiseData)} scrollable />}
         <StateMapChart name={stateId} height={300} scale={2000} onEntrySelected={console.log} />
         <Tooltip id="district-tooltip" />
       </div>

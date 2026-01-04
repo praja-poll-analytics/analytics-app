@@ -14,11 +14,12 @@ import { ReactSVG } from 'react-svg';
 interface ResultTableProps<T> {
   data: T[];
   columns: ColumnDef<T>[];
+  scrollable?: boolean;
 }
 
 const pageSizes = [10, 25, 50, 100];
 
-export function ResultTable<T>({ data, columns }: ResultTableProps<T>) {
+export function ResultTable<T>({ data, columns, scrollable = false }: ResultTableProps<T>) {
   const [searchQuery, setSearchQuery] = useState('');
   const [pageSize, setPageSize] = useState(25);
 
@@ -125,14 +126,17 @@ export function ResultTable<T>({ data, columns }: ResultTableProps<T>) {
         )}
       </div>
 
-      <div className="overflow-hidden rounded-md border">
-        <Table>
+      <div className={`rounded-md border ${scrollable ? 'overflow-x-auto' : 'overflow-x-auto lg:overflow-hidden'}`}>
+        <Table className={scrollable ? 'w-full' : 'table-fixed w-full'}>
           <TableHeader className="bg-primary">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id} className="text-white text-center">
+                    <TableHead
+                      key={header.id}
+                      className={`text-white text-center px-2 break-words whitespace-normal h-auto py-2 ${scrollable ? 'min-w-[150px]' : ''}`}
+                    >
                       {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                     </TableHead>
                   );
@@ -145,7 +149,7 @@ export function ResultTable<T>({ data, columns }: ResultTableProps<T>) {
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className="border-r">
+                    <TableCell key={cell.id} className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'}`}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}

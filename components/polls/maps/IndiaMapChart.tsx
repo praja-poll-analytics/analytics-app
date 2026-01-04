@@ -2,6 +2,14 @@ import React from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { GeographiesRenderProps, Geography as GeographyType, IndiaMapChartProps } from './types';
 
+const commonStyle = {
+  stroke: '#666666',
+  strokeWidth: 0.75,
+  outline: 'none',
+  cursor: 'pointer',
+  filter: 'drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2))',
+};
+
 const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
   width,
   height,
@@ -34,25 +42,16 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
                   data-tooltip-content={name}
                   style={{
                     default: {
-                      fill: defaultColorMapping?.[name] || '#E3F2FD',
-                      stroke: '#333333',
-                      strokeWidth: 1,
-                      outline: 'none',
-                      cursor: 'pointer',
+                      fill: defaultColorMapping?.[name] || '#FFFFFF',
+                      ...commonStyle,
                     },
                     hover: {
                       fill: '#1976D2',
-                      stroke: '#333333',
-                      strokeWidth: 1,
-                      outline: 'none',
-                      cursor: 'pointer',
+                      ...commonStyle,
                     },
                     pressed: {
                       fill: '#0D47A1',
-                      stroke: '#333333',
-                      strokeWidth: 1,
-                      outline: 'none',
-                      cursor: 'pointer',
+                      ...commonStyle,
                     },
                   }}
                 />
