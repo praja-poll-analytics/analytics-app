@@ -1,6 +1,6 @@
-import { CSVData, PartyChartData } from '../../types';
+import { CSVData, MergeCellInfo, PartyChartData } from '../../types';
 
-export const mapCSV = (csv: string): CSVData => {
+export const mapCSV = (csv: string, mergeColumns?: string[]): CSVData => {
   const lines = csv.split('\n').filter((line) => line.trim());
   const headers = lines[0].split(',').map((header) => header.trim());
   const data = lines.slice(1).map((line) => {
@@ -10,7 +10,45 @@ export const mapCSV = (csv: string): CSVData => {
       return acc;
     }, {} as Record<string, string>);
   });
-  return { data, headers };
+
+  const mergeCells: MergeCellInfo[] = [];
+
+  if (mergeColumns && mergeColumns.length > 0) {
+    mergeColumns.forEach((columnKey) => {
+      let currentValue: string | null = null;
+      let startRow = 0;
+      let rowSpan = 0;
+
+      data.forEach((row, index) => {
+        const value = row[columnKey] ?? '';
+        if (value === currentValue || (value?.trim() === '' && currentValue !== null)) {
+          rowSpan++;
+        } else {
+          if (rowSpan > 1 && currentValue !== null) {
+            mergeCells.push({
+              columnKey,
+              startRow,
+              rowSpan,
+              value: currentValue,
+            });
+          }
+          currentValue = value;
+          startRow = index;
+          rowSpan = 1;
+        }
+      });
+
+      if (rowSpan > 1 && currentValue !== null) {
+        mergeCells.push({
+          columnKey,
+          startRow,
+          rowSpan,
+          value: currentValue,
+        });
+      }
+    });
+  }
+  return { data, headers, mergeCells };
 };
 
 export const getChartData = (csvData: CSVData, estimatedColumn: string, actualColumn: string): PartyChartData[] => {

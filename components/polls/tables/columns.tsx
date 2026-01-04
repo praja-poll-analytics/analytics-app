@@ -5,14 +5,14 @@ import { partyColorMapping } from './utils/colorMapping';
 
 export const getTableData = (
   csvData: CSVData
-): { data: Record<string, string>[]; columns: ColumnDef<Record<string, string>>[] } => {
+): { data: Record<string, string>[]; columns: ColumnDef<Record<string, string>>[]; mergeCells?: CSVData['mergeCells'] } => {
   const columns: ColumnDef<Record<string, string>>[] = csvData.headers.map((header) => ({
     accessorKey: header,
     header,
     cell: ({ row }) =>
       header === 'Party Name' ? <PartyNameCell row={row} /> : <DefaultCell row={row} header={header} />,
   }));
-  return { data: csvData.data, columns };
+  return { data: csvData.data, columns, mergeCells: csvData.mergeCells };
 };
 
 const PartyNameCell = ({ row }: { row: Row<Record<string, string>> }) => {

@@ -32,11 +32,20 @@ export interface ElectionConfig {
   estimatedColumn: string;
   actualColumn: string;
   scrollableTable?: boolean;
+  mergeColumns?: string[];
 }
 
 export interface CSVData {
   data: Record<string, string>[];
   headers: string[];
+  mergeCells?: MergeCellInfo[];
+}
+
+export interface MergeCellInfo {
+  columnKey: string;
+  startRow: number;
+  rowSpan: number;
+  value: string;
 }
 
 export interface PartyChartData {

@@ -15,13 +15,37 @@ interface ResultTableProps<T> {
   data: T[];
   columns: ColumnDef<T>[];
   scrollable?: boolean;
+  mergeCells?: Array<{
+    columnKey: string;
+    startRow: number;
+    rowSpan: number;
+    value: string;
+  }>;
 }
 
 const pageSizes = [10, 25, 50, 100];
 
-export function ResultTable<T>({ data, columns, scrollable = false }: ResultTableProps<T>) {
+export function ResultTable<T>({ data, columns, scrollable = false, mergeCells = [] }: ResultTableProps<T>) {
   const [searchQuery, setSearchQuery] = useState('');
   const [pageSize, setPageSize] = useState(25);
+
+  // Helper function to check if a cell should be hidden (part of a merged cell)
+  const shouldHideCell = (rowIndex: number, columnKey: string): boolean => {
+    return mergeCells.some(
+      (merge) =>
+        merge.columnKey === columnKey &&
+        rowIndex > merge.startRow &&
+        rowIndex < merge.startRow + merge.rowSpan
+    );
+  };
+
+  // Helper function to get rowspan for a cell
+  const getCellRowSpan = (rowIndex: number, columnKey: string): number => {
+    const merge = mergeCells.find(
+      (m) => m.columnKey === columnKey && m.startRow === rowIndex
+    );
+    return merge ? merge.rowSpan : 1;
+  };
 
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
@@ -146,13 +170,27 @@ export function ResultTable<T>({ data, columns, scrollable = false }: ResultTabl
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
+              table.getRowModel().rows.map((row, rowIndex) => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'}`}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  ))}
+                  {row.getVisibleCells().map((cell) => {
+                    const columnKey = cell.column.id;
+                    const hide = shouldHideCell(rowIndex, columnKey);
+                    const rowSpan = getCellRowSpan(rowIndex, columnKey);
+
+                    if (hide) {
+                      return null;
+                    }
+
+                    return (
+                      <TableCell
+                        key={cell.id}
+                        rowSpan={rowSpan}
+                        className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'} ${rowSpan > 1 ? 'align-middle' : ''}`}
+                      >
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </TableCell>
+                    );
+                  })}
                 </TableRow>
               ))
             ) : (

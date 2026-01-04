@@ -29,23 +29,23 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
     try {
       const response = await axios.get(`/data/${stateId}/${electionKey}-party-wise.csv`);
       const text = response.data;
-      const data = mapCSV(text);
+      const data = mapCSV(text, currentElection?.mergeColumns);
       setPartyWiseData(data);
     } catch (error) {
       console.log('Error fetching party-wise data:', error);
     }
-  }, [stateId, electionKey]);
+  }, [stateId, electionKey, currentElection?.mergeColumns]);
 
   const fetchConstituencyWiseData = useCallback(async () => {
     try {
       const response = await axios.get(`/data/${stateId}/${electionKey}-constituency-wise.csv`);
       const text = response.data;
-      const data = mapCSV(text);
+      const data = mapCSV(text, currentElection?.mergeColumns);
       setConstituencyWiseData(data);
     } catch (error) {
       console.log('Error fetching constituency-wise data:', error);
     }
-  }, [stateId, electionKey]);
+  }, [stateId, electionKey, currentElection?.mergeColumns]);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
