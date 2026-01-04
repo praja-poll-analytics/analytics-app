@@ -19,6 +19,7 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
   defaultColorMapping,
   onHoverStateChange,
   onEntrySelected,
+  selectedDistrict,
 }) => {
   const json = `/topoJsons/states/${name}.json`;
   const config = statesMapConfig[name];
@@ -35,22 +36,24 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
       <Geographies geography={json}>
         {({ geographies }: GeographiesRenderProps) =>
           geographies.map((geo: GeographyType) => {
-            const { district: name } = geo.properties;
+            const { district: districtName } = geo.properties;
+            const isSelected =
+              selectedDistrict && districtName?.toLowerCase().startsWith(selectedDistrict.toLowerCase());
             return (
-              name && (
+              districtName && (
                 <React.Fragment key={geo.rsmKey}>
                   <Geography
                     geography={geo}
-                    onMouseEnter={() => onHoverStateChange?.(name)}
+                    onMouseEnter={() => onHoverStateChange?.(districtName)}
                     onMouseLeave={() => onHoverStateChange?.(null)}
                     onClick={() => {
-                      onEntrySelected?.(`${name}`);
+                      onEntrySelected?.(`${districtName}`);
                     }}
                     data-tooltip-id="district-tooltip"
-                    data-tooltip-content={name}
+                    data-tooltip-content={districtName}
                     style={{
                       default: {
-                        fill: defaultColorMapping?.[name] || '#FFFFFF',
+                        fill: isSelected ? '#1976D2' : defaultColorMapping?.[districtName] || '#FFFFFF',
                         ...commonStyle,
                       },
                       hover: {

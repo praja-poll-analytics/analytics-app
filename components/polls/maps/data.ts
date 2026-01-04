@@ -7,7 +7,7 @@ export const statesMapConfig: Record<string, { name: string; scaleMap?: number; 
   andhrapradesh: {
     name: 'Andhra Pradesh',
     scaleMap: 2000,
-    centerMap: [80, 17],
+    centerMap: [80, 16],
   },
   arunachalpradesh: {
     name: 'Arunachal Pradesh',

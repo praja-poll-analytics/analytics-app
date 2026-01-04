@@ -29,4 +29,5 @@ export interface StateMapChartProps {
   defaultColorMapping?: Record<string, string>;
   onHoverStateChange?: (entry: string | null) => void;
   onEntrySelected?: (entry: string) => void;
+  selectedDistrict?: string | null;
 }

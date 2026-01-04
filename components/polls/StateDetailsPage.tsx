@@ -3,20 +3,22 @@
 import axios from 'axios';
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
-import { ReactSVG } from 'react-svg';
 import { Tooltip } from 'react-tooltip';
+import { Button } from '../ui/button';
+import { ElectionSelector } from './ElectionSelector';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
 import { getTableData } from './tables/columns';
 import { getChartData, mapCSV, recalculateMergeCells } from './tables/utils/csvMapper';
-import { CSVData, ElectionConfig, ElectionType } from './types';
+import { CSVData, ElectionType } from './types';
 
 export default function StateDetailPage({ stateId }: { stateId: string }) {
   const [partyWiseData, setPartyWiseData] = useState<CSVData | null>(null);
   const [constituencyWiseData, setConstituencyWiseData] = useState<CSVData | null>(null);
   const [currentDistrictData, setCurrentDistrictData] = useState<CSVData | null>(null);
+  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const config = electionData[stateId];
   const [currentElection, setCurrentElection] = useState(config?.availableElections[0]);
@@ -67,20 +69,64 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
   };
 
   const handleDistrictSelection = (district: string) => {
-    if (constituencyWiseData && constituencyWiseData.headers.includes('District')) {
-      const districtData = constituencyWiseData?.data.filter((entry) =>
-        entry['District'].toLowerCase().startsWith(district.toLowerCase())
-      );
-
-      // Recalculate merge cells for the filtered data
-      const updatedMergeCells = recalculateMergeCells(districtData, currentElection?.mergeColumns);
-
-      setCurrentDistrictData({
-        ...constituencyWiseData,
-        data: districtData,
-        mergeCells: updatedMergeCells,
-      });
+    if (selectedDistrict === district) {
+      setSelectedDistrict(null);
+      return;
     }
+    if (constituencyWiseData && constituencyWiseData.headers.includes('District')) {
+      setSelectedDistrict(district);
+    }
+  };
+
+  const handleClearDistrictSelection = () => {
+    setSelectedDistrict(null);
+    setCurrentDistrictData(constituencyWiseData);
+  };
+
+  useEffect(() => {
+    if (constituencyWiseData && constituencyWiseData.headers.includes('District')) {
+      if (selectedDistrict) {
+        const districtData = constituencyWiseData?.data.filter((entry) =>
+          entry['District'].toLowerCase().startsWith(selectedDistrict.toLowerCase())
+        );
+        const updatedMergeCells = recalculateMergeCells(districtData, currentElection?.mergeColumns);
+
+        setCurrentDistrictData({
+          ...constituencyWiseData,
+          data: districtData,
+          mergeCells: updatedMergeCells,
+        });
+      } else {
+        setCurrentDistrictData(constituencyWiseData);
+      }
+    }
+  }, [selectedDistrict, constituencyWiseData, currentElection]);
+
+  const DistrictSelector = () => {
+    return (
+      <div className="flex flex-col">
+        {selectedDistrict && (
+          <div className="flex flex-row items-center mb-4 gap-4">
+            <p className="text-neutral-600">
+              Showing results for: <span className="font-semibold text-primary">{selectedDistrict}</span>
+            </p>
+            <Button onClick={handleClearDistrictSelection}>
+              <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Clear Selection
+            </Button>
+          </div>
+        )}
+        <StateMapChart
+          name={stateId}
+          height={300}
+          scale={2000}
+          onEntrySelected={handleDistrictSelection}
+          selectedDistrict={selectedDistrict}
+        />
+      </div>
+    );
   };
 
   if (!currentElection) {
@@ -124,65 +170,18 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
           />
         )}
-        <StateMapChart name={stateId} height={300} scale={2000} onEntrySelected={handleDistrictSelection} />
-        {currentDistrictData && (
-          <ResultTable {...getTableData(currentDistrictData)} scrollable title="Constituency-wise Survey Report" />
-        )}
+        <div className="">
+          {currentDistrictData && (
+            <ResultTable
+              {...getTableData(currentDistrictData)}
+              scrollable
+              title="Constituency-wise Survey Report"
+              subComponent={<DistrictSelector />}
+            />
+          )}
+        </div>
         <Tooltip id="district-tooltip" />
       </div>
     </main>
   );
 }
-
-const ElectionSelector = ({
-  availableElections,
-  currentElection,
-  onElectionChange,
-}: {
-  availableElections: ElectionConfig[];
-  currentElection: ElectionConfig;
-  onElectionChange: (election: ElectionConfig) => void;
-}) => {
-  return (
-    <div>
-      <h2 className="text-xl font-semibold text-neutral-800 mb-4">Select Election Type</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {availableElections.map((election) => (
-          <div
-            key={election.name}
-            onClick={() => onElectionChange(election)}
-            className={`relative p-6 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
-              currentElection.name === election.name
-                ? 'border-primary bg-primary/5 shadow-lg scale-105'
-                : 'border-neutral-200 bg-white hover:border-primary/50 hover:shadow-md'
-            }`}
-          >
-            <div className="flex flex-col space-y-2">
-              <div className="flex items-center justify-between">
-                <span
-                  className={`text-sm font-medium px-3 py-1 rounded-full ${
-                    election.type === ElectionType.Assembly
-                      ? 'bg-blue-100 text-blue-800'
-                      : 'bg-green-100 text-green-800'
-                  }`}
-                >
-                  {election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha'}
-                </span>
-                {currentElection.name === election.name && (
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center">
-                    <ReactSVG src="/assets/icons/check.svg" className="size-3 text-white" />
-                  </div>
-                )}
-              </div>
-              <h3 className="text-lg font-semibold text-neutral-900">{election.name}</h3>
-              {election.surveyDate && <p className="text-sm text-neutral-600">Survey Date: {election.surveyDate}</p>}
-              {election.electionDate && (
-                <p className="text-sm text-neutral-600">Election Date: {election.electionDate}</p>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};

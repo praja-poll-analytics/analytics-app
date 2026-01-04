@@ -8,7 +8,7 @@ import {
   getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { ReactSVG } from 'react-svg';
 
 interface ResultTableProps<T> {
@@ -22,11 +22,19 @@ interface ResultTableProps<T> {
     rowSpan: number;
     value: string;
   }>;
+  subComponent?: ReactNode;
 }
 
 const pageSizes = [10, 25, 50, 100];
 
-export function ResultTable<T>({ title, data, columns, scrollable = false, mergeCells = [] }: ResultTableProps<T>) {
+export function ResultTable<T>({
+  title,
+  data,
+  columns,
+  scrollable = false,
+  mergeCells = [],
+  subComponent,
+}: ResultTableProps<T>) {
   const [searchQuery, setSearchQuery] = useState('');
   const [pageSize, setPageSize] = useState(25);
 
@@ -123,7 +131,7 @@ export function ResultTable<T>({ title, data, columns, scrollable = false, merge
           <span className="text-sm text-neutral-600">entries</span>
         </div>
       </div>
-
+      {subComponent}
       <div className="flex flex-row justify-between w-full items-center mb-4">
         <div className="text-sm text-neutral-600">
           Showing {table.getState().pagination.pageIndex * pageSize + 1} to{' '}
