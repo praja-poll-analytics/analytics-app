@@ -65,14 +65,21 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
       <Navigation />
       <main className="pt-16">
-        <section className="py-20 bg-white/80 backdrop-blur-sm border-b border-neutral-200">
+        {/* Hero Header - matching home page style */}
+        <section className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 py-12 shadow-2xl">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              Contact <span className="text-blue-400">Us</span>
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              Have questions about our services or want to collaborate? We&apos;d love to hear from you.
+            </p>
+          </div>
+        </section>
+
+        {/* Form Section */}
+        <section className="py-16 bg-white/80 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">Contact Us</h1>
-              <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-                Have questions about our services or want to collaborate? We&apos;d love to hear from you.
-              </p>
-            </div>
 
             <div className="bg-white rounded-2xl shadow-lg border border-neutral-200 p-8">
               {submitStatus === 'success' ? (
