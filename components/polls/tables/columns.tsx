@@ -34,5 +34,19 @@ const DefaultCell = ({ row, header }: { row: Row<Record<string, string>>; header
   const isNumber = value.length > 0 && !isNaN(Number(value));
   const isPositive = (value as string).startsWith('+');
   const displayValue = isNumber ? (isPositive ? '+' : '') + formatVotes(Number(value)) : (value as string);
+
+  // Check if the value contains literal \n and split into lines
+  const hasNewline = displayValue.includes('\\n');
+  if (hasNewline) {
+    const lines = displayValue.split('\\n');
+    return (
+      <div className="capitalize text-center">
+        {lines.map((line, index) => (
+          <div key={index}>{line}</div>
+        ))}
+      </div>
+    );
+  }
+
   return <div className="capitalize text-center">{displayValue}</div>;
 };

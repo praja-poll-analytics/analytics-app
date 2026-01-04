@@ -1,244 +1,244 @@
 District,Constituency,Expected Winning Party (By PPA on 11-11-25),Actual Winner (after results on 14-11-25),Expected Votes (By PPA on 11-11-25),Actual Votes (after results on 14-11-25),Vote Diff,Runner-Up (By PPA on 11-11-25),Actual Runner-Up (after results on 14-11-25),Runner-Up Votes (By PPA on 11-11-25),Actual Runner-Up Votes (after results on 14-11-25),Winning Margin (By PPA on 11-11-25),Actual Margin (after results on 14-11-25),Error Margin ±5000 proposed (By PPA on 11-11-25),After Adjustment actual diffence
-PASCHIM CHAMPARANपश्चिम चंपारण,1 - VALMIKI NAGARवाल्मीकि नगर,INC (MGB),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,2 - RAMNAGAR (SC)रामनगर (अ.जा.),BJP (NDA),BJP (NDA),87430,115214,27784,RJD (MGB),RJD (MGB),49086,79534,38344,35680,35680,0
-,3 - NARKATIAGANJनरकटियागंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,4 - BAGAHAबगहा,BJP (NDA),BJP (NDA),101267,106875,5608,INC (MGB),INC (MGB),70889,100562,30378,6313,23378,-17065
-,5 - LAURIYAलौरिया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,6 - NAUTANनौतन,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,7 - CHANPATIAचनपटिया,BJP (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,8 - BETTIAHबेतिया,BJP (NDA),BJP (NDA),98012,91907,-6105,INC (MGB),INC (MGB),44026,69534,53986,22373,46986,-24613
-,9 - SIKTAसिकटा,JDU (NDA),JDU (NDA),78131,97173,19042,CPIML (MGB),INDEPENDENT,39065,50029,39066,47144,46066,1078
-PURVI CHAMPARANपूर्वी चम्पारण,10 - RAXAULरक्सौल,BJP (NDA),BJP (NDA),97971,106765,8794,INC (MGB),INC (MGB),57659,88887,40312,17878,33312,-15434
-,11 - SUGAULIसुगौली,LJP (NDA),LJP (NDA),84281,98875,14594,VIP,JJD,48594,40684,35687,58191,42687,15504
-,12 - NARKATIAनरकटिया,JDU (NDA),JDU (NDA),115204,104450,-10754,RJD (MGB),RJD (MGB),105310,103007,9894,1443,2894,-1451
-,13 - HARSIDHI (SC)हरसिद्धि (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,14 - GOVINDGANJगोविंदगंज,BJP (NDA),LJP/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,15 - KESARIAकेसरिया,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,16 - KALYANPURकल्याणपुर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,17 - PIPRAपिपरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,18 - MADHUBANमधुबन,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,19 - MOTIHARIमोतिहारी,BJP (NDA),BJP (NDA),99672,106080,6408,RJD (MGB),RJD (MGB),91560,92517,8112,13563,13563,0
-,20 - CHIRAIAचिरैया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,21 - DHAKAढाका,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-SHEOHARशिवहर,22 - SHEOHARशिवहर,JDU (NDA),JDU (NDA),89916,97269,7353,RJD (MGB),RJD (MGB),55834,65871,34082,31398,31398,0
-SITAMARHIसीतामढ़ी,23 - RIGAरीगा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,24 - BATHNAHA (SC)बथनाहा (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,25 - PARIHARपरीहार,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,26 - SURSANDसुरसंड,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,27 - BAJPATTIबाजपट्टी,RLM,RLM,97650,99144,1494,RJD (MGB),RJD (MGB),72059,99749,25591,3395,18591,-15196
-,28 - SITAMARHIसीतामढ़ी,BJP (NDA),BJP (NDA),118418,104226,-14192,RJD (MGB),RJD (MGB),78945,98664,39473,5562,32473,-26911
-,29 - RUNNISAIDPURरुन्नीसैदपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,30 - BELSANDबेलसंड,LJP (NDA),LJP (NDA),86109,82076,-4033,RJD (MGB),RJD (MGB),52441,59391,33668,22685,26668,-3983
-MADHUBANIमधुबनी,31 - HARLAKHIहरलाखी,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,32 - BENIPATTIबेनीपट्टी,BJP (NDA),BJP (NDA),87288,87153,-135,INC (MGB),INC (MGB),60556,63221,26732,23932,23932,0
-,33 - KHAJAULIखजौली,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,34 - BABUBARHIबाबूबरही,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,35 - BISFIबिस्फी,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,36 - MADHUBANIमधुबनी,RLM,RLM,87254,97956,10702,RJD (MGB),RJD (MGB),76347,77404,10907,20552,17907,2645
-,37 - RAJNAGAR (SC)राजनगर (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,38 - JHANJHARPURझंझारपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,39 - PHULPARASफुलपरास,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,40 - LAUKAHAलौकहा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-SUPAULसुपौल,41 - NIRMALIनिर्मली,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,42 - PIPRAपिपरा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,43 - SUPAULसुपौल,JDU (NDA),JDU (NDA),102834,109085,6251,INC (MGB),INC (MGB),85390,78282,17444,30803,24444,6359
-,44 - TRIVENIGANJ (SC)त्रिवेणीगंज (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,45 - CHHATAPURछातापुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-ARARIAअररिया,46 - NARPATGANJनरपतगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,47 - RANIGANJ (SC)रानीगंज (अ.जा.),JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,48 - FORBESGANJफोर्बेस्गंज,BJP (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,49 - ARARIAअररिया,INC (MGB),INC (MGB),93314,91529,-1785,JDU (NDA),JDU (NDA),62908,78788,30406,12741,23406,-10665
-,50 - JOKIHATजोकिहाट,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
-,51 - SIKTIसिकटी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-KISHANGANJकिशनगंज,52 - BAHADURGANJबहादुरगंज,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
-,53 - THAKURGANJठाकुरगंज,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,54 - KISHANGANJकिशनगंज,BJP (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,55 - KOCHADHAMANकोचाधामन,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
-,56 - AMOURअमौर,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
-,57 - BAISIबैसी,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
-,58 - KASBAकस्बा,LJP (NDA),LJP (NDA),86865,86877,12,INC (MGB),INC (MGB),71076,74002,15789,12875,12875,0
-PURNIAपूर्णिया,59 - BANMANKHI (SC)बनमनखी (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,60 - RUPAULIरूपौली,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,61 - DHAMDAHAधमदाहा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,62 - PURNIAपूर्णिया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-KATIHARकटिहार,63 - KATIHARकटिहार,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,64 - KADWAकदवा,INC (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,65 - BALRAMPURबलरामपुर,CPIML (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,66 - PRANPURप्राणपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,67 - MANIHARI (ST)मनीहारी (ज.जा.),JDU (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,68 - BARARIबरारी,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,69 - KORHA (SC)कोरहा (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-MADHEPURAमधेपुरा,70 - ALAMNAGARआलमनगर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,71 - BIHARIGANJबिहारीगंज,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,72 - SINGHESHWAR (SC)सिंगेश्वर (अ.जा.),JDU (NDA),JDU (NDA),110169,106416,-3753,RJD (MGB),RJD (MGB),99677,103434,10492,2982,3492,-510
-,73 - MADHEPURAमधेपुरा,RJD (MGB),RJD (MGB),95414,108464,13050,JDU (NDA),JDU (NDA),57729,100655,42584,7809,35584,-27775
-SAHARSAसहरसा,74 - SONBARSHA (SC)सोनबर्षा (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,75 - SAHARSAसहरसा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,76 - SIMRI BAKHTIARPURसिमरी बख्तियारपुर,RJD (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,77 - MAHISHIमहिषी,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,78 - KUSHESHWAR ASTHAN (SC)कुशेश्वर स्थान(अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-DARBHANGAदरभंगा,79 - GAURA BAURAMगौरा बौराम,VIP,BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,80 - BENIPURबेनीपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,81 - ALINAGARअलीनगर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,82 - DARBHANGA RURALदरभंगा ग्रामीण,JDU (NDA),JDU (NDA),85701,80624,-5077,RJD (MGB),RJD (MGB),60191,62232,25510,18392,18392,0
-,83 - DARBHANGAदरभंगा,BJP (NDA),BJP (NDA),93723,97453,3730,VIP,VIP,69176,72806,24547,24593,24593,0
-,84 - HAYAGHATहयाघाट,JDU (NDA),BJP/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,85 - BAHADURPURबहादुरपुर,BJP (NDA),JDU/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,86 - KEOTIकेवटी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,87 - JALEजाले,BJP (NDA),BJP (NDA),98401,100496,2095,INC (MGB),INC (MGB),54342,78634,44059,21862,37059,-15197
-MUZAFFARPURमुजफ्फरपुर,88 - GAIGHATगायघाट,JDU (NDA),JDU (NDA),80755,108104,27349,RJD (MGB),RJD (MGB),75101,84687,5654,23417,12654,10763
-,89 - AURAIऔराई,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,90 - MINAPURमीनापुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,91 - BOCHAHA (SC)बोचहां (अ.जा.),LJP (NDA),LJP (NDA),90923,108186,17263,RJD (MGB),RJD (MGB),84228,87870,6695,20316,13695,6621
-,92 - SAKRA (SC)सकरा (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,93 - KURHANIकुरहनी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,94 - MUZAFFARPURमुजफ्फरपुर,BJP (NDA),BJP (NDA),92553,100477,7924,INC (MGB),INC (MGB),60149,67820,32404,32657,32657,0
-,95 - KANTIकांति,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,96 - BARURAJबरुराज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,97 - PAROOपरू,RLM,RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,98 - SAHEBGANJसाहेबगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-GOPALGANJगोपालगंज,99 - BAIKUNTHPURबैकुंठपुर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,100 - BARAULIबरौली,BJP (NDA),JDU/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-GOPALGANJगोपालगंज,101 - GOPALGANJगोपालगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,102 - KUCHAIKOTEकुचायकोटे,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,103 - BHOREY (SC)भोरे (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,104 - HATHUAहथुआ,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-SIWANसिवान,105 - SIWANसिवान,BJP (NDA),BJP (NDA),85525,92379,6854,RJD (MGB),RJD (MGB),66899,83009,18626,9370,11626,-2256
-,106 - ZIRADEIज़िरादेई,JDU (NDA),JDU (NDA),62179,66227,4048,CPIML (MGB),CPIML (MGB),48362,63601,13817,2626,6817,-4191
-,107 - DARAULI (SC)दरौली (अ.जा.),LJP (NDA),LJP (NDA),81065,83014,1949,CPIML (MGB),CPIML (MGB),55465,73442,25600,9572,18600,-9028
-,108 - RAGHUNATHPURरघुनाथपुर,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,109 - DARAUNDHAदरौंधा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,110 - BARHARIAबड़हरिया,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,111 - GORIAKOTHIगोरियाकोठी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,112 - MAHARAJGANJमहराजगंज,JDU (NDA),JDU (NDA),74408,86813,12405,RJD (MGB),RJD (MGB),61490,65714,25733,21099,21099,0
-SARANसारण (छपरा),113 - EKMAएकमा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,114 - MANJHIमांझी,CPIM (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,115 - BANIAPURबनियापुर,BJP (NDA),BJP (NDA),89823,95606,5783,RJD (MGB),RJD (MGB),83587,80170,6236,15436,13236,2200
-,116 - TARAIYAतरैया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,117 - MARHAURAमरहौरा,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,118 - CHAPRAछपरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,119 - GARKHA (SC)गरखा (अ.जा.),RJD (MGB),RJD (MGB),88730,91134,2404,LJP (NDA),RJD (MGB),79127,78330,9603,12804,12804,0
-,120 - AMNOURअमनौर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,121 - PARSAपरसा,RJD (MGB),RJD (MGB),98542,89093,-9449,JDU (NDA),JDU (NDA),78681,63321,19861,25772,25772,0
-,122 - SONEPURसोनेपुर,BJP (NDA),BJP (NDA),81789,90842,9053,RJD (MGB),RJD (MGB),65431,86075,16358,4767,9358,-4591
-VAISHALIवैशाली,123 - HAJIPURहाजीपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,124 - LALGANJलालगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,125 - VAISHALIवैशाली,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,126 - MAHUAमहुआ,JJD,LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,127 - RAJA PAKAR (SC)राजा पाकर (अ.जा.),INC (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,128 - RAGHOPURराघोपुर,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,129 - MAHNARमहनार,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,130 - PATEPUR (SC)पातेपुर (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-SAMASTIPURसमस्तीपुर,131 - KALYANPUR (SC)कल्याणपुर (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,132 - WARISNAGARवारिसनगर,JDU (NDA),JDU (NDA),81207,108968,27761,CPIML (MGB),CPIML (MGB),69606,74532,11601,34436,18601,15835
-,133 - SAMASTIPURसमस्तीपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,134 - UJIARPURउजियारपुर,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,135 - MORWAमोरवा,RJD (MGB),RJD (MGB),75092,77770,2678,JDU (NDA),JDU (NDA),62537,69099,12555,8671,8671,0
-,136 - SARAIRANJANसरायरंजन,JDU (NDA),JDU (NDA),92596,102792,10196,RJD (MGB),RJD (MGB),70947,81994,21649,20798,20798,0
-,137 - MOHIUDDINNAGARमोहिउद्दीननगर,BJP (NDA),BJP (NDA),83971,89208,5237,RJD (MGB),RJD (MGB),61363,77526,22608,11682,15608,-3926
-,138 - BIBHUTIPURबिभूतिपुर,JDU (NDA),CPI(M),-,-,-,-,-,-,-,-,-,±5000,-
-,139 - ROSERA (SC)रोसेरा (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,140 - HASANPURहसनपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-BEGUSARAIबेगूसराय,141 - CHERIA BARIARPURचेरिया बरियारपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,142 - BACHHWARAबछवाड़ा,BJP (NDA),BJP (NDA),79786,100343,20557,INC (MGB),INC (MGB),54205,84502,25581,15841,18581,-2740
-,143 - TEGHRAतेघरा,BJP (NDA),BJP (NDA),101961,112770,10809,CPI,CPI,48965,77406,55996,35364,48996,-13632
-,144 - MATIHANIमटिहानी,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,145 - SAHEBPUR KAMALसाहेबपुर कमाल,LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,146 - BEGUSARAIबेगूसराय,BJP (NDA),BJP (NDA),96118,119506,23388,INC (MGB),INC (MGB),72432,88874,23686,30632,30632,0
-,147 - BAKHRI (SC)बखरी (अ.जा.),LJP (NDA),LJP (NDA),89350,98511,9161,CPI,CPI,58940,81193,30410,17318,23410,-6092
-KHAGARIAखगरिया,148 - ALAULI (SC)अलौली (अ.जा.),RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,149 - KHAGARIAखगरिया,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,150 - BELDAURबेलदौर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,151 - PARBATTAपरबत्ता,LJP (NDA),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-BHAGALPURभागलपुर,152 - BIHPURबिहपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,153 - GOPALPURगोपालपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,154 - PIRPAINTI (SC)पीरपैंती (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,155 - KAHALGAONकहलगांव,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,156 - BHAGALPURभागलपुर,BJP (NDA),BJP (NDA),95673,100770,5097,INC (MGB),INC (MGB),63782,87296,31891,13474,24891,-11417
-,157 - SULTANGANJसुल्तानगंज,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,158 - NATHNAGARनाथनगर,RJD (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-BANKAबांका,159 - AMARPURअमरपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,160 - DHAURAIYA (SC)धौरैया (अ.जा.),RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,161 - BANKAबांका,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,162 - KATORIA (ST)कटोरिया प्रखण्ड (ज.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,163 - BELHARबेलहर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-MUNGERमुंगेर,164 - TARAPURतारापुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,165 - MUNGERमुंगेर,BJP (NDA),BJP (NDA),75092,108028,32936,RJD (MGB),RJD (MGB),50061,89278,25031,18750,18031,719
-,166 - JAMALPURजमालपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-LAKHISARAIलखीसराय,167 - SURYAGARHAसूर्यगढ़,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,168 - LAKHISARAIलखीसराय,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-SHEIKHPURAशेखपुरा,169 - SHEIKHPURAशेखपुरा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,170 - BARBIGHAबरबीघा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-NALANDAनालंदा,171 - ASTHAWANअस्थावां,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,172 - BIHARSHARIFबिहारशरीफ,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,173 - RAJGIR (SC)राजगीर (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,174 - ISLAMPURइस्लामपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,175 - HILSAहिलसा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,176 - NALANDAनालंदा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,177 - HARNAUTहरनौत,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,178 - MOKAMAमोकामा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-PATNAपटना,179 - BARHबाढ,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,180 - BAKHTIARPURबख्तियारपुर,LJP (NDA),LJP (NDA),90870,88520,-2350,RJD (MGB),RJD (MGB),65584,87539,25286,981,18286,-17305
-,181 - DIGHAदीघा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,182 - BANKIPURबांकीपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,183 - KUMHRARकुम्हरार,BJP (NDA),BJP (NDA),92905,100485,7580,INC (MGB),INC (MGB),56093,52961,23727,47524,30727,16797
-,184 - PATNA SAHIBपटना साहिब,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,185 - FATUHAफतुहा,LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,186 - DANAPURदानापुर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,187 - MANERमनेर,RJD (MGB),RJD (MGB),102962,110798,7836,LJP (NDA),LJP (NDA),85056,90764,17906,20034,20034,0
-,188 - PHULWARI (SC)फुलवारी (अ.जा.),CPIML (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,189 - MASAURHI (SC)मसौर्ही (अ.जा.),JDU (NDA),JDU (NDA),116165,106505,-9660,RJD (MGB),RJD (MGB),60466,98862,55699,7643,48699,-41056
-,190 - PALIGANJपालीगंज,CPIML (MGB),CPIML (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-,191 - BIKRAMबिक्रम,BJP (NDA),BJP (NDA),119503,101189,-18314,INC (MGB),INC (MGB),69668,95588,49835,5601,42835,-37234
-BHOJPURभोजपुर,192 - SANDESHसंदेश,JDU (NDA),JDU (NDA),86741,80598,-6143,RJD (MGB),RJD (MGB),69153,80571,17588,27,10588,-10561
-,193 - BARHARAबरहरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,194 - ARRAHआरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,195 - AGIAON (SC)अगिआंव (अ.जा.),BJP (NDA),BJP (NDA),66690,69412,2722,CPIML (MGB),CPIML (MGB),50684,69317,16006,95,9006,-8911
-,196 - TARARIतरारी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,197 - JAGDISHPURजगदीशपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,198 - SHAHPURशाहपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-BUXARबक्सर,199 - BRAHAMPURब्रहमपुर,RJD (MGB),RJD (MGB),94096,95828,1732,LJP (NDA),LJP (NDA),72520,92608,21576,3220,14576,-11356
-,200 - BUXARबक्सर,INC (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-BUXARबक्सर,201 - DUMRAONडुमरांव,JDU (NDA),JDU (NDA),99381,79411,-19970,CPIML (MGB),CPIML (MGB),70035,77306,29346,2105,22346,-20241
-,202 - RAJPUR (SC)राजपुर (अ.जा.),JDU (NDA),JDU (NDA),82029,80701,-1328,INC (MGB),INC (MGB),58285,71565,33744,9136,26744,-17608
-KAIMUR (BHABHUA)कैमूर (भभुआ),203 - RAMGARHरामगढ,BJP (NDA),BSP,-,-,-,-,-,-,-,-,-,±5000,-
-,204 - MOHANIA (SC)मोहनिया (अ.जा.),RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,205 - BHABUAभभुआ,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,206 - CHAINPURचैनपुर,OTHERS,JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-ROHTASरोहतास,207 - CHENARI (SC)चेनारी (अ.जा.),LJP (NDA),LJP (NDA),82677,95579,12902,INC (MGB),INC (MGB),62072,73591,20605,21988,21988,0
-,208 - SASARAMसासाराम,RLM,RLM,79097,105006,25909,RJD (MGB),RJD (MGB),72769,79563,6328,25443,13328,12115
-,209 - KARGAHARकरगहर,JDU (NDA),JDU (NDA),79230,92485,13255,INC (MGB),BSP,49165,56809,21965,35676,28965,6711
-,210 - DINARAदिनारा,RLM,RLM,67846,78338,10492,RJD (MGB),RJD (MGB),56615,67504,11231,10834,10834,0
-,211 - NOKHAनोखा,JDU (NDA),JDU (NDA),71127,93193,22066,RJD (MGB),RJD (MGB),55608,69139,15519,24054,22519,1535
-,212 - DEHRIडेहरी,RJD (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,0
-,213 - KARAKATकाराकाट,JDU (NDA),CPIML (MGB),-,-,-,-,-,-,-,-,-,±5000,0
-ARWALअरवल,214 - ARWALअरवल,CPIML (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,0
-,215 - KURTHAकुर्था,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,0
-JAHANABADजहानाबाद,216 - JEHANABADजहानाबाद,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
-,217 - GHOSIघोसी,JDU (NDA),JDU (NDA),81010,80740,-270,CPIML (MGB),CPIML (MGB),60587,68811,20423,11929,13423,-1494
-,218 - MAKHDUMPUR (SC)मखदमूपुर (अ.जा.),LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
-AURANGABADऔरंगाबाद,219 - GOHगोह,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
-,220 - OBRAओबरा,LJP (NDA),LJP (NDA),81329,91638,10309,RJD (MGB),RJD (MGB),72768,79625,8561,12013,12013,0
-,221 - NABINAGARनबीनगर,JDU (NDA),JDU (NDA),83733,80380,-3353,RJD (MGB),RJD (MGB),71328,80268,12405,112,5405,-5293
-,222 - KUTUMBA (SC)कुटुम्ब (अ.जा.),HAMS,HAMS,74819,84727,9908,INC (MGB),INC (MGB),53612,63202,21207,21525,21525,0
-,223 - AURANGABADऔरंगाबाद,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,0
-,224 - RAFIGANJरफीगंज,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,0
-GAYAगया,225 - GURUAगुरुआ,BJP (NDA),BJP (NDA),84309,99758,15449,RJD (MGB),RJD (MGB),78497,75564,5812,24194,12812,11382
-,226 - SHERGHATIशेरघाटी,LJP (NDA),LJP (NDA),74460,77270,2810,RJD (MGB),RJD (MGB),66704,63746,7756,13524,13524,0
-,227 - IMAMGANJ (SC)इमामगंज (अ.जा.),HAMS,HAMS,-,-,-,-,-,-,-,-,-,±5000,0
-,228 - BARACHATTI (SC)बराचट्टी (अ.जा.),HAMS,HAMS,-,-,-,-,-,-,-,-,-,±5000,0
-,229 - BODH GAYA (SC)बोध गया (अ.जा.),LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
-,230 - GAYA TOWNगया शहर,BJP (NDA),BJP (NDA),88058,90878,2820,INC (MGB),INC (MGB),64668,64455,23390,26423,26423,0
-,231 - TIKARIटिकारी,HAMS,RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
-,232 - BELAGANJबेलागंज,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,0
-,233 - ATRIअत्री,HAMS,HAMS,87244,102102,14858,RJD (MGB),RJD (MGB),63450,76325,23794,25777,25777,0
-,234 - WAZIRGANJवजीरगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-NAWADAनवादा,235 - RAJAULI (SC)राजौली (अ.जा.),RJD (MGB),LJP (NDA),88873,90272,1399,LJP (NDA),RJD (MGB),63370,86319,25503,3953,18503,-14550
-,236 - HISUAहिसुआ,BJP (NDA),BJP (NDA),106028,95885,-10143,INC (MGB),INC (MGB),73758,68036,32270,27849,27849,0
-,237 - NAWADAनवादा,JDU (NDA),JDU (NDA),108530,87423,-21107,RJD (MGB),RJD (MGB),76609,59829,31921,27594,27594,0
-,238 - GOBINDPURगोविंदपुर,LJP (NDA),LJP (NDA),94953,72581,-22372,RJD (MGB),RJD (MGB),50641,49675,44312,22906,37312,-14406
-,239 - WARSALIGANJवारसालीगंज,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
-JAMUIजमुई,240 - SIKANDRA (SC)सिकंदरा (अ.जा.),HAMS,HAMS,62602,91603,29001,RJD (MGB),RJD (MGB),45067,67696,17535,23907,23907,0
-,241 - JAMUIजमुई,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,242 - JHAJHAझाझा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
-,243 - CHAKAIचकाई,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+PASCHIM CHAMPARAN\nपश्चिम चंपारण,1 - VALMIKI NAGAR\nवाल्मीकि नगर,INC (MGB),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,2 - RAMNAGAR (SC)\nरामनगर (अ.जा.),BJP (NDA),BJP (NDA),87430,115214,27784,RJD (MGB),RJD (MGB),49086,79534,38344,35680,35680,0
+,3 - NARKATIAGANJ\nनरकटियागंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,4 - BAGAHA\nबगहा,BJP (NDA),BJP (NDA),101267,106875,5608,INC (MGB),INC (MGB),70889,100562,30378,6313,23378,-17065
+,5 - LAURIYA\nलौरिया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,6 - NAUTAN\nनौतन,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,7 - CHANPATIA\nचनपटिया,BJP (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,8 - BETTIAH\nबेतिया,BJP (NDA),BJP (NDA),98012,91907,-6105,INC (MGB),INC (MGB),44026,69534,53986,22373,46986,-24613
+,9 - SIKTA\nसिकटा,JDU (NDA),JDU (NDA),78131,97173,19042,CPIML (MGB),INDEPENDENT,39065,50029,39066,47144,46066,1078
+PURVI CHAMPARAN\nपूर्वी चम्पारण,10 - RAXAUL\nरक्सौल,BJP (NDA),BJP (NDA),97971,106765,8794,INC (MGB),INC (MGB),57659,88887,40312,17878,33312,-15434
+,11 - SUGAULI\nसुगौली,LJP (NDA),LJP (NDA),84281,98875,14594,VIP,JJD,48594,40684,35687,58191,42687,15504
+,12 - NARKATIA\nनरकटिया,JDU (NDA),JDU (NDA),115204,104450,-10754,RJD (MGB),RJD (MGB),105310,103007,9894,1443,2894,-1451
+,13 - HARSIDHI (SC)\nहरसिद्धि (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,14 - GOVINDGANJ\nगोविंदगंज,BJP (NDA),LJP/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,15 - KESARIA\nकेसरिया,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,16 - KALYANPUR\nकल्याणपुर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,17 - PIPRA\nपिपरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,18 - MADHUBAN\nमधुबन,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,19 - MOTIHARI\nमोतिहारी,BJP (NDA),BJP (NDA),99672,106080,6408,RJD (MGB),RJD (MGB),91560,92517,8112,13563,13563,0
+,20 - CHIRAIA\nचिरैया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,21 - DHAKA\nढाका,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+SHEOHAR\nशिवहर,22 - SHEOHAR\nशिवहर,JDU (NDA),JDU (NDA),89916,97269,7353,RJD (MGB),RJD (MGB),55834,65871,34082,31398,31398,0
+SITAMARHI\nसीतामढ़ी,23 - RIGA\nरीगा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,24 - BATHNAHA (SC)\nबथनाहा (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,25 - PARIHAR\nपरीहार,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,26 - SURSAND\nसुरसंड,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,27 - BAJPATTI\nबाजपट्टी,RLM,RLM,97650,99144,1494,RJD (MGB),RJD (MGB),72059,99749,25591,3395,18591,-15196
+,28 - SITAMARHI\nसीतामढ़ी,BJP (NDA),BJP (NDA),118418,104226,-14192,RJD (MGB),RJD (MGB),78945,98664,39473,5562,32473,-26911
+,29 - RUNNISAIDPUR\nरुन्नीसैदपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,30 - BELSAND\nबेलसंड,LJP (NDA),LJP (NDA),86109,82076,-4033,RJD (MGB),RJD (MGB),52441,59391,33668,22685,26668,-3983
+MADHUBANI\nमधुबनी,31 - HARLAKHI\nहरलाखी,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,32 - BENIPATTI\nबेनीपट्टी,BJP (NDA),BJP (NDA),87288,87153,-135,INC (MGB),INC (MGB),60556,63221,26732,23932,23932,0
+,33 - KHAJAULI\nखजौली,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,34 - BABUBARHI\nबाबूबरही,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,35 - BISFI\nबिस्फी,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,36 - MADHUBANI\nमधुबनी,RLM,RLM,87254,97956,10702,RJD (MGB),RJD (MGB),76347,77404,10907,20552,17907,2645
+,37 - RAJNAGAR (SC)\nराजनगर (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,38 - JHANJHARPUR\nझंझारपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,39 - PHULPARAS\nफुलपरास,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,40 - LAUKAHA\nलौकहा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+SUPAUL\nसुपौल,41 - NIRMALI\nनिर्मली,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,42 - PIPRA\nपिपरा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,43 - SUPAUL\nसुपौल,JDU (NDA),JDU (NDA),102834,109085,6251,INC (MGB),INC (MGB),85390,78282,17444,30803,24444,6359
+,44 - TRIVENIGANJ (SC)\nत्रिवेणीगंज (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,45 - CHHATAPUR\nछातापुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+ARARIA\nअररिया,46 - NARPATGANJ\nनरपतगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,47 - RANIGANJ (SC)\nरानीगंज (अ.जा.),JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,48 - FORBESGANJ\nफोर्बेस्गंज,BJP (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,49 - ARARIA\nअररिया,INC (MGB),INC (MGB),93314,91529,-1785,JDU (NDA),JDU (NDA),62908,78788,30406,12741,23406,-10665
+,50 - JOKIHAT\nजोकिहाट,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
+,51 - SIKTI\nसिकटी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+KISHANGANJ\nकिशनगंज,52 - BAHADURGANJ\nबहादुरगंज,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
+,53 - THAKURGANJ\nठाकुरगंज,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,54 - KISHANGANJ\nकिशनगंज,BJP (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,55 - KOCHADHAMAN\nकोचाधामन,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
+,56 - AMOUR\nअमौर,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
+,57 - BAISI\nबैसी,AIMIM,AIMIM,-,-,-,-,-,-,-,-,-,±5000,-
+,58 - KASBA\nकस्बा,LJP (NDA),LJP (NDA),86865,86877,12,INC (MGB),INC (MGB),71076,74002,15789,12875,12875,0
+PURNIA\nपूर्णिया,59 - BANMANKHI (SC)\nबनमनखी (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,60 - RUPAULI\nरूपौली,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,61 - DHAMDAHA\nधमदाहा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,62 - PURNIA\nपूर्णिया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+KATIHAR\nकटिहार,63 - KATIHAR\nकटिहार,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,64 - KADWA\nकदवा,INC (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,65 - BALRAMPUR\nबलरामपुर,CPIML (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,66 - PRANPUR\nप्राणपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,67 - MANIHARI (ST)\nमनीहारी (ज.जा.),JDU (NDA),INC (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,68 - BARARI\nबरारी,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,69 - KORHA (SC)\nकोरहा (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+MADHEPURA\nमधेपुरा,70 - ALAMNAGAR\nआलमनगर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,71 - BIHARIGANJ\nबिहारीगंज,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,72 - SINGHESHWAR (SC)\nसिंगेश्वर (अ.जा.),JDU (NDA),JDU (NDA),110169,106416,-3753,RJD (MGB),RJD (MGB),99677,103434,10492,2982,3492,-510
+,73 - MADHEPURA\nमधेपुरा,RJD (MGB),RJD (MGB),95414,108464,13050,JDU (NDA),JDU (NDA),57729,100655,42584,7809,35584,-27775
+SAHARSA\nसहरसा,74 - SONBARSHA (SC)\nसोनबर्षा (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,75 - SAHARSA\nसहरसा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,76 - SIMRI BAKHTIARPUR\nसिमरी बख्तियारपुर,RJD (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,77 - MAHISHI\nमहिषी,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,78 - KUSHESHWAR ASTHAN (SC)\nकुशेश्वर स्थान(अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+DARBHANGA\nदरभंगा,79 - GAURA BAURAM\nगौरा बौराम,VIP,BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,80 - BENIPUR\nबेनीपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,81 - ALINAGAR\nअलीनगर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,82 - DARBHANGA RURAL\nदरभंगा ग्रामीण,JDU (NDA),JDU (NDA),85701,80624,-5077,RJD (MGB),RJD (MGB),60191,62232,25510,18392,18392,0
+,83 - DARBHANGA\nदरभंगा,BJP (NDA),BJP (NDA),93723,97453,3730,VIP,VIP,69176,72806,24547,24593,24593,0
+,84 - HAYAGHAT\nहयाघाट,JDU (NDA),BJP/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,85 - BAHADURPUR\nबहादुरपुर,BJP (NDA),JDU/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,86 - KEOTI\nकेवटी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,87 - JALE\nजाले,BJP (NDA),BJP (NDA),98401,100496,2095,INC (MGB),INC (MGB),54342,78634,44059,21862,37059,-15197
+MUZAFFARPUR\nमुजफ्फरपुर,88 - GAIGHAT\nगायघाट,JDU (NDA),JDU (NDA),80755,108104,27349,RJD (MGB),RJD (MGB),75101,84687,5654,23417,12654,10763
+,89 - AURAI\nऔराई,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,90 - MINAPUR\nमीनापुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,91 - BOCHAHA (SC)\nबोचहां (अ.जा.),LJP (NDA),LJP (NDA),90923,108186,17263,RJD (MGB),RJD (MGB),84228,87870,6695,20316,13695,6621
+,92 - SAKRA (SC)\nसकरा (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,93 - KURHANI\nकुरहनी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,94 - MUZAFFARPUR\nमुजफ्फरपुर,BJP (NDA),BJP (NDA),92553,100477,7924,INC (MGB),INC (MGB),60149,67820,32404,32657,32657,0
+,95 - KANTI\nकांति,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,96 - BARURAJ\nबरुराज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,97 - PAROO\nपरू,RLM,RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,98 - SAHEBGANJ\nसाहेबगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+GOPALGANJ\nगोपालगंज,99 - BAIKUNTHPUR\nबैकुंठपुर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,100 - BARAULI\nबरौली,BJP (NDA),JDU/NDA (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+GOPALGANJ\nगोपालगंज,101 - GOPALGANJ\nगोपालगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,102 - KUCHAIKOTE\nकुचायकोटे,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,103 - BHOREY (SC)\nभोरे (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,104 - HATHUA\nहथुआ,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+SIWAN\nसिवान,105 - SIWAN\nसिवान,BJP (NDA),BJP (NDA),85525,92379,6854,RJD (MGB),RJD (MGB),66899,83009,18626,9370,11626,-2256
+,106 - ZIRADEI\nज़िरादेई,JDU (NDA),JDU (NDA),62179,66227,4048,CPIML (MGB),CPIML (MGB),48362,63601,13817,2626,6817,-4191
+,107 - DARAULI (SC)\nदरौली (अ.जा.),LJP (NDA),LJP (NDA),81065,83014,1949,CPIML (MGB),CPIML (MGB),55465,73442,25600,9572,18600,-9028
+,108 - RAGHUNATHPUR\nरघुनाथपुर,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,109 - DARAUNDHA\nदरौंधा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,110 - BARHARIA\nबड़हरिया,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,111 - GORIAKOTHI\nगोरियाकोठी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,112 - MAHARAJGANJ\nमहराजगंज,JDU (NDA),JDU (NDA),74408,86813,12405,RJD (MGB),RJD (MGB),61490,65714,25733,21099,21099,0
+SARAN\nसारण (छपरा),113 - EKMA\nएकमा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,114 - MANJHI\nमांझी,CPIM (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,115 - BANIAPUR\nबनियापुर,BJP (NDA),BJP (NDA),89823,95606,5783,RJD (MGB),RJD (MGB),83587,80170,6236,15436,13236,2200
+,116 - TARAIYA\nतरैया,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,117 - MARHAURA\nमरहौरा,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,118 - CHAPRA\nछपरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,119 - GARKHA (SC)\nगरखा (अ.जा.),RJD (MGB),RJD (MGB),88730,91134,2404,LJP (NDA),RJD (MGB),79127,78330,9603,12804,12804,0
+,120 - AMNOUR\nअमनौर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,121 - PARSA\nपरसा,RJD (MGB),RJD (MGB),98542,89093,-9449,JDU (NDA),JDU (NDA),78681,63321,19861,25772,25772,0
+,122 - SONEPUR\nसोनेपुर,BJP (NDA),BJP (NDA),81789,90842,9053,RJD (MGB),RJD (MGB),65431,86075,16358,4767,9358,-4591
+VAISHALI\nवैशाली,123 - HAJIPUR\nहाजीपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,124 - LALGANJ\nलालगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,125 - VAISHALI\nवैशाली,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,126 - MAHUA\nमहुआ,JJD,LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,127 - RAJA PAKAR (SC)\nराजा पाकर (अ.जा.),INC (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,128 - RAGHOPUR\nराघोपुर,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,129 - MAHNAR\nमहनार,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,130 - PATEPUR (SC)\nपातेपुर (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+SAMASTIPUR\nसमस्तीपुर,131 - KALYANPUR (SC)\nकल्याणपुर (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,132 - WARISNAGAR\nवारिसनगर,JDU (NDA),JDU (NDA),81207,108968,27761,CPIML (MGB),CPIML (MGB),69606,74532,11601,34436,18601,15835
+,133 - SAMASTIPUR\nसमस्तीपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,134 - UJIARPUR\nउजियारपुर,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,135 - MORWA\nमोरवा,RJD (MGB),RJD (MGB),75092,77770,2678,JDU (NDA),JDU (NDA),62537,69099,12555,8671,8671,0
+,136 - SARAIRANJAN\nसरायरंजन,JDU (NDA),JDU (NDA),92596,102792,10196,RJD (MGB),RJD (MGB),70947,81994,21649,20798,20798,0
+,137 - MOHIUDDINNAGAR\nमोहिउद्दीननगर,BJP (NDA),BJP (NDA),83971,89208,5237,RJD (MGB),RJD (MGB),61363,77526,22608,11682,15608,-3926
+,138 - BIBHUTIPUR\nबिभूतिपुर,JDU (NDA),CPI(M),-,-,-,-,-,-,-,-,-,±5000,-
+,139 - ROSERA (SC)\nरोसेरा (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,140 - HASANPUR\nहसनपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+BEGUSARAI\nबेगूसराय,141 - CHERIA BARIARPUR\nचेरिया बरियारपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,142 - BACHHWARA\nबछवाड़ा,BJP (NDA),BJP (NDA),79786,100343,20557,INC (MGB),INC (MGB),54205,84502,25581,15841,18581,-2740
+,143 - TEGHRA\nतेघरा,BJP (NDA),BJP (NDA),101961,112770,10809,CPI,CPI,48965,77406,55996,35364,48996,-13632
+,144 - MATIHANI\nमटिहानी,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,145 - SAHEBPUR KAMAL\nसाहेबपुर कमाल,LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,146 - BEGUSARAI\nबेगूसराय,BJP (NDA),BJP (NDA),96118,119506,23388,INC (MGB),INC (MGB),72432,88874,23686,30632,30632,0
+,147 - BAKHRI (SC)\nबखरी (अ.जा.),LJP (NDA),LJP (NDA),89350,98511,9161,CPI,CPI,58940,81193,30410,17318,23410,-6092
+KHAGARIA\nखगरिया,148 - ALAULI (SC)\nअलौली (अ.जा.),RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,149 - KHAGARIA\nखगरिया,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,150 - BELDAUR\nबेलदौर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,151 - PARBATTA\nपरबत्ता,LJP (NDA),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+BHAGALPUR\nभागलपुर,152 - BIHPUR\nबिहपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,153 - GOPALPUR\nगोपालपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,154 - PIRPAINTI (SC)\nपीरपैंती (अ.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,155 - KAHALGAON\nकहलगांव,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,156 - BHAGALPUR\nभागलपुर,BJP (NDA),BJP (NDA),95673,100770,5097,INC (MGB),INC (MGB),63782,87296,31891,13474,24891,-11417
+,157 - SULTANGANJ\nसुल्तानगंज,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,158 - NATHNAGAR\nनाथनगर,RJD (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+BANKA\nबांका,159 - AMARPUR\nअमरपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,160 - DHAURAIYA (SC)\nधौरैया (अ.जा.),RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,161 - BANKA\nबांका,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,162 - KATORIA (ST)\nकटोरिया प्रखण्ड (ज.जा.),BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,163 - BELHAR\nबेलहर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+MUNGER\nमुंगेर,164 - TARAPUR\nतारापुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,165 - MUNGER\nमुंगेर,BJP (NDA),BJP (NDA),75092,108028,32936,RJD (MGB),RJD (MGB),50061,89278,25031,18750,18031,719
+,166 - JAMALPUR\nजमालपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+LAKHISARAI\nलखीसराय,167 - SURYAGARHA\nसूर्यगढ़,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,168 - LAKHISARAI\nलखीसराय,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+SHEIKHPURA\nशेखपुरा,169 - SHEIKHPURA\nशेखपुरा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,170 - BARBIGHA\nबरबीघा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+NALANDA\nनालंदा,171 - ASTHAWAN\nअस्थावां,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,172 - BIHARSHARIF\nबिहारशरीफ,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,173 - RAJGIR (SC)\nराजगीर (अ.जा.),JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,174 - ISLAMPUR\nइस्लामपुर,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,175 - HILSA\nहिलसा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,176 - NALANDA\nनालंदा,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,177 - HARNAUT\nहरनौत,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,178 - MOKAMA\nमोकामा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+PATNA\nपटना,179 - BARH\nबाढ,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,180 - BAKHTIARPUR\nबख्तियारपुर,LJP (NDA),LJP (NDA),90870,88520,-2350,RJD (MGB),RJD (MGB),65584,87539,25286,981,18286,-17305
+,181 - DIGHA\nदीघा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,182 - BANKIPUR\nबांकीपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,183 - KUMHRAR\nकुम्हरार,BJP (NDA),BJP (NDA),92905,100485,7580,INC (MGB),INC (MGB),56093,52961,23727,47524,30727,16797
+,184 - PATNA SAHIB\nपटना साहिब,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,185 - FATUHA\nफतुहा,LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,186 - DANAPUR\nदानापुर,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,187 - MANER\nमनेर,RJD (MGB),RJD (MGB),102962,110798,7836,LJP (NDA),LJP (NDA),85056,90764,17906,20034,20034,0
+,188 - PHULWARI (SC)\nफुलवारी (अ.जा.),CPIML (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,189 - MASAURHI (SC)\nमसौर्ही (अ.जा.),JDU (NDA),JDU (NDA),116165,106505,-9660,RJD (MGB),RJD (MGB),60466,98862,55699,7643,48699,-41056
+,190 - PALIGANJ\nपालीगंज,CPIML (MGB),CPIML (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+,191 - BIKRAM\nबिक्रम,BJP (NDA),BJP (NDA),119503,101189,-18314,INC (MGB),INC (MGB),69668,95588,49835,5601,42835,-37234
+BHOJPUR\nभोजपुर,192 - SANDESH\nसंदेश,JDU (NDA),JDU (NDA),86741,80598,-6143,RJD (MGB),RJD (MGB),69153,80571,17588,27,10588,-10561
+,193 - BARHARA\nबरहरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,194 - ARRAH\nआरा,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,195 - AGIAON (SC)\nअगिआंव (अ.जा.),BJP (NDA),BJP (NDA),66690,69412,2722,CPIML (MGB),CPIML (MGB),50684,69317,16006,95,9006,-8911
+,196 - TARARI\nतरारी,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,197 - JAGDISHPUR\nजगदीशपुर,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,198 - SHAHPUR\nशाहपुर,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+BUXAR\nबक्सर,199 - BRAHAMPUR\nब्रहमपुर,RJD (MGB),RJD (MGB),94096,95828,1732,LJP (NDA),LJP (NDA),72520,92608,21576,3220,14576,-11356
+,200 - BUXAR\nबक्सर,INC (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+BUXAR\nबक्सर,201 - DUMRAON\nडुमरांव,JDU (NDA),JDU (NDA),99381,79411,-19970,CPIML (MGB),CPIML (MGB),70035,77306,29346,2105,22346,-20241
+,202 - RAJPUR (SC)\nराजपुर (अ.जा.),JDU (NDA),JDU (NDA),82029,80701,-1328,INC (MGB),INC (MGB),58285,71565,33744,9136,26744,-17608
+KAIMUR (BHABHUA)\nकैमूर (भभुआ),203 - RAMGARH\nरामगढ,BJP (NDA),BSP,-,-,-,-,-,-,-,-,-,±5000,-
+,204 - MOHANIA (SC)\nमोहनिया (अ.जा.),RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,205 - BHABUA\nभभुआ,RJD (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,206 - CHAINPUR\nचैनपुर,OTHERS,JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+ROHTAS\nरोहतास,207 - CHENARI (SC)\nचेनारी (अ.जा.),LJP (NDA),LJP (NDA),82677,95579,12902,INC (MGB),INC (MGB),62072,73591,20605,21988,21988,0
+,208 - SASARAM\nसासाराम,RLM,RLM,79097,105006,25909,RJD (MGB),RJD (MGB),72769,79563,6328,25443,13328,12115
+,209 - KARGAHAR\nकरगहर,JDU (NDA),JDU (NDA),79230,92485,13255,INC (MGB),BSP,49165,56809,21965,35676,28965,6711
+,210 - DINARA\nदिनारा,RLM,RLM,67846,78338,10492,RJD (MGB),RJD (MGB),56615,67504,11231,10834,10834,0
+,211 - NOKHA\nनोखा,JDU (NDA),JDU (NDA),71127,93193,22066,RJD (MGB),RJD (MGB),55608,69139,15519,24054,22519,1535
+,212 - DEHRI\nडेहरी,RJD (MGB),LJP (NDA),-,-,-,-,-,-,-,-,-,±5000,0
+,213 - KARAKAT\nकाराकाट,JDU (NDA),CPIML (MGB),-,-,-,-,-,-,-,-,-,±5000,0
+ARWAL\nअरवल,214 - ARWAL\nअरवल,CPIML (MGB),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,0
+,215 - KURTHA\nकुर्था,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,0
+JAHANABAD\nजहानाबाद,216 - JEHANABAD\nजहानाबाद,JDU (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
+,217 - GHOSI\nघोसी,JDU (NDA),JDU (NDA),81010,80740,-270,CPIML (MGB),CPIML (MGB),60587,68811,20423,11929,13423,-1494
+,218 - MAKHDUMPUR (SC)\nमखदमूपुर (अ.जा.),LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
+AURANGABAD\nऔरंगाबाद,219 - GOH\nगोह,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
+,220 - OBRA\nओबरा,LJP (NDA),LJP (NDA),81329,91638,10309,RJD (MGB),RJD (MGB),72768,79625,8561,12013,12013,0
+,221 - NABINAGAR\nनबीनगर,JDU (NDA),JDU (NDA),83733,80380,-3353,RJD (MGB),RJD (MGB),71328,80268,12405,112,5405,-5293
+,222 - KUTUMBA (SC)\nकुटुम्ब (अ.जा.),HAMS,HAMS,74819,84727,9908,INC (MGB),INC (MGB),53612,63202,21207,21525,21525,0
+,223 - AURANGABAD\nऔरंगाबाद,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,0
+,224 - RAFIGANJ\nरफीगंज,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,0
+GAYA\nगया,225 - GURUA\nगुरुआ,BJP (NDA),BJP (NDA),84309,99758,15449,RJD (MGB),RJD (MGB),78497,75564,5812,24194,12812,11382
+,226 - SHERGHATI\nशेरघाटी,LJP (NDA),LJP (NDA),74460,77270,2810,RJD (MGB),RJD (MGB),66704,63746,7756,13524,13524,0
+,227 - IMAMGANJ (SC)\nइमामगंज (अ.जा.),HAMS,HAMS,-,-,-,-,-,-,-,-,-,±5000,0
+,228 - BARACHATTI (SC)\nबराचट्टी (अ.जा.),HAMS,HAMS,-,-,-,-,-,-,-,-,-,±5000,0
+,229 - BODH GAYA (SC)\nबोध गया (अ.जा.),LJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
+,230 - GAYA TOWN\nगया शहर,BJP (NDA),BJP (NDA),88058,90878,2820,INC (MGB),INC (MGB),64668,64455,23390,26423,26423,0
+,231 - TIKARI\nटिकारी,HAMS,RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,0
+,232 - BELAGANJ\nबेलागंज,JDU (NDA),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,0
+,233 - ATRI\nअत्री,HAMS,HAMS,87244,102102,14858,RJD (MGB),RJD (MGB),63450,76325,23794,25777,25777,0
+,234 - WAZIRGANJ\nवजीरगंज,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+NAWADA\nनवादा,235 - RAJAULI (SC)\nराजौली (अ.जा.),RJD (MGB),LJP (NDA),88873,90272,1399,LJP (NDA),RJD (MGB),63370,86319,25503,3953,18503,-14550
+,236 - HISUA\nहिसुआ,BJP (NDA),BJP (NDA),106028,95885,-10143,INC (MGB),INC (MGB),73758,68036,32270,27849,27849,0
+,237 - NAWADA\nनवादा,JDU (NDA),JDU (NDA),108530,87423,-21107,RJD (MGB),RJD (MGB),76609,59829,31921,27594,27594,0
+,238 - GOBINDPUR\nगोविंदपुर,LJP (NDA),LJP (NDA),94953,72581,-22372,RJD (MGB),RJD (MGB),50641,49675,44312,22906,37312,-14406
+,239 - WARSALIGANJ\nवारसालीगंज,BJP (NDA),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-
+JAMUI\nजमुई,240 - SIKANDRA (SC)\nसिकंदरा (अ.जा.),HAMS,HAMS,62602,91603,29001,RJD (MGB),RJD (MGB),45067,67696,17535,23907,23907,0
+,241 - JAMUI\nजमुई,BJP (NDA),BJP (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,242 - JHAJHA\nझाझा,RJD (MGB),JDU (NDA),-,-,-,-,-,-,-,-,-,±5000,-
+,243 - CHAKAI\nचकाई,RJD (MGB),RJD (MGB),-,-,-,-,-,-,-,-,-,±5000,-

@@ -32,18 +32,13 @@ export function ResultTable<T>({ data, columns, scrollable = false, mergeCells =
   // Helper function to check if a cell should be hidden (part of a merged cell)
   const shouldHideCell = (rowIndex: number, columnKey: string): boolean => {
     return mergeCells.some(
-      (merge) =>
-        merge.columnKey === columnKey &&
-        rowIndex > merge.startRow &&
-        rowIndex < merge.startRow + merge.rowSpan
+      (merge) => merge.columnKey === columnKey && rowIndex > merge.startRow && rowIndex < merge.startRow + merge.rowSpan
     );
   };
 
   // Helper function to get rowspan for a cell
   const getCellRowSpan = (rowIndex: number, columnKey: string): number => {
-    const merge = mergeCells.find(
-      (m) => m.columnKey === columnKey && m.startRow === rowIndex
-    );
+    const merge = mergeCells.find((m) => m.columnKey === columnKey && m.startRow === rowIndex);
     return merge ? merge.rowSpan : 1;
   };
 
@@ -159,7 +154,9 @@ export function ResultTable<T>({ data, columns, scrollable = false, mergeCells =
                   return (
                     <TableHead
                       key={header.id}
-                      className={`text-white text-center px-2 break-words whitespace-normal h-auto py-2 ${scrollable ? 'min-w-[150px]' : ''}`}
+                      className={`border-r text-white text-center px-2 break-words whitespace-normal h-auto py-2 ${
+                        scrollable ? 'min-w-[150px]' : ''
+                      }`}
                     >
                       {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                     </TableHead>
@@ -185,7 +182,9 @@ export function ResultTable<T>({ data, columns, scrollable = false, mergeCells =
                       <TableCell
                         key={cell.id}
                         rowSpan={rowSpan}
-                        className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'} ${rowSpan > 1 ? 'align-middle' : ''}`}
+                        className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'} ${
+                          rowSpan > 1 ? 'align-middle' : ''
+                        }`}
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </TableCell>
