@@ -10,12 +10,13 @@ import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
 import { getTableData } from './tables/columns';
-import { getChartData, mapCSV } from './tables/utils/csvMapper';
+import { getChartData, mapCSV, recalculateMergeCells } from './tables/utils/csvMapper';
 import { CSVData, ElectionConfig, ElectionType } from './types';
 
 export default function StateDetailPage({ stateId }: { stateId: string }) {
   const [partyWiseData, setPartyWiseData] = useState<CSVData | null>(null);
   const [constituencyWiseData, setConstituencyWiseData] = useState<CSVData | null>(null);
+  const [currentDistrictData, setCurrentDistrictData] = useState<CSVData | null>(null);
   const [loading, setLoading] = useState(true);
   const config = electionData[stateId];
   const [currentElection, setCurrentElection] = useState(config?.availableElections[0]);
@@ -42,6 +43,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
       const text = response.data;
       const data = mapCSV(text, currentElection?.mergeColumns);
       setConstituencyWiseData(data);
+      setCurrentDistrictData(data);
     } catch (error) {
       console.log('Error fetching constituency-wise data:', error);
     }
@@ -62,6 +64,23 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
 
   const handleElectionChange = (election: (typeof config.availableElections)[0]) => {
     setCurrentElection(election);
+  };
+
+  const handleDistrictSelection = (district: string) => {
+    if (constituencyWiseData && constituencyWiseData.headers.includes('District')) {
+      const districtData = constituencyWiseData?.data.filter((entry) =>
+        entry['District'].toLowerCase().startsWith(district.toLowerCase())
+      );
+
+      // Recalculate merge cells for the filtered data
+      const updatedMergeCells = recalculateMergeCells(districtData, currentElection?.mergeColumns);
+
+      setCurrentDistrictData({
+        ...constituencyWiseData,
+        data: districtData,
+        mergeCells: updatedMergeCells,
+      });
+    }
   };
 
   if (!currentElection) {
@@ -99,14 +118,16 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
           </div>
         )}
-        {partyWiseData && <ResultTable {...getTableData(partyWiseData)} />}
+        {partyWiseData && <ResultTable {...getTableData(partyWiseData)} title="Party-wise Prediction Analysis" />}
         {partyWiseData && (
           <PartyVoteDistributionChart
             data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
           />
         )}
-        {constituencyWiseData && <ResultTable {...getTableData(constituencyWiseData)} scrollable />}
-        <StateMapChart name={stateId} height={300} scale={2000} onEntrySelected={console.log} />
+        <StateMapChart name={stateId} height={300} scale={2000} onEntrySelected={handleDistrictSelection} />
+        {currentDistrictData && (
+          <ResultTable {...getTableData(currentDistrictData)} scrollable title="Constituency-wise Survey Report" />
+        )}
         <Tooltip id="district-tooltip" />
       </div>
     </main>

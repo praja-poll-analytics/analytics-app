@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 
 interface ResultTableProps<T> {
+  title: string;
   data: T[];
   columns: ColumnDef<T>[];
   scrollable?: boolean;
@@ -25,7 +26,7 @@ interface ResultTableProps<T> {
 
 const pageSizes = [10, 25, 50, 100];
 
-export function ResultTable<T>({ data, columns, scrollable = false, mergeCells = [] }: ResultTableProps<T>) {
+export function ResultTable<T>({ title, data, columns, scrollable = false, mergeCells = [] }: ResultTableProps<T>) {
   const [searchQuery, setSearchQuery] = useState('');
   const [pageSize, setPageSize] = useState(25);
 
@@ -65,6 +66,9 @@ export function ResultTable<T>({ data, columns, scrollable = false, mergeCells =
 
   return (
     <div className="w-full">
+      {/* Title */}
+      {title && <h2 className="text-2xl font-bold text-neutral-900 mb-4">{title}</h2>}
+
       {/* Search and Page Size Row */}
       <div className="mb-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         {/* Search Input */}
