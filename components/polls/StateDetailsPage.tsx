@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { Button } from '../ui/button';
 import { ElectionSelector } from './ElectionSelector';
+import { Methodology } from './Methodology';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
@@ -135,7 +136,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
 
   return (
     <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10">
         {/* Header */}
         <div>
           <Link
@@ -176,6 +177,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
           />
         )}
+        {stateId === 'bihar' && <Methodology />}
         <div className="">
           {currentDistrictData && (
             <ResultTable
