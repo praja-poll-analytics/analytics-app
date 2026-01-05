@@ -13,7 +13,7 @@ import WhatsNewSection from './WhatsNewSection';
 export default function HomePage() {
   return (
     <section id="home" className="min-h-screen flex flex-col pt-16">
-      <div className="flex items-center bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 py-4 shadow-2xl">
+      <div className="flex items-center page-header">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
             {/* Left side - Name and Description */}

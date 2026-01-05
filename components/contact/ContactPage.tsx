@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '../ui/button';
 import Footer from '../home/Footer';
 import Navigation from '../home/Navigation';
+import { Button } from '../ui/button';
 
 interface ContactFormData {
   name: string;
@@ -66,7 +66,7 @@ const ContactPage = () => {
       <Navigation />
       <main className="pt-16">
         {/* Hero Header - matching home page style */}
-        <section className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 py-12 shadow-2xl">
+        <section className="page-header">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               Contact <span className="text-blue-400">Us</span>
@@ -80,7 +80,6 @@ const ContactPage = () => {
         {/* Form Section */}
         <section className="py-16 bg-white/80 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div className="bg-white rounded-2xl shadow-lg border border-neutral-200 p-8">
               {submitStatus === 'success' ? (
                 <div className="text-center py-8">
