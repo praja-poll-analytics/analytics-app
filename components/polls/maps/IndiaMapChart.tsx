@@ -1,5 +1,7 @@
+import { geoCentroid } from 'd3-geo';
 import React from 'react';
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
+import { stateAbbreviations } from './data';
 import { GeographiesRenderProps, Geography as GeographyType, IndiaMapChartProps } from './types';
 
 const commonStyle = {
@@ -18,6 +20,9 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
   onHoverStateChange,
   onEntrySelected,
 }) => {
+  const [hoveredState, setHoveredState] = React.useState<string | null>(null);
+  const [pressedState, setPressedState] = React.useState<string | null>(null);
+
   return (
     <ComposableMap
       projection="geoMercator"
@@ -29,12 +34,28 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
         {({ geographies }: GeographiesRenderProps) =>
           geographies.map((geo: GeographyType) => {
             const { name } = geo.properties;
+            const abbreviation = stateAbbreviations[name];
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const centroid = geoCentroid(geo as any);
+
+            const isHovered = hoveredState === name;
+            const isPressed = pressedState === name;
+            const textFill = isPressed || isHovered || defaultColorMapping?.[name] ? '#FFFFFF' : '#333';
+
             return (
               <React.Fragment key={geo.rsmKey}>
                 <Geography
                   geography={geo}
-                  onMouseEnter={() => onHoverStateChange?.(name)}
-                  onMouseLeave={() => onHoverStateChange?.(null)}
+                  onMouseEnter={() => {
+                    setHoveredState(name);
+                    onHoverStateChange?.(name);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredState(null);
+                    onHoverStateChange?.(null);
+                  }}
+                  onMouseDown={() => setPressedState(name)}
+                  onMouseUp={() => setPressedState(null)}
                   onClick={() => {
                     onEntrySelected(`${name}`);
                   }}
@@ -55,6 +76,19 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
                     },
                   }}
                 />
+                {abbreviation && (
+                  <Marker coordinates={centroid}>
+                    <text
+                      textAnchor="middle"
+                      fontSize={8}
+                      fontWeight="600"
+                      fill={textFill}
+                      style={{ userSelect: 'none', pointerEvents: 'none' }}
+                    >
+                      {abbreviation}
+                    </text>
+                  </Marker>
+                )}
               </React.Fragment>
             );
           })
