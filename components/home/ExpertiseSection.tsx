@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ReactSVG } from 'react-svg';
 
 export default function ExpertiseSection() {
@@ -13,16 +14,18 @@ export default function ExpertiseSection() {
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200',
       iconBg: 'bg-blue-500',
+      link: '/about#objectives',
     },
     {
       id: 2,
-      title: 'Leadership',
-      description: 'Experienced team with vision and expertise',
+      title: 'Trend Setting',
+      description: 'Industry-leading survey innovations',
       icon: '/assets/icons/leadership.svg',
       color: 'from-purple-500 to-purple-600',
       bgColor: 'bg-purple-50',
       borderColor: 'border-purple-200',
       iconBg: 'bg-purple-500',
+      link: '/about#trend-setting-surveys',
     },
     {
       id: 3,
@@ -33,6 +36,7 @@ export default function ExpertiseSection() {
       bgColor: 'bg-green-50',
       borderColor: 'border-green-200',
       iconBg: 'bg-green-500',
+      link: '/about#methodology',
     },
     {
       id: 4,
@@ -43,26 +47,29 @@ export default function ExpertiseSection() {
       bgColor: 'bg-yellow-50',
       borderColor: 'border-yellow-200',
       iconBg: 'bg-yellow-500',
+      link: '/about#specialization',
     },
     {
       id: 5,
-      title: 'Media Coverage',
-      description: 'Extensive presence across media platforms',
+      title: 'Election Surveys',
+      description: 'Track record of successful predictions',
       icon: '/assets/icons/media-coverage.svg',
       color: 'from-red-500 to-red-600',
       bgColor: 'bg-red-50',
       borderColor: 'border-red-200',
       iconBg: 'bg-red-500',
+      link: '/about#election-surveys',
     },
     {
       id: 6,
-      title: 'State Analysis',
-      description: 'Comprehensive regional insights and data',
+      title: 'About Us',
+      description: 'Our story and mission',
       icon: '/assets/icons/state-analysis.svg',
       color: 'from-indigo-500 to-indigo-600',
       bgColor: 'bg-indigo-50',
       borderColor: 'border-indigo-200',
       iconBg: 'bg-indigo-500',
+      link: '/about#about-us',
     },
   ];
 
@@ -85,8 +92,9 @@ export default function ExpertiseSection() {
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 relative">
             {expertiseItems.map((item) => (
-              <div
+              <Link
                 key={item.id}
+                href={item.link}
                 className="group relative flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 cursor-pointer"
               >
                 <div
@@ -106,7 +114,7 @@ export default function ExpertiseSection() {
                     className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl transition-opacity duration-500`}
                   ></div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
