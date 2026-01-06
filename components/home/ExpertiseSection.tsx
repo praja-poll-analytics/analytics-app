@@ -90,20 +90,16 @@ export default function ExpertiseSection() {
                 className="group relative flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 cursor-pointer"
               >
                 <div
-                  className={`items-center relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-3 sm:p-6 border-2 ${item.borderColor} ${item.bgColor} hover:border-opacity-100 border-opacity-50 w-full h-full flex flex-col justify-between`}
+                  className={`items-center relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-3 sm:p-6 border-2 border-gray-200 hover:border-gray-300 w-full h-full flex flex-col justify-between`}
                 >
                   <div
-                    className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-lg mb-2 sm:mb-4 transform transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110`}
+                    className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-gray-300 bg-white shadow-lg mb-2 sm:mb-4 transform transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110`}
                   >
-                    <ReactSVG src={item.icon} className="text-white size-6 sm:size-8" />
+                    <ReactSVG src={item.icon} className="text-black size-6 sm:size-8" />
                   </div>
 
                   <div className="flex-1 flex flex-col">
-                    <h3
-                      className={`text-sm sm:text-xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-1 sm:mb-2`}
-                    >
-                      {item.title}
-                    </h3>
+                    <h3 className="text-sm sm:text-lg font-semibold text-black mb-1 sm:mb-2">{item.title}</h3>
                   </div>
 
                   <div
