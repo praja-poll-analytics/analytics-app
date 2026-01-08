@@ -21,7 +21,7 @@ const stateColorMapping: Record<string, string> = {
   'Uttar Pradesh': MAP_COLORS.recentElection,
 };
 
-export default function ElectionResults() {
+export default function ElectionResults({ showTitle = true }: { showTitle?: boolean }) {
   const [selectedState, setSelectedState] = useState<string | null>(null);
   const [selectedStateStats, setSelectedStateStats] = useState<StateStats | null>(null);
 
@@ -38,9 +38,11 @@ export default function ElectionResults() {
   return (
     <section className="py-4 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-6">
-        <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-          Explore States
-        </h2>
+        {showTitle && (
+          <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+            Explore States
+          </h2>
+        )}
         <p className="text-sm lg:text-base text-gray-600 mb-4">Click to see election results</p>
         <div className="flex flex-wrap justify-center gap-4">
           {Object.entries(electionData).map(([key, data]) => (

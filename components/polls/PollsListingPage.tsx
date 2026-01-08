@@ -1,39 +1,25 @@
 'use client';
 
-import Footer from '@/components/home/Footer';
-import Navigation from '@/components/home/Navigation';
-import { useRouter } from 'next/navigation';
-import { Tooltip } from 'react-tooltip';
-import { electionData } from './data';
-import IndiaMapChart from './maps/IndiaMapChart';
+import ElectionResults from '../home/ElectionResults';
+import Navigation from '../home/Navigation';
 
 export default function PollsListingPage() {
-  const router = useRouter();
-
-  const onStateSelected = (stateName: string) => {
-    const key = stateName.toLowerCase().replaceAll(' ', '');
-    if (!!electionData[key]) {
-      router.push(`/polls/states/${key}`);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100">
       <Navigation />
-
-      <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">State Polls Analysis</h1>
-            <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
-              Explore comprehensive poll analytics and predictions for upcoming state elections across India
+      <main className="pt-16">
+        <section className="page-header">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              Election <span className="text-blue-400">Polls</span>
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              Explore our election survey results and predictions across Indian states
             </p>
           </div>
-          <IndiaMapChart onEntrySelected={onStateSelected} height={500} scale={800} />
-          <Tooltip id="map-tooltip" />
-        </div>
+        </section>
+        <ElectionResults showTitle={false} />
       </main>
-      <Footer />
     </div>
   );
 }
