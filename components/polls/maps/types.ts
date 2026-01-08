@@ -19,6 +19,8 @@ export interface IndiaMapChartProps {
   defaultColorMapping?: Record<string, string>;
   onHoverStateChange?: (stateName: string | null) => void;
   onEntrySelected: (stateName: string) => void;
+  selectedState?: string | null;
+  selectedStateColor?: string;
 }
 
 export interface StateMapChartProps {

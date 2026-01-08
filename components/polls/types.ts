@@ -53,3 +53,12 @@ export interface PartyChartData {
   estimated: number;
   actual: number;
 }
+
+export interface StateStats {
+  name: string;
+  mlas: number;
+  mpsLokSabha: number;
+  ulbs: number;
+  rajyaSabha: number;
+  legislativeCouncil: number;
+}

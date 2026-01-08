@@ -19,6 +19,8 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
   defaultColorMapping,
   onHoverStateChange,
   onEntrySelected,
+  selectedState,
+  selectedStateColor = '#EC5528',
 }) => {
   const [hoveredState, setHoveredState] = React.useState<string | null>(null);
   const [pressedState, setPressedState] = React.useState<string | null>(null);
@@ -40,7 +42,14 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
 
             const isHovered = hoveredState === name;
             const isPressed = pressedState === name;
-            const textFill = isPressed || isHovered || defaultColorMapping?.[name] ? '#FFFFFF' : '#333';
+            const isSelected = selectedState === name;
+            const hasColor = isSelected || defaultColorMapping?.[name];
+            const textFill = isPressed || isHovered || hasColor ? '#FFFFFF' : '#333';
+
+            const getFillColor = () => {
+              if (isSelected) return selectedStateColor;
+              return defaultColorMapping?.[name] || '#FFFFFF';
+            };
 
             return (
               <React.Fragment key={geo.rsmKey}>
@@ -63,7 +72,7 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
                   data-tooltip-content={name}
                   style={{
                     default: {
-                      fill: defaultColorMapping?.[name] || '#FFFFFF',
+                      fill: getFillColor(),
                       ...commonStyle,
                     },
                     hover: {
