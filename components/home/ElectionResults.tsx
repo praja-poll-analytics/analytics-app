@@ -1,9 +1,10 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-import { stateStats } from '../polls/data';
+import { electionData, stateStats } from '../polls/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
 import { StateStats } from '../polls/types';
 import StateStatsCard from './StateStatsCard';
@@ -40,9 +41,18 @@ export default function ElectionResults() {
         <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
           Explore States
         </h2>
-        <p className="text-sm lg:text-base text-gray-600">
-          Hover over a state to view statistics, click to see election results
-        </p>
+        <p className="text-sm lg:text-base text-gray-600 mb-4">Click to see election results</p>
+        <div className="flex flex-wrap justify-center gap-4">
+          {Object.entries(electionData).map(([key, data]) => (
+            <Link
+              key={key}
+              href={`/polls/states/${key}`}
+              className="px-4 py-2 text-sm font-medium rounded border border-primary text-primary transition-colors hover:bg-primary hover:!text-white"
+            >
+              {data.stateName}
+            </Link>
+          ))}
+        </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-center lg:items-center gap-6">
         <div className="lg:w-180 relative">
