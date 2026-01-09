@@ -29,8 +29,7 @@ export default function HomePage() {
 
             <div className="flex-shrink-0 order-1 md:order-2">
               <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-xl">
-                {' '}
-                <Image src="/assets/images/kmohanrao.jpeg" alt="" fill className="object-cover" />
+                <Image src="/assets/images/personnel/kmohanrao.jpeg" alt="" fill className="object-cover" />
               </div>
             </div>
           </div>

@@ -67,7 +67,7 @@ const DistributionChart = ({ data }: { data: { color: string; name: string; valu
           cx="50%"
           cy="50%"
           labelLine={false}
-          label={({ name, percent }) => <text>{`${name}: ${percent ? (percent * 100).toFixed(1) : '0'}%`}</text>}
+          label={({ name, percent }) => `${name}: ${percent ? (percent * 100).toFixed(1) : '0'}%`}
           outerRadius={80}
           fill="#8884d8"
           dataKey="value"
