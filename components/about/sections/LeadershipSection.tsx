@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ReactSVG } from 'react-svg';
-import { leadershipTeam, advisoryBoard } from '../data';
+import { advisoryBoard, leadershipTeam } from '../data';
 
 const LeadershipSection = () => {
   return (
@@ -36,7 +36,7 @@ const LeadershipSection = () => {
               </div>
               <h3 className="text-lg font-semibold text-gray-800 text-center mb-1">{member.name}</h3>
               <p className="text-sm text-indigo-600 text-center mb-3">{member.position}</p>
-              <p className="text-sm text-gray-600 text-center mb-4 line-clamp-3">{member.bio}</p>
+              <p className="text-sm text-gray-600 text-center mb-4">{member.bio}</p>
               <div className="flex flex-wrap justify-center gap-1">
                 {member.tags.slice(0, 3).map((tag, tagIdx) => (
                   <span

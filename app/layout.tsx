@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Archivo } from 'next/font/google';
 import './globals.css';
 
-const primaryFont = Poppins({
+const primaryFont = Archivo({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-primary',
