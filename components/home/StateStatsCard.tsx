@@ -1,5 +1,6 @@
 'use client';
 
+import StateMapChart from '../polls/maps/StateMapChart';
 import { StateStats } from '../polls/types';
 
 interface StateStatsCardProps {
@@ -25,32 +26,38 @@ export default function StateStatsCard({ stats, stateName }: StateStatsCardProps
       </div>
     );
   }
-
+  const key = stateName?.toLowerCase().replaceAll(' ', '');
   return (
     <div className="flex flex-col w-full justify-center items-center rounded-2xl p-6 shadow-lg min-h-[400px] border border-blue-100">
       {/* State Name */}
-      <h3 className="text-3xl font-black text-gray-900 mb-6 text-center tracking-tight">{stateName.toUpperCase()}</h3>
-
-      {/* Top Stats Row - MLAs, MPs, ULBs */}
-      <div className="flex justify-center gap-3 mb-4">
-        <div className="text-center">
-          <p className="text-sm font-semibold text-gray-600 mb-1">MLAs:</p>
-          <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
-            <span className="text-2xl font-bold">{stats.mlas}</span>
+      <div className="flex flex-col lg:flex-row w-full items-center justify-between">
+        <div className="flex flex-col">
+          <h3 className="text-3xl font-black text-gray-900 mb-6 text-center tracking-tight">
+            {stateName.toUpperCase()}
+          </h3>
+          {/* Top Stats Row - MLAs, MPs, ULBs */}
+          <div className="flex justify-center gap-3 mb-4">
+            <div className="text-center">
+              <p className="text-sm font-semibold text-gray-600 mb-1">MLAs:</p>
+              <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
+                <span className="text-2xl font-bold">{stats.mlas}</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-gray-600 mb-1">MPs:</p>
+              <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
+                <span className="text-2xl font-bold">{stats.mpsLokSabha}</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-gray-600 mb-1">ULBs:</p>
+              <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
+                <span className="text-2xl font-bold">{stats.ulbs}</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="text-center">
-          <p className="text-sm font-semibold text-gray-600 mb-1">MPs:</p>
-          <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
-            <span className="text-2xl font-bold">{stats.mpsLokSabha}</span>
-          </div>
-        </div>
-        <div className="text-center">
-          <p className="text-sm font-semibold text-gray-600 mb-1">ULBs:</p>
-          <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
-            <span className="text-2xl font-bold">{stats.ulbs}</span>
-          </div>
-        </div>
+        <StateMapChart name={key} width={500} height={300} scale={100} />
       </div>
 
       {/* Bottom Stats - Rajya Sabha & Legislative Council */}

@@ -39,6 +39,10 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
             const { district: districtName } = geo.properties;
             const isSelected =
               selectedDistrict && districtName?.toLowerCase().startsWith(selectedDistrict.toLowerCase());
+            if (!districtName) {
+              return null;
+            }
+            const defaultColor = isSelected ? '#1976D2' : defaultColorMapping?.[districtName] || '#FFFFFF';
             return (
               districtName && (
                 <React.Fragment key={geo.rsmKey}>
@@ -53,15 +57,15 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
                     data-tooltip-content={districtName}
                     style={{
                       default: {
-                        fill: isSelected ? '#1976D2' : defaultColorMapping?.[districtName] || '#FFFFFF',
+                        fill: defaultColor,
                         ...commonStyle,
                       },
                       hover: {
-                        fill: '#1976D2',
+                        fill: onHoverStateChange ? '#1976D2' : defaultColor,
                         ...commonStyle,
                       },
                       pressed: {
-                        fill: '#0D47A1',
+                        fill: onEntrySelected ? '#0D47A1' : defaultColor,
                         ...commonStyle,
                       },
                     }}

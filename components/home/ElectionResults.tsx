@@ -43,7 +43,7 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
             Explore States
           </h2>
         )}
-        <p className="text-sm lg:text-base text-gray-600 mb-4">Click to see recent election surveys</p>
+        <p className="text-sm lg:text-base text-gray-600 mb-4">For detailed analysis, click on states below.</p>
         <div className="flex flex-wrap justify-center gap-4">
           {Object.entries(electionData).flatMap(([key, data]) =>
             data.availableElections.map((election, index) => {
