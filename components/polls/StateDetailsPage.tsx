@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { Button } from '../ui/button';
@@ -16,13 +17,17 @@ import { getChartData, mapCSV, recalculateMergeCells } from './tables/utils/csvM
 import { CSVData, ElectionType } from './types';
 
 export default function StateDetailPage({ stateId }: { stateId: string }) {
+  const defaultQueryElectionType = useSearchParams().get('election');
+  console.log('Default Election Type from URL:', defaultQueryElectionType);
   const [partyWiseData, setPartyWiseData] = useState<CSVData | null>(null);
   const [constituencyWiseData, setConstituencyWiseData] = useState<CSVData | null>(null);
   const [currentDistrictData, setCurrentDistrictData] = useState<CSVData | null>(null);
   const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const config = electionData[stateId];
-  const [currentElection, setCurrentElection] = useState(config?.availableElections[0]);
+  const [currentElection, setCurrentElection] = useState(
+    config?.availableElections[defaultQueryElectionType ? parseInt(defaultQueryElectionType) : 0]
+  );
   const electionKey = !!currentElection
     ? currentElection.type === ElectionType.Assembly
       ? 'assembly'

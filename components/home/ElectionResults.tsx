@@ -6,7 +6,7 @@ import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { electionData, stateStats } from '../polls/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
-import { StateStats } from '../polls/types';
+import { ElectionType, StateStats } from '../polls/types';
 import StateStatsCard from './StateStatsCard';
 
 const MAP_COLORS = {
@@ -43,17 +43,26 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
             Explore States
           </h2>
         )}
-        <p className="text-sm lg:text-base text-gray-600 mb-4">Click to see election results</p>
+        <p className="text-sm lg:text-base text-gray-600 mb-4">Click to see recent election surveys</p>
         <div className="flex flex-wrap justify-center gap-4">
-          {Object.entries(electionData).map(([key, data]) => (
-            <Link
-              key={key}
-              href={`/polls/states/${key}`}
-              className="px-4 py-2 text-sm font-medium rounded border border-primary text-primary transition-colors hover:bg-primary hover:!text-white"
-            >
-              {data.stateName}
-            </Link>
-          ))}
+          {Object.entries(electionData).flatMap(([key, data]) =>
+            data.availableElections.map((election, index) => {
+              const year = election.surveyDate?.split('-').pop() || election.name.match(/\d{4}/)?.[0] || '';
+              const shortName = election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha';
+              return (
+                <Link
+                  key={`${key}-${index}`}
+                  href={`/polls/states/${key}?election=${index}`}
+                  className="px-8 py-3 rounded-lg bg-primary text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px]"
+                >
+                  <div className="text-lg font-semibold">{data.stateName}</div>
+                  <div className="text-base opacity-90">{shortName}</div>
+                  <div className="border-t border-white/30 my-1.5"></div>
+                  <div className="text-sm font-medium">{year}</div>
+                </Link>
+              );
+            })
+          )}
         </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-center lg:items-center gap-6">
