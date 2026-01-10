@@ -128,6 +128,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
           name={stateId}
           height={300}
           scale={2000}
+          onHoverStateChange={() => {}}
           onEntrySelected={handleDistrictSelection}
           selectedDistrict={selectedDistrict}
         />
@@ -140,24 +141,23 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
   }
 
   return (
-    <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col gap-10">
-        {/* Header */}
-        <div>
+    <div className="py-16">
+      <section className="page-header mb-6 px-6 lg:px-0">
+        <div className="max-w-7xl mx-auto">
           <Link
             href="/polls"
-            className="inline-flex items-center text-primary hover:text-primary-light mb-4 transition-colors"
+            className="inline-flex items-center text-blue-300 hover:text-blue-200 mb-4 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Polls
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">{config.stateName}</h1>
-          <p className="text-neutral-600 text-lg mb-6">{currentElection.name}</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">{config.stateName}</h1>
+          <p className="text-white/80 text-lg">{currentElection.name}</p>
         </div>
-
-        {/* Election Type Selector */}
+      </section>
+      <div className="max-w-7xl mx-auto flex flex-col gap-10 px-6 lg:px-0">
         {config.availableElections.length > 1 && (
           <ElectionSelector
             availableElections={config.availableElections}
@@ -196,6 +196,6 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
         </div>
         <Tooltip id="district-tooltip" />
       </div>
-    </main>
+    </div>
   );
 }
