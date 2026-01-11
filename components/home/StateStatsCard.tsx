@@ -1,15 +1,19 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+import { electionData, stateStats } from '../polls/data';
+import { getKeyFromStateName } from '../polls/maps/data';
 import StateMapChart from '../polls/maps/StateMapChart';
-import { StateStats } from '../polls/types';
+import { ElectionType } from '../polls/types';
 
 interface StateStatsCardProps {
-  stats: StateStats | null;
   stateName: string | null;
 }
 
-export default function StateStatsCard({ stats, stateName }: StateStatsCardProps) {
-  if (!stats || !stateName) {
+export default function StateStatsCard({ stateName }: StateStatsCardProps) {
+  const router = useRouter();
+
+  if (!stateName) {
     return (
       <div className="bg-blue-50 rounded-2xl p-6 shadow-lg h-full flex flex-col justify-center items-center text-center min-h-[400px] border border-blue-100">
         <div className="text-blue-300 mb-2">
@@ -26,7 +30,28 @@ export default function StateStatsCard({ stats, stateName }: StateStatsCardProps
       </div>
     );
   }
-  const key = stateName?.toLowerCase().replaceAll(' ', '');
+
+  const key = getKeyFromStateName(stateName);
+  const stats = stateStats[key];
+
+  const navigateToStatePolls = (type: ElectionType) => {
+    const availableElectionIndex = electionData[key]?.availableElections.findIndex(
+      (election) => election.type === type
+    );
+    if (availableElectionIndex !== -1 && availableElectionIndex !== undefined) {
+      const url = `/polls/states/${key}?election=${availableElectionIndex}`;
+      router.push(url);
+    }
+  };
+
+  const onMLAClick = () => {
+    navigateToStatePolls(ElectionType.Assembly);
+  };
+
+  const onMPClick = () => {
+    navigateToStatePolls(ElectionType.LokSabha);
+  };
+
   return (
     <div className="flex flex-col w-full justify-center items-center rounded-2xl p-6 shadow-lg min-h-[400px] border border-blue-100">
       {/* State Name */}
@@ -37,13 +62,13 @@ export default function StateStatsCard({ stats, stateName }: StateStatsCardProps
           </h3>
           {/* Top Stats Row - MLAs, MPs, ULBs */}
           <div className="flex justify-center gap-3 mb-4">
-            <div className="text-center">
+            <div className="text-center cursor-pointer" onClick={onMLAClick}>
               <p className="text-sm font-semibold text-gray-600 mb-1">MLAs:</p>
               <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
                 <span className="text-2xl font-bold">{stats.mlas}</span>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center cursor-pointer" onClick={onMPClick}>
               <p className="text-sm font-semibold text-gray-600 mb-1">MPs:</p>
               <div className="bg-primary text-white px-4 py-3 rounded-lg min-w-[70px]">
                 <span className="text-2xl font-bold">{stats.mpsLokSabha}</span>

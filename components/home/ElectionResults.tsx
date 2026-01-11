@@ -4,10 +4,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-import { electionData, partyColorMapping, stateStats } from '../polls/data';
-import { statesMapConfig } from '../polls/maps/data';
+import { electionData, partyColorMapping } from '../polls/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
-import { ElectionConfig, ElectionType, StateStats } from '../polls/types';
+import { ElectionConfig, ElectionType } from '../polls/types';
 import StateStatsCard from './StateStatsCard';
 
 const MAP_COLORS = {
@@ -24,7 +23,6 @@ const getStateColor = (election: ElectionConfig) => {
 
 export default function ElectionResults({ showTitle = true }: { showTitle?: boolean }) {
   const [selectedState, setSelectedState] = useState<string | null>(null);
-  const [selectedStateStats, setSelectedStateStats] = useState<StateStats | null>(null);
   const stateColorMapping = Object.entries(electionData).reduce((acc, [, data]) => {
     const latestElection = data.availableElections[0];
     const color = getStateColor(latestElection).bgColor;
@@ -34,16 +32,6 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
 
   const onStateSelected = (stateName: string) => {
     setSelectedState(stateName);
-    if (stateName) {
-      const key = Object.entries(statesMapConfig).find(([, data]) => data.name === stateName)?.[0];
-      if (!key) {
-        setSelectedStateStats(null);
-        return;
-      }
-      setSelectedStateStats(stateStats[key] || null);
-    } else {
-      setSelectedStateStats(null);
-    }
   };
 
   return (
@@ -111,7 +99,7 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
           <Tooltip id="map-tooltip" />
         </div>
         <div className="lg:w-172">
-          <StateStatsCard stats={selectedStateStats} stateName={selectedState} />
+          <StateStatsCard stateName={selectedState} />
         </div>
       </div>
     </section>

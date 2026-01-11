@@ -213,3 +213,10 @@ export const statesMapConfig: Record<string, { name: string; scaleMap?: number; 
     centerMap: [87.5, 24],
   },
 };
+
+export const getKeyFromStateName = (stateName: string): string => {
+  return (
+    Object.entries(statesMapConfig).find(([, config]) => config.name === stateName)?.[0] ||
+    stateName.toLowerCase().replace(/\s+/g, '')
+  );
+};
