@@ -3,13 +3,7 @@ import { useRef } from 'react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const carouselImages = [
-  'https://indianpac.s3.ap-south-1.amazonaws.com/wp-content/uploads/2025/05/21113732/IMPACT_Delhi_2.webp',
-  'https://indianpac.s3.ap-south-1.amazonaws.com/wp-content/uploads/2025/05/14132551/IMPACT_WB.webp',
-  'https://indianpac.s3.ap-south-1.amazonaws.com/wp-content/uploads/2021/07/our-impact-tn.webp',
-  'https://indianpac.s3.ap-south-1.amazonaws.com/wp-content/uploads/2021/07/our-impact-mh.webp',
-  'https://indianpac.s3.ap-south-1.amazonaws.com/wp-content/uploads/2021/07/our-impact-up.webp',
-];
+const carouselImages = Array.from({ length: 6 }, (_, i) => `/assets/images/carousel/carousel_${i + 1}.jpeg`);
 
 export const ImageCarousel = () => {
   const swiperRef = useRef(null);
