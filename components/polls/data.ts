@@ -14,26 +14,6 @@ export const electionData: Record<string, StateElectionData> = {
       },
     ],
   },
-  bihar: {
-    stateName: 'Bihar',
-    availableElections: [
-      {
-        name: 'Bihar Legislative Assembly Election 2025',
-        type: ElectionType.Assembly,
-        estimatedColumn: 'Estimated Seats Prediction',
-        actualColumn: 'Actual Seats After Results on 14-11-2025',
-        mergeColumns: [
-          'Alliance',
-          'District',
-          'Expected Total Seats',
-          'Actual Total Seats After Results 14-11-2025',
-          'After Adjustment With Variation By PPA',
-          'Differences',
-        ],
-        rulingParty: 'BJP',
-      },
-    ],
-  },
   andhrapradesh: {
     stateName: 'Andhra Pradesh',
     availableElections: [
@@ -52,6 +32,26 @@ export const electionData: Record<string, StateElectionData> = {
         actualColumn: 'Actual Results 2024',
         rulingParty: 'YSRCP',
         partyNameColumns: ['Party Name', 'Winning Party Predicted', 'Winning Party Actual'],
+      },
+    ],
+  },
+  bihar: {
+    stateName: 'Bihar',
+    availableElections: [
+      {
+        name: 'Bihar Legislative Assembly Election 2025',
+        type: ElectionType.Assembly,
+        estimatedColumn: 'Estimated Seats Prediction',
+        actualColumn: 'Actual Seats After Results on 14-11-2025',
+        mergeColumns: [
+          'Alliance',
+          'District',
+          'Expected Total Seats',
+          'Actual Total Seats After Results 14-11-2025',
+          'After Adjustment With Variation By PPA',
+          'Differences',
+        ],
+        rulingParty: 'BJP',
       },
     ],
   },

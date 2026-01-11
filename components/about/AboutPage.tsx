@@ -103,8 +103,8 @@ const AboutPage = () => {
           {activeTab === 'who-we-are' && (
             <>
               <AboutUsSection />
-              <ObjectivesSection />
               <LeadershipSection />
+              <ObjectivesSection />
             </>
           )}
 

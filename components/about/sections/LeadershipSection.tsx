@@ -25,7 +25,7 @@ const LeadershipSection = () => {
               key={idx}
               className="bg-white/80 backdrop-blur-sm rounded-2xl border border-indigo-100 p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
             >
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-100 shadow-md">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-100 shadow-md hover:scale-145 transition-transform">
                 <Image
                   src={member.image}
                   alt={member.name}
