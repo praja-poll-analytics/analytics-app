@@ -1,4 +1,4 @@
-import { CSVData, MergeCellInfo, PartyChartData } from '../../types';
+import { CSVData, ElectionConfig, MergeCellInfo, PartyChartData } from '../../types';
 
 // Helper function to calculate merge cells for given data
 const calculateMergeCells = (data: Record<string, string>[], mergeColumns?: string[]): MergeCellInfo[] => {
@@ -43,7 +43,7 @@ const calculateMergeCells = (data: Record<string, string>[], mergeColumns?: stri
   return mergeCells;
 };
 
-export const mapCSV = (csv: string, mergeColumns?: string[]): CSVData => {
+export const mapCSV = (csv: string, electionConfig?: ElectionConfig): CSVData => {
   const lines = csv.split('\n').filter((line) => line.trim());
   const headers = lines[0].split(',').map((header) => header.trim());
   const data = lines.slice(1).map((line) => {
@@ -54,8 +54,8 @@ export const mapCSV = (csv: string, mergeColumns?: string[]): CSVData => {
     }, {} as Record<string, string>);
   });
 
-  const mergeCells = calculateMergeCells(data, mergeColumns);
-  return { data, headers, mergeCells };
+  const mergeCells = calculateMergeCells(data, electionConfig?.mergeColumns);
+  return { data, headers, mergeCells, partyNameColumns: electionConfig?.partyNameColumns };
 };
 
 // Recalculate merge cells for filtered data

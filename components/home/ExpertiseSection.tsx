@@ -51,7 +51,7 @@ export default function ExpertiseSection() {
       description: 'Track record of success',
       icon: '/assets/icons/state-analysis.svg',
       color: 'from-amber-500 to-amber-600',
-      link: '/about?tab=our-work#election-surveys',
+      link: '/polls',
     },
     {
       id: 7,

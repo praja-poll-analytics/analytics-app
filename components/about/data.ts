@@ -126,15 +126,15 @@ export const mediaCoverage: MediaCoverage[] = [
     youtubeUrl: 'https://youtu.be/-xtVbVLCgfs',
   },
   {
-    title: 'Press Coverage - Amar Ujala',
+    title: 'Press Coverage - Election Analysis',
     type: 'press',
-    description: 'Featured in Amar Ujala for election predictions and analytical approaches',
+    description: 'Featured in South Indian Newspaper',
     image: '/assets/images/coverage/newspaper1.jpeg',
   },
   {
     title: 'Media Interviews',
     type: 'press',
-    description: 'Expert commentary on election forecasting techniques in leading media outlets',
+    description: 'Featured in Amar Ujala for election predictions and analytical approaches',
     image: '/assets/images/coverage/newspaper2.jpeg',
   },
 ];

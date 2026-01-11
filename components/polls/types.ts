@@ -33,12 +33,16 @@ export interface ElectionConfig {
   actualColumn: string;
   scrollableTable?: boolean;
   mergeColumns?: string[];
+  isUpcoming?: boolean;
+  rulingParty?: string;
+  partyNameColumns?: string[];
 }
 
 export interface CSVData {
   data: Record<string, string>[];
   headers: string[];
   mergeCells?: MergeCellInfo[];
+  partyNameColumns?: string[];
 }
 
 export interface MergeCellInfo {

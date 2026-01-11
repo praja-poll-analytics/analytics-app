@@ -43,7 +43,7 @@ export default function PartyVoteDistributionChart({ data }: PartyVoteDistributi
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">Party-wise Vote Distribution</h2>
+      <h2 className="text-2xl font-bold mb-6">Party seat wise percentage distribution</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-gradient-to-br from-neutral-50 via-primary/5 to-neutral-100 backdrop-blur-sm rounded-xl border p-6">
           <h3 className="text-lg font-semibold mb-4">Predicted Votes</h3>

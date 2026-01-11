@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-import { electionData, stateStats } from '../polls/data';
+import { electionData, partyColorMapping, stateStats } from '../polls/data';
+import { statesMapConfig } from '../polls/maps/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
-import { ElectionType, StateStats } from '../polls/types';
+import { ElectionConfig, ElectionType, StateStats } from '../polls/types';
 import StateStatsCard from './StateStatsCard';
 
 const MAP_COLORS = {
@@ -15,20 +16,30 @@ const MAP_COLORS = {
   selectedState: '#EC5528',
 };
 
-const stateColorMapping: Record<string, string> = {
-  Bihar: MAP_COLORS.upcomingElection,
-  'Andhra Pradesh': MAP_COLORS.recentElection,
-  'Uttar Pradesh': MAP_COLORS.recentElection,
+const getStateColor = (election: ElectionConfig) => {
+  const bgColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.bg : MAP_COLORS.upcomingElection;
+  const fgColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.fg : '#FFFFFF';
+  return { bgColor, fgColor };
 };
 
 export default function ElectionResults({ showTitle = true }: { showTitle?: boolean }) {
   const [selectedState, setSelectedState] = useState<string | null>(null);
   const [selectedStateStats, setSelectedStateStats] = useState<StateStats | null>(null);
+  const stateColorMapping = Object.entries(electionData).reduce((acc, [, data]) => {
+    const latestElection = data.availableElections[0];
+    const color = getStateColor(latestElection).bgColor;
+    acc[data.stateName] = color;
+    return acc;
+  }, {} as Record<string, string>);
 
   const onStateSelected = (stateName: string) => {
     setSelectedState(stateName);
     if (stateName) {
-      const key = stateName.toLowerCase().replaceAll(' ', '');
+      const key = Object.entries(statesMapConfig).find(([, data]) => data.name === stateName)?.[0];
+      if (!key) {
+        setSelectedStateStats(null);
+        return;
+      }
       setSelectedStateStats(stateStats[key] || null);
     } else {
       setSelectedStateStats(null);
@@ -47,18 +58,25 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
         <div className="flex flex-wrap justify-center gap-4">
           {Object.entries(electionData).flatMap(([key, data]) =>
             data.availableElections.map((election, index) => {
-              const year = election.surveyDate?.split('-').pop() || election.name.match(/\d{4}/)?.[0] || '';
+              const year = election.isUpcoming
+                ? 'Upcoming'
+                : election.surveyDate?.split('-').pop() || election.name.match(/\d{4}/)?.[0] || '';
               const shortName = election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha';
+              const { bgColor, fgColor } = getStateColor(election);
               return (
                 <Link
                   key={`${key}-${index}`}
                   href={`/polls/states/${key}?election=${index}`}
-                  className="px-8 py-3 rounded-lg bg-primary text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px]"
+                  style={{ backgroundColor: bgColor, color: fgColor }}
+                  className="rounded-lg overflow-hidden text-white transition-all hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px] border-2"
                 >
-                  <div className="text-lg font-semibold">{data.stateName}</div>
-                  <div className="text-base opacity-90">{shortName}</div>
-                  <div className="border-t border-white/30 my-1.5"></div>
-                  <div className="text-sm font-medium">{year}</div>
+                  <div className="px-4 py-3 text-center">
+                    <div className="text-lg font-semibold">{data.stateName}</div>
+                    <div className="text-sm opacity-90">{shortName}</div>
+                  </div>
+                  <div className="text-sm font-semibold py-2 bg-white text-center text-gray-800 border-t border-gray-200">
+                    {year}
+                  </div>
                 </Link>
               );
             })

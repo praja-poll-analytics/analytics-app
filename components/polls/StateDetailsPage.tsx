@@ -18,7 +18,6 @@ import { CSVData, ElectionType } from './types';
 
 export default function StateDetailPage({ stateId }: { stateId: string }) {
   const defaultQueryElectionType = useSearchParams().get('election');
-  console.log('Default Election Type from URL:', defaultQueryElectionType);
   const [partyWiseData, setPartyWiseData] = useState<CSVData | null>(null);
   const [constituencyWiseData, setConstituencyWiseData] = useState<CSVData | null>(null);
   const [currentDistrictData, setCurrentDistrictData] = useState<CSVData | null>(null);
@@ -38,24 +37,24 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
     try {
       const response = await axios.get(`/data/${stateId}/${electionKey}-party-wise.csv`);
       const text = response.data;
-      const data = mapCSV(text, currentElection?.mergeColumns);
+      const data = mapCSV(text, currentElection);
       setPartyWiseData(data);
     } catch (error) {
       console.log('Error fetching party-wise data:', error);
     }
-  }, [stateId, electionKey, currentElection?.mergeColumns]);
+  }, [stateId, electionKey, currentElection]);
 
   const fetchConstituencyWiseData = useCallback(async () => {
     try {
       const response = await axios.get(`/data/${stateId}/${electionKey}-constituency-wise.csv`);
       const text = response.data;
-      const data = mapCSV(text, currentElection?.mergeColumns);
+      const data = mapCSV(text, currentElection);
       setConstituencyWiseData(data);
       setCurrentDistrictData(data);
     } catch (error) {
       console.log('Error fetching constituency-wise data:', error);
     }
-  }, [stateId, electionKey, currentElection?.mergeColumns]);
+  }, [stateId, electionKey, currentElection]);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
