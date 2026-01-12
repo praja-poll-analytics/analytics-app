@@ -46,10 +46,10 @@ Agra,Agra Rural,BJP,107539,129887,+22348
 Agra,Fatehabad,BJP,96511,101960,+5449
 Agra,Agra North,BSP,92203,-,-
 Agra,Agra South,BJP,97118,111882,+14764
-Shahjhanpur,Shahjahanpur,BJP,11317,100734,+89417
-Shahjhanpur,Tilhar,CONGRESS,77738,-,-
-Shahjhanpur,Pawayan,BJP,116148,126635,+10487
-Shahjhanpur,Jalalabad,BJP,90708,-,-
+Shahjahanpur,Shahjahanpur,BJP,11317,100734,+89417
+Shahjahanpur,Tilhar,CONGRESS,77738,-,-
+Shahjahanpur,Pawayan,BJP,116148,126635,+10487
+Shahjahanpur,Jalalabad,BJP,90708,-,-
 Hardoi,Bilgram-Mallavan,SP,84407,-,-
 Hardoi,Sandeela,SP,80492,-,-
 Hardoi,Sawayajpur,SP,89535,-,-
@@ -77,16 +77,16 @@ Fatehpur,Fatehpur Sadar,BJP,98216,89481,-8735
 Fatehpur,Jahanabad,BJP-Apana Dal,84220,81438,-2782
 Fatehpur,Bindaki,BJP,96244,97996,+1752
 Fatehpur,Khaga,BJP,82489,94954,+12465
-Badayun,Sahasvan,SP,98741,77543,-21198
-Badayun,Bilsi,BSP,76410,-,-
-Badayun,Badaun,BJP,78956,87314,+8358
-Badayun,Shekhupur,SP,98673,-,-
-Deoriya,Deoriya Sadar,BJP,75242,88030,+12788
-Deoriya,Rampur Karkhana,BJP,49752,62886,+13134
-Deoriya,Barhaj,BJP,66622,61996,-4626
-Deoriya,Pathardeva,BJP,73147,99812,+26665
-Deoriya,Ruddhpur,BJP,78838,77754,-1084
-Deoriya,Salempur,BJP,85653,76175,-9478
+Budaun,Sahasvan,SP,98741,77543,-21198
+Budaun,Bilsi,BSP,76410,-,-
+Budaun,Badaun,BJP,78956,87314,+8358
+Budaun,Shekhupur,SP,98673,-,-
+Deoria,Deoriya Sadar,BJP,75242,88030,+12788
+Deoria,Rampur Karkhana,BJP,49752,62886,+13134
+Deoria,Barhaj,BJP,66622,61996,-4626
+Deoria,Pathardeva,BJP,73147,99812,+26665
+Deoria,Ruddhpur,BJP,78838,77754,-1084
+Deoria,Salempur,BJP,85653,76175,-9478
 Basti,Rudhauli,BJP,83250,90311,+7061
 Basti,Basti Sadar,BJP,79952,92697,+12745
 Basti,Kaptanganj,BJP,82601,70527,-12074
@@ -101,22 +101,22 @@ Mathura,Mont,RLD,72243,-,-
 Mathura,Govardhan,RLD,75765,-,-
 Mathura,Baldev,RLD,80765,-,-
 Mathura,Mathura,RLD,81528,-,-
-Bulandshahar,Diwai,BSP,76415,-,-
-Bulandshahar,AnoopShahar,BJP,82071,112431,+30360
-Bulandshahar,Bulandshahar,BJP,86805,111538,+24733
-Bulandshahar,Shikarpur,BJP,81325,101912,+20587
-Bulandshahar,Sikandarabad,BJP,91747,104956,+13209
-Bulandshahar,Syana,BJP,108784,125854,+17070
-Bulandshahar,Khurja,BJP,90262,119493,+29231
-Raibareli,Sareni,CONGRESS,81243,-,-
-Raibareli,Harchandpur,CONGRESS,64821,65104,+283
-Raibareli,Salon,CONGRESS,70680,-,-
-Raibareli,Bachharawan,CONGRESS,68626,-,-
-Siddharthnagar,Banshi,BJP,86642,77548,-9094
-Siddharthnagar,Dumariyaganj,BSP,52801,-,-
-Siddharthnagar,Itawan,SP,66706,-,-
-Siddharthnagar,Shohratgarh,BJP-Apana Dal,75706,66653,-9053
-Siddharthnagar,Kapilvastu,BJP,94811,114082,+19271
+Bulandshahr,Diwai,BSP,76415,-,-
+Bulandshahr,AnoopShahar,BJP,82071,112431,+30360
+Bulandshahr,Bulandshahar,BJP,86805,111538,+24733
+Bulandshahr,Shikarpur,BJP,81325,101912,+20587
+Bulandshahr,Sikandarabad,BJP,91747,104956,+13209
+Bulandshahr,Syana,BJP,108784,125854,+17070
+Bulandshahr,Khurja,BJP,90262,119493,+29231
+Rae Bareli,Sareni,CONGRESS,81243,-,-
+Rae Bareli,Harchandpur,CONGRESS,64821,65104,+283
+Rae Bareli,Salon,CONGRESS,70680,-,-
+Rae Bareli,Bachharawan,CONGRESS,68626,-,-
+Siddharth Nagar,Banshi,BJP,86642,77548,-9094
+Siddharth Nagar,Dumariyaganj,BSP,52801,-,-
+Siddharth Nagar,Itawan,SP,66706,-,-
+Siddharth Nagar,Shohratgarh,BJP-Apana Dal,75706,66653,-9053
+Siddharth Nagar,Kapilvastu,BJP,94811,114082,+19271
 Varanasi,Rohaniyan,BJP,67991,119885,+51894
 Varanasi,Sewapuri,BJP-Apana Dal,57136,103423,+46287
 Varanasi,Shivpur,BJP,79805,110453,+30648
@@ -132,13 +132,13 @@ Jaunpur,Machhlishahar,BSP,66746,-,-
 Jaunpur,Madiyahu,BJP-Apana Dal,59731,58804,-927
 Jaunpur,Mugra Badshahpur,BJP,63824,-,-
 Jaunpur,Badlapur,BJP,60770,60237,-533
-Balia,Balia,BJP,88311,92889,+4578
-Balia,Baansdeeh,BJP,59847,-,-
-Balia,Sikandarpur,BSP,54145,-,-
-Balia,Fefna,BJP,65182,70589,+5407
-Balia,Belthara Road,BJP,63900,77504,+13604
-Balia,Rasanda,BSP,70512,92272,+21760
-Balia,Bairiya,BJP,59812,64868,+5056
+Ballia,Balia,BJP,88311,92889,+4578
+Ballia,Baansdeeh,BJP,59847,-,-
+Ballia,Sikandarpur,BSP,54145,-,-
+Ballia,Fefna,BJP,65182,70589,+5407
+Ballia,Belthara Road,BJP,63900,77504,+13604
+Ballia,Rasanda,BSP,70512,92272,+21760
+Ballia,Bairiya,BJP,59812,64868,+5056
 Mau,Mau Sadar,SP,90831,-,-
 Mau,Mohamdabad,BSP,74025,-,-
 Mau,Ghoshi,BSP,86576,-,-
@@ -151,6 +151,6 @@ Baghpat,Badaut,BJP,109401,79427,-29974
 Saharanpur,Gango,BJP,100425,99446,-979
 Saharanpur,Nakud,BJP,102842,94375,-8467
 Saharanpur,Saharanpur Sadar,BJP,160297,-,-
-Muzzaffar Nagar,Purkazi,BJP,115653,77491,-38162
-Muzzaffar Nagar,Khatauli,BJP,101928,94771,-7157
+Muzaffarnagar,Purkazi,BJP,115653,77491,-38162
+Muzaffarnagar,Khatauli,BJP,101928,94771,-7157
 Meerut,Meerut Sadar,BJP,138968,132518,-6450

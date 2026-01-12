@@ -25,7 +25,10 @@ const pageSizes = [10, 25, 50, 100];
 export function ResultTable<T>({ title, csvData, columns, scrollable = false, subComponent }: ResultTableProps<T>) {
   const { data, mergeCells } = csvData;
   const [searchQuery, setSearchQuery] = useState('');
-  const [pageSize, setPageSize] = useState(25);
+  const [pagination, setPagination] = useState({
+    pageIndex: 0, //initial page index
+    pageSize: 25, //default page size
+  });
 
   // Helper function to check if a cell should be hidden (part of a merged cell)
   const shouldHideCell = (rowIndex: number, columnKey: string): boolean => {
@@ -52,15 +55,12 @@ export function ResultTable<T>({ title, csvData, columns, scrollable = false, su
     getPaginationRowModel: getPaginationRowModel(),
     state: {
       globalFilter: searchQuery,
-      pagination: {
-        pageSize: pageSize,
-        pageIndex: 0,
-      },
+      pagination,
     },
     onGlobalFilterChange: setSearchQuery,
     onPaginationChange: (updater) => {
       const newState = typeof updater === 'function' ? updater(table.getState().pagination) : updater;
-      setPageSize(newState.pageSize);
+      setPagination(newState);
     },
   });
 
@@ -106,10 +106,10 @@ export function ResultTable<T>({ title, csvData, columns, scrollable = false, su
         <div className="flex items-center space-x-2">
           <span className="text-sm text-neutral-600">Show</span>
           <select
-            value={pageSize}
+            value={pagination.pageSize}
             onChange={(e) => {
               const newPageSize = Number(e.target.value);
-              setPageSize(newPageSize);
+              setPagination({ ...pagination, pageSize: newPageSize });
               table.setPageSize(newPageSize);
             }}
             className="border border-neutral-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
@@ -126,9 +126,12 @@ export function ResultTable<T>({ title, csvData, columns, scrollable = false, su
       {subComponent}
       <div className="flex flex-row justify-between w-full items-center mb-4">
         <div className="text-sm text-neutral-600">
-          Showing {table.getState().pagination.pageIndex * pageSize + 1} to{' '}
-          {Math.min((table.getState().pagination.pageIndex + 1) * pageSize, table.getFilteredRowModel().rows.length)} of{' '}
-          {table.getFilteredRowModel().rows.length} entries
+          Showing {table.getState().pagination.pageIndex * pagination.pageSize + 1} to{' '}
+          {Math.min(
+            (table.getState().pagination.pageIndex + 1) * pagination.pageSize,
+            table.getFilteredRowModel().rows.length
+          )}{' '}
+          of {table.getFilteredRowModel().rows.length} entries
         </div>
         {table.getPageCount() > 1 && (
           <div className="flex items-center justify-end space-x-2">

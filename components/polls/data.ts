@@ -11,6 +11,7 @@ export const electionData: Record<string, StateElectionData> = {
         estimatedColumn: 'Estimates on 09-03-2017 after calculations',
         actualColumn: 'Actual seats received on 11-03-2017',
         rulingParty: 'BJP',
+        mergeColumns: ['District'],
       },
     ],
   },
