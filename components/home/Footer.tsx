@@ -45,7 +45,7 @@ export default function Footer() {
             <ul className="space-y-2 text-neutral-400">
               <li className="flex items-center">
                 <ReactSVG src="/assets/icons/email.svg" className="size-4 mr-2 text-neutral-400" />
-                prajapollsanalytics@gmail.com
+                prajapoll123@gmail.com
               </li>
               <li className="flex items-center">
                 <ReactSVG src="/assets/icons/phone.svg" className="size-4 mr-2 text-neutral-400" />

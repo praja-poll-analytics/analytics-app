@@ -3,9 +3,8 @@
 import { formatVotes } from '@/lib/utils/string';
 import { useCallback } from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { partyColorMapping } from '../data';
 import { PartyChartData } from '../types';
-
-const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#06b6d4', '#84cc16'];
 
 interface PartyVoteDistributionChartProps {
   data: PartyChartData[];
@@ -32,7 +31,7 @@ export default function PartyVoteDistributionChart({ data }: PartyVoteDistributi
 
       return combined.map((item, index) => ({
         ...item,
-        color: item.name === 'Other' ? '#94a3b8' : COLORS[index % COLORS.length],
+        color: partyColorMapping[item.name]?.bg || (index === combined.length - 1 ? '#A3A3A3' : '#8884d8'),
       }));
     },
     [data]
