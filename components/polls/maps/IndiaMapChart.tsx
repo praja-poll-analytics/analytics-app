@@ -43,12 +43,15 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
             const isHovered = hoveredState === name;
             const isPressed = pressedState === name;
             const isSelected = selectedState === name;
-            const hasColor = isSelected || defaultColorMapping?.[name];
-            const textFill = isPressed || isHovered || hasColor ? '#FFFFFF' : '#333';
 
             const getFillColor = () => {
               if (isSelected) return selectedStateColor;
-              return defaultColorMapping?.[name] || '#FFFFFF';
+              return defaultColorMapping?.[name]?.bg || '#FFFFFF';
+            };
+
+            const getTextColor = () => {
+              if (isSelected || isHovered || isPressed) return '#FFFFFF';
+              return defaultColorMapping?.[name]?.fg || '#333';
             };
 
             return (
@@ -91,7 +94,7 @@ const IndiaMapChart: React.FC<IndiaMapChartProps> = ({
                       textAnchor="middle"
                       fontSize={8}
                       fontWeight="600"
-                      fill={textFill}
+                      fill={getTextColor()}
                       style={{ userSelect: 'none', pointerEvents: 'none' }}
                     >
                       {abbreviation}

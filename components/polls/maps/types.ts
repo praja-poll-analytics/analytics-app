@@ -1,3 +1,5 @@
+import { StateColors } from '../types';
+
 export interface GeographyProperties {
   name: string;
   district?: string;
@@ -16,7 +18,7 @@ export interface IndiaMapChartProps {
   width?: number;
   height: number;
   scale?: number;
-  defaultColorMapping?: Record<string, string>;
+  defaultColorMapping?: Record<string, StateColors>;
   onHoverStateChange?: (stateName: string | null) => void;
   onEntrySelected: (stateName: string) => void;
   selectedState?: string | null;

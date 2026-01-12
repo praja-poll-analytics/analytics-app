@@ -66,3 +66,9 @@ export interface StateStats {
   rajyaSabha: number;
   legislativeCouncil: number;
 }
+
+export interface StateColors {
+  bg: string;
+  fg: string;
+  border: string;
+}

@@ -6,7 +6,7 @@ import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { electionData, partyColorMapping } from '../polls/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
-import { ElectionConfig, ElectionType } from '../polls/types';
+import { ElectionConfig, ElectionType, StateColors } from '../polls/types';
 import StateStatsCard from './StateStatsCard';
 
 const MAP_COLORS = {
@@ -15,20 +15,20 @@ const MAP_COLORS = {
   selectedState: '#EC5528',
 };
 
-const getStateColor = (election: ElectionConfig) => {
+const getStateColor = (election: ElectionConfig): StateColors => {
   const bgColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.bg : MAP_COLORS.upcomingElection;
   const fgColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.fg : '#FFFFFF';
-  return { bgColor, fgColor };
+  const borderColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.border : '#FFFFFF';
+  return { bg: bgColor, fg: fgColor, border: borderColor };
 };
 
 export default function ElectionResults({ showTitle = true }: { showTitle?: boolean }) {
   const [selectedState, setSelectedState] = useState<string | null>(null);
   const stateColorMapping = Object.entries(electionData).reduce((acc, [, data]) => {
     const latestElection = data.availableElections[0];
-    const color = getStateColor(latestElection).bgColor;
-    acc[data.stateName] = color;
+    acc[data.stateName] = getStateColor(latestElection);
     return acc;
-  }, {} as Record<string, string>);
+  }, {} as Record<string, StateColors>);
 
   const onStateSelected = (stateName: string) => {
     setSelectedState(stateName);
@@ -50,12 +50,12 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
                 ? 'Upcoming'
                 : election.surveyDate?.split('-').pop() || election.name.match(/\d{4}/)?.[0] || '';
               const shortName = election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha';
-              const { bgColor, fgColor } = getStateColor(election);
+              const colors = getStateColor(election);
               return (
                 <Link
                   key={`${key}-${index}`}
                   href={`/polls/states/${key}?election=${index}`}
-                  style={{ backgroundColor: bgColor, color: fgColor }}
+                  style={{ backgroundColor: colors.bg, color: colors.fg }}
                   className="rounded-lg overflow-hidden text-white transition-all hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px] border-2"
                 >
                   <div className="px-4 py-3 text-center">

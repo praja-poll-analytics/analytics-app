@@ -1,4 +1,4 @@
-import { ElectionType, StateElectionData, StateStats } from './types';
+import { ElectionType, StateColors, StateElectionData, StateStats } from './types';
 
 export const electionData: Record<string, StateElectionData> = {
   uttarpradesh: {
@@ -23,7 +23,7 @@ export const electionData: Record<string, StateElectionData> = {
         type: ElectionType.Assembly,
         estimatedColumn: 'Expected Seats',
         actualColumn: 'Actual Seats',
-        rulingParty: 'YSRCP',
+        rulingParty: 'AP-ALLIANCE',
         partyNameColumns: ['Party Name', 'Expected Winner (SGED)', 'Actual Winner 2024'],
       },
       {
@@ -31,7 +31,7 @@ export const electionData: Record<string, StateElectionData> = {
         type: ElectionType.LokSabha,
         estimatedColumn: 'Expected Total Seats / Predicted Seats',
         actualColumn: 'Actual Results 2024',
-        rulingParty: 'YSRCP',
+        rulingParty: 'AP-ALLIANCE',
         partyNameColumns: ['Party Name', 'Winning Party Predicted', 'Winning Party Actual'],
       },
     ],
@@ -53,6 +53,13 @@ export const electionData: Record<string, StateElectionData> = {
           'Differences',
         ],
         rulingParty: 'BJP',
+        partyNameColumns: [
+          'Party Name',
+          'Expected Winning Party (By PPA on 11-11-25)',
+          'Actual Winner (after results on 14-11-25)',
+          'Runner-Up (By PPA on 11-11-25)',
+          'Actual Runner-Up (after results on 14-11-25)',
+        ],
       },
     ],
   },
@@ -333,26 +340,27 @@ export const stateStats: Record<string, StateStats> = {
   },
 };
 
-export const partyColorMapping: Record<string, { bg: string; fg: string }> = {
-  BJP: { bg: '#FF9933', fg: '#FFFFFF' },
-  INC: { bg: '#0066FF', fg: '#FFFFFF' },
-  Congress: { bg: '#0066FF', fg: '#FFFFFF' },
-  AAP: { bg: '#00AEEF', fg: '#FFFFFF' },
-  TMC: { bg: '#FF69B4', fg: '#FFFFFF' },
-  SP: { bg: '#FF0000', fg: '#FFFFFF' },
-  BSP: { bg: '#800080', fg: '#FFFFFF' },
-  YSRCP: { bg: '#FFFF00', fg: '#000000' },
-  TDP: { bg: '#008000', fg: '#FFFFFF' },
-  DMK: { bg: '#FF0000', fg: '#FFFFFF' },
-  AIADMK: { bg: '#0000FF', fg: '#FFFFFF' },
-  JDU: { bg: '#008080', fg: '#FFFFFF' },
-  'LJP(RV)': { bg: '#FFA500', fg: '#FFFFFF' },
-  RJD: { bg: '#3FADCC', fg: '#FFFFFF' },
-  RLM: { bg: '#A52A2A', fg: '#FFFFFF' },
-  HAMS: { bg: '#00FF00', fg: '#000000' },
-  'CPI(M)': { bg: '#FF0000', fg: '#FFFFFF' },
-  CPI: { bg: '#FF0000', fg: '#FFFFFF' },
-  'CPI(ML)': { bg: '#FF0000', fg: '#FFFFFF' },
-  AIMIM: { bg: '#32683B', fg: '#FFFFFF' },
-  Others: { bg: '#CCCCCC', fg: '#000000' },
+export const partyColorMapping: Record<string, StateColors> = {
+  BJP: { bg: '#EC6842', fg: '#FFFFFF', border: '#C4532F' },
+  INC: { bg: '#5B7FC2', fg: '#FFFFFF', border: '#4A68A0' },
+  Congress: { bg: '#2563eb', fg: '#FFFFFF', border: '#1d4ed8' },
+  AAP: { bg: '#00AEEF', fg: '#FFFFFF', border: '#008BC0' },
+  TMC: { bg: '#FF69B4', fg: '#FFFFFF', border: '#D84D94' },
+  SP: { bg: '#059669', fg: '#FFFFFF', border: '#047857' },
+  BSP: { bg: '#4f46e5', fg: '#FFFFFF', border: '#3730a3' },
+  YSRCP: { bg: '#059669', fg: '#FFFFFF', border: '#047857' },
+  TDP: { bg: '#d97706', fg: '#000000', border: '#b45309' },
+  JDU: { bg: '#4CAF50', fg: '#FFFFFF', border: '#3D8B40' },
+  'LJP(RV)': { bg: '#7E57C2', fg: '#FFFFFF', border: '#5E3F9E' },
+  LJP: { bg: '#7E57C2', fg: '#FFFFFF', border: '#5E3F9E' },
+  RJD: { bg: '#5B9BD5', fg: '#FFFFFF', border: '#4A7CAB' },
+  RLM: { bg: '#E91E8E', fg: '#FFFFFF', border: '#B81570' },
+  HAMS: { bg: '#E8973D', fg: '#FFFFFF', border: '#C07A2E' },
+  VIP: { bg: '#8B5CF6', fg: '#FFFFFF', border: '#6D47C5' },
+  'CPI(M)': { bg: '#8B5CF6', fg: '#FFFFFF', border: '#6D47C5' },
+  CPI: { bg: '#4CAF50', fg: '#FFFFFF', border: '#3D8B40' },
+  'CPI(ML)': { bg: '#26A69A', fg: '#FFFFFF', border: '#1D857A' },
+  AIMIM: { bg: '#C0392B', fg: '#FFFFFF', border: '#962D22' },
+  Others: { bg: '#8b5cf6', fg: '#FFFFFF', border: '#6d28d9' },
+  'AP-ALLIANCE': { bg: '#FFFF00', fg: '#000000', border: '#CCCC00' },
 };

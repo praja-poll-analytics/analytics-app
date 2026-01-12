@@ -19,15 +19,29 @@ export const getTableColumns = (csvData: CSVData): ColumnDef<Record<string, stri
 
 const PartyNameCell = ({ row, header }: { row: Row<Record<string, string>>; header: string }) => {
   const partyName = row.getValue(header) as string;
-  const colorMapping = partyColorMapping[partyName] || partyColorMapping['Others'];
+  const partyNameCleaned = partyName.split(' (')[0].trim();
+  const allianceName = partyName.includes(' (') ? partyName.split(' (')[1].replace(')', '').trim() : null;
+  const colorMapping = partyColorMapping[partyNameCleaned] || partyColorMapping['Others'];
   return (
-    <div className="capitalize text-center">
-      <span
-        className="px-4 py-2 border rounded-sm text-white font-semibold"
-        style={{ background: colorMapping.bg, color: colorMapping.fg }}
-      >
-        {partyName}
-      </span>
+    <div className="flex flex-col gap-2">
+      <div className="capitalize text-center">
+        <span
+          className="px-4 py-1 rounded-sm text-white text-xs font-semibold"
+          style={
+            partyNameCleaned.trim() !== '-'
+              ? {
+                  background: colorMapping.bg,
+                  color: colorMapping.fg,
+                  borderColor: colorMapping.border,
+                  borderWidth: '1.5px',
+                }
+              : {}
+          }
+        >
+          {partyNameCleaned}
+        </span>
+      </div>
+      {allianceName && <div className="text-xs text-neutral-600 text-center">({allianceName})</div>}
     </div>
   );
 };
