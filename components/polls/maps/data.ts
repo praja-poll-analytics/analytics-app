@@ -89,7 +89,7 @@ export const statesMapConfig: Record<string, { name: string; scaleMap?: number; 
   },
   haryana: {
     name: 'Haryana',
-    scaleMap: 4500, // 44,212 sq km - small state
+    scaleMap: 3500, // 44,212 sq km - small state
     centerMap: [76, 29],
   },
   himachalpradesh: {
@@ -114,7 +114,7 @@ export const statesMapConfig: Record<string, { name: string; scaleMap?: number; 
   },
   kerala: {
     name: 'Kerala',
-    scaleMap: 4500, // 38,863 sq km - small state, narrow shape
+    scaleMap: 3000, // 38,863 sq km - small state, narrow shape
     centerMap: [76.3, 10.5],
   },
   ladakh: {

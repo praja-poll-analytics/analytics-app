@@ -64,12 +64,12 @@ export default function ExpertiseSection() {
   ];
 
   return (
-    <section className="py-8 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-transparent to-purple-50 opacity-50"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-6">
-          <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-600 to-slate-500 bg-clip-text text-transparent mb-2">
             Explore Our Expertise
           </h2>
           <p className="text-sm lg:text-lg text-gray-600 max-w-3xl mx-auto">

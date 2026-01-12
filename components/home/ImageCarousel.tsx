@@ -3,7 +3,10 @@ import { useRef } from 'react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const carouselImages = Array.from({ length: 6 }, (_, i) => `/assets/images/carousel/carousel_${i + 1}.jpeg`);
+const carouselImages = [
+  ...Array.from({ length: 5 }, (_, i) => `/assets/images/carousel/carousel_${i + 1}.jpeg`),
+  '/assets/images/coverage/newspaper2.jpeg',
+];
 
 export const ImageCarousel = () => {
   const swiperRef = useRef(null);

@@ -35,10 +35,10 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
   };
 
   return (
-    <section className="py-4 px-4 sm:px-6 lg:px-8">
+    <section className="py-8 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-6">
         {showTitle && (
-          <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-600 to-slate-500 bg-clip-text text-transparent mb-2">
             Explore States
           </h2>
         )}
