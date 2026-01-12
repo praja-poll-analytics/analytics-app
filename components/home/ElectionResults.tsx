@@ -52,7 +52,7 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
               return (
                 <Link
                   key={`${key}-${index}`}
-                  href={`/polls/states/${key}?election=${index}`}
+                  href={election.isUpcoming ? '#' : `/polls/states/${key}?election=${index}`}
                   style={{ backgroundColor: colors.bg, color: colors.fg, borderColor: `${colors.border}` }}
                   className="rounded-lg overflow-hidden text-white transition-all shadow-lg hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px] border-[1.5px]"
                 >
