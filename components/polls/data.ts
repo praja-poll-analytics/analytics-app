@@ -362,5 +362,5 @@ export const partyColorMapping: Record<string, StateColors> = {
   'CPI(ML)': { bg: '#26A69A', fg: '#FFFFFF', border: '#1D857A' },
   AIMIM: { bg: '#C0392B', fg: '#FFFFFF', border: '#962D22' },
   Others: { bg: '#8b5cf6', fg: '#FFFFFF', border: '#6d28d9' },
-  'AP-ALLIANCE': { bg: '#FFFF00', fg: '#000000', border: '#CCCC00' },
+  'AP-ALLIANCE': { bg: '#FDEE00', fg: '#000000', border: '#CCCC00' },
 };
