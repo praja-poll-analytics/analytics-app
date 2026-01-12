@@ -16,10 +16,8 @@ const MAP_COLORS = {
 };
 
 const getStateColor = (election: ElectionConfig): StateColors => {
-  const bgColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.bg : MAP_COLORS.upcomingElection;
-  const fgColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.fg : '#FFFFFF';
-  const borderColor = election.rulingParty ? partyColorMapping[election.rulingParty]?.border : '#FFFFFF';
-  return { bg: bgColor, fg: fgColor, border: borderColor };
+  const mapping = election.rulingParty ? partyColorMapping[election.rulingParty] : null;
+  return mapping || { bg: MAP_COLORS.upcomingElection, fg: '#FFFFFF', border: MAP_COLORS.upcomingElection };
 };
 
 export default function ElectionResults({ showTitle = true }: { showTitle?: boolean }) {
@@ -55,8 +53,8 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
                 <Link
                   key={`${key}-${index}`}
                   href={`/polls/states/${key}?election=${index}`}
-                  style={{ backgroundColor: colors.bg, color: colors.fg }}
-                  className="rounded-lg overflow-hidden text-white transition-all hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px] border-2"
+                  style={{ backgroundColor: colors.bg, color: colors.fg, borderColor: `${colors.border}` }}
+                  className="rounded-lg overflow-hidden text-white transition-all shadow-lg hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px] border-[1.5px]"
                 >
                   <div className="px-4 py-3 text-center">
                     <div className="text-lg font-semibold">{data.stateName}</div>
