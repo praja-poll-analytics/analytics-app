@@ -34,8 +34,8 @@ export const ImageCarousel = () => {
       >
         {carouselImages.map((image, index) => (
           <SwiperSlide key={index} className="relative">
-            <div className="absolute inset-0 bg-black/40" />
-            <Image src={image} alt={`Carousel slide ${index + 1}`} fill className="object-cover p-0" />
+            <div className="absolute inset-0 bg-white" />
+            <Image src={image} alt={`Carousel slide ${index + 1}`} fill className="object-contain p-0" />
           </SwiperSlide>
         ))}
       </Swiper>

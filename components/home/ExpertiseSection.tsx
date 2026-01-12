@@ -69,7 +69,7 @@ export default function ExpertiseSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-600 to-slate-500 bg-clip-text text-transparent mb-2">
+          <h2 className="text-3xl font-bold bg-gradient-to-r text-primary bg-clip-text text-transparent mb-2">
             Explore Our Expertise
           </h2>
           <p className="text-sm lg:text-lg text-gray-600 max-w-3xl mx-auto">

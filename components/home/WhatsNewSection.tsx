@@ -40,8 +40,8 @@ export default function WhatsNewSection() {
     <div className="w-full h-full py-3 lg:py-4 px-4 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col h-full">
         <div className="mb-4">
-          <h2 className="text-xl lg:text-2xl md:text-4xl font-bold text-neutral-900 mb-2">What&apos;s New</h2>
-          <p className="text-sm lg:text text-neutral-600 max-w-2xl mx-auto">
+          <h2 className="text-xl lg:text-2xl md:text-4xl font-bold text-neutral-900 mb-2 text-center">Updates</h2>
+          <p className="text-sm lg:text text-neutral-600 max-w-2xl mx-auto text-center">
             Stay updated with our latest election analysis, research findings, and platform improvements
           </p>
         </div>

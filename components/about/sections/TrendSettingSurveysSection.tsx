@@ -27,9 +27,9 @@ const TrendSettingSurveysSection = () => {
             <p className="text-gray-700 leading-relaxed">
               Previously the survey work was done under the banner S-GED (Society for Global Enlightenment and
               Development). The first survey was done in 2017 for Uttar Pradesh assembly elections. Before 2017, all
-              surveys by agencies on election results in India were based on exit polls and total number of seats to
-              be won by a particular party but never gave constituency wise result and predicting which party and
-              which candidate will win with what majority.
+              surveys by agencies on election results in India were based on exit polls and total number of seats to be
+              won by a particular party but never gave constituency wise result and predicting which party and which
+              candidate will win with what majority.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
               <strong>For the first time in India</strong>, our agency gave for 153 constituencies of Uttar Pradesh
@@ -47,15 +47,39 @@ const TrendSettingSurveysSection = () => {
               Andhra Pradesh Assembly Elections
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              In 2024, our agency (S-GED) conducted survey and predicted in Andhra Pradesh that Telugu Desam will
-              win 149 seats and they got around 160 seats. The <strong>new trend setting</strong> in this survey
-              was: we predicted in all assembly constituencies which party / candidate will win and with what
-              majority.
+              In 2024, our agency (S-GED) conducted survey and predicted in Andhra Pradesh that Telugu Desam will win
+              149 seats and they got around 160 seats. The <strong>new trend setting</strong> in this survey was: we
+              predicted in all assembly constituencies which party / candidate will win and with what majority.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
-              In many cases we were correct to a large extent. Most probably in future, most of the survey agencies
-              in India will try to predict at least approximately the number of votes a particular candidate may get
-              per constituency.
+              In many cases we were correct to a large extent. Most probably in future, most of the survey agencies in
+              India will try to predict at least approximately the number of votes a particular candidate may get per
+              constituency.
+            </p>
+          </div>
+
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-100 p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+              <div className="px-2 rounded-lg bg-gradient-to-br from-purple-100 to-purple-50 border border-purple-200 flex items-center justify-center">
+                <span className="text-purple-600 font-bold">2025</span>
+              </div>
+              Bihar Assembly Elections
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              In 2025, Praja Poll Analytics LLP (PPA) conducted a detailed election survey in Bihar based on extensive
+              field visits and direct interaction with voters across constituencies. The survey focused on alliance-wise
+              performance, <b>constituency-wise trends</b>, and candidate-wise assessment.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              The prediction was made with respect to expected seats, winning margins, and overall electoral outcome.
+              The survey achieved an accuracy level of approximately 98%, reflecting the strength of methodology and
+              ground-level data collection.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              The distinguishing feature of the Bihar 2025 survey was the integration of constituency-wise voter
+              sentiment with socio-economic and local governance factors, which enabled more precise assessment of
+              electoral behaviour. This survey further strengthened the trend of constituency-level analysis and
+              reinforced the credibility of scientific, field-based election surveys in India.
             </p>
           </div>
         </div>
