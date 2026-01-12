@@ -233,7 +233,7 @@ const ContactPage = () => {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-neutral-900 mb-1">Email</h3>
-                <p className="text-neutral-600">contact@prajapoll.com</p>
+                <p className="text-neutral-600">prajapoll123@gmail.com</p>
               </div>
               <div className="text-center p-6 bg-white/70 rounded-xl border border-neutral-200">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -247,7 +247,7 @@ const ContactPage = () => {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-neutral-900 mb-1">Phone</h3>
-                <p className="text-neutral-600">+91 9876543210</p>
+                <p className="text-neutral-600">+91 99811 92939</p>
               </div>
               <div className="text-center p-6 bg-white/70 rounded-xl border border-neutral-200">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -267,7 +267,7 @@ const ContactPage = () => {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-neutral-900 mb-1">Location</h3>
-                <p className="text-neutral-600">New Delhi, India</p>
+                <p className="text-neutral-600">Andhra Pradesh, India</p>
               </div>
             </div>
           </div>
