@@ -12,6 +12,13 @@ const primaryFont = Archivo({
 export const metadata: Metadata = {
   title: 'Praja Poll Analytics',
   description: 'Poll analytics & predictions',
+  openGraph: {
+    title: 'Praja Poll Analytics',
+    description: 'Poll analytics & predictions',
+    images: ['/assets/logo.svg'],
+  },
+  alternates: { canonical: './' },
+  metadataBase: new URL('https://www.prajapollanalytics.com'),
 };
 
 export default function RootLayout({
