@@ -9,16 +9,77 @@ const primaryFont = Archivo({
   display: 'swap',
 });
 
+const siteUrl = 'https://www.prajapoll.com';
+const siteName = 'Praja Poll Analytics';
+const siteDescription =
+  "India's trusted partner in political research and opinion polling. Get accurate election predictions, constituency-wise analysis, and comprehensive survey reports.";
+
 export const metadata: Metadata = {
-  title: 'Praja Poll Analytics',
-  description: 'Poll analytics & predictions',
-  openGraph: {
-    title: 'Praja Poll Analytics',
-    description: 'Poll analytics & predictions',
-    images: ['/assets/logo.svg'],
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  alternates: { canonical: './' },
-  metadataBase: new URL('https://www.prajapollanalytics.com'),
+  description: siteDescription,
+  keywords: [
+    'election polls',
+    'political surveys',
+    'election predictions',
+    'India elections',
+    'poll analytics',
+    'constituency analysis',
+    'Bihar elections',
+    'Uttar Pradesh elections',
+    'state elections',
+    'Lok Sabha',
+    'Vidhan Sabha',
+    'municipality elections',
+  ],
+  authors: [{ name: 'Praja Poll Analytics' }],
+  creator: 'Praja Poll Analytics',
+  publisher: 'Praja Poll Analytics',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: siteUrl,
+    siteName: siteName,
+    title: siteName,
+    description: siteDescription,
+    images: [
+      {
+        url: '/assets/logo.png',
+        width: 588,
+        height: 580,
+        alt: 'Praja Poll Analytics - Election Predictions & Political Research',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteName,
+    description: siteDescription,
+    images: ['/assets/logo.png'],
+    creator: '@prajapoll',
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  icons: {
+    icon: [{ url: '/assets/logo.svg', type: 'image/svg+xml' }],
+  },
+  verification: {},
 };
 
 export default function RootLayout({
@@ -28,9 +89,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/assets/logo.svg" type="image/svg" />
-      </head>
       <body className={`${primaryFont.variable} antialiased`}>{children}</body>
     </html>
   );
