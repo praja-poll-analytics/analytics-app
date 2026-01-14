@@ -30,7 +30,9 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
   const electionKey = !!currentElection
     ? currentElection.type === ElectionType.Assembly
       ? 'assembly'
-      : 'loksabha'
+      : currentElection.type === ElectionType.LokSabha
+      ? 'loksabha'
+      : 'municipal'
     : null;
 
   const fetchPartyWiseData = useCallback(async () => {
@@ -46,7 +48,8 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
 
   const fetchConstituencyWiseData = useCallback(async () => {
     try {
-      const response = await axios.get(`/data/${stateId}/${electionKey}-constituency-wise.csv`);
+      const key = currentElection?.type === ElectionType.Municipal ? 'ward' : 'constituency';
+      const response = await axios.get(`/data/${stateId}/${electionKey}-${key}-wise.csv`);
       const text = response.data;
       const data = mapCSV(text, currentElection);
       setConstituencyWiseData(data);

@@ -87,6 +87,34 @@ export const electionData: Record<string, StateElectionData> = {
       },
     ],
   },
+  bmc: {
+    stateName: 'BMC (Mumbai)',
+    availableElections: [
+      {
+        name: 'Brihanmumbai Municipal Corporation Election 2026',
+        type: ElectionType.Municipal,
+        electionDate: '15-01-2026',
+        estimatedColumn: 'Estimated Seats Prediction',
+        actualColumn: 'Actual Seats After Results on 16-01-2026',
+        mergeColumns: [
+          'Alliance',
+          'Zone',
+          'Expected Total Seats',
+          'Actual Total Seats After Results 16-01-2026',
+          'After Adjustment With Variation By PPA',
+          'Differences',
+        ],
+        rulingParty: 'BJP',
+        partyNameColumns: [
+          'Party Name',
+          'Expected Winning Party (By PPA on 13-01-26)',
+          'Actual Winner (after results on 16-01-26)',
+          'Runner-Up (By PPA on 13-01-26)',
+          'Actual Runner-Up (after results on 16-01-26)',
+        ],
+      },
+    ],
+  },
 };
 
 export const stateStats: Record<string, StateStats> = {
@@ -363,4 +391,10 @@ export const partyColorMapping: Record<string, StateColors> = {
   AIMIM: { bg: '#C0392B', fg: '#FFFFFF', border: '#962D22' },
   Others: { bg: '#8b5cf6', fg: '#FFFFFF', border: '#6d28d9' },
   'AP-ALLIANCE': { bg: '#FDEE00', fg: '#000000', border: '#CCCC00' },
+  'Shiv Sena (Shinde)': { bg: '#F57C00', fg: '#FFFFFF', border: '#E65100' },
+  'Shiv Sena (UBT)': { bg: '#FF6F00', fg: '#FFFFFF', border: '#E65100' },
+  'NCP (Ajit Pawar)': { bg: '#00BFFF', fg: '#FFFFFF', border: '#0099CC' },
+  'NCP (Sharad Pawar)': { bg: '#0080FF', fg: '#FFFFFF', border: '#0066CC' },
+  MNS: { bg: '#8B4513', fg: '#FFFFFF', border: '#654321' },
+  VBA: { bg: '#4169E1', fg: '#FFFFFF', border: '#2E5CB8' },
 };

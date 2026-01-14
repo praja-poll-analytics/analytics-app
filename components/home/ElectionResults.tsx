@@ -47,7 +47,12 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
               const year = election.isUpcoming
                 ? 'Upcoming'
                 : election.surveyDate?.split('-').pop() || election.name.match(/\d{4}/)?.[0] || '';
-              const shortName = election.type === ElectionType.Assembly ? 'Assembly' : 'Lok Sabha';
+              const shortName =
+                election.type === ElectionType.Assembly
+                  ? 'Assembly'
+                  : election.type === ElectionType.LokSabha
+                  ? 'Lok Sabha'
+                  : 'Municipal';
               const colors = getStateColor(election);
               return (
                 <Link

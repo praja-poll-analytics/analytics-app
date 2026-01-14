@@ -3,7 +3,7 @@ import Navigation from '@/components/home/Navigation';
 import StateDetailPage from '@/components/polls/StateDetailsPage';
 import { notFound } from 'next/navigation';
 
-const availableStates = ['uttarpradesh', 'bihar', 'andhrapradesh'];
+const availableStates = ['uttarpradesh', 'bihar', 'andhrapradesh', 'bmc'];
 
 export default async function StatePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

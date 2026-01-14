@@ -17,6 +17,7 @@ export interface ConstituencyWiseEntry {
 export enum ElectionType {
   Assembly,
   LokSabha,
+  Municipal,
 }
 
 export interface StateElectionData {
