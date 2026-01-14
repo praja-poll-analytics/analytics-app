@@ -51,7 +51,7 @@ export default function Footer() {
                 <ReactSVG src="/assets/icons/phone.svg" className="size-4 mr-2 text-neutral-400" />
                 +91 99811 92939
               </li>
-              <li className="flex items-center">
+              <li className="flex items-start">
                 <ReactSVG src="/assets/icons/location.svg" className="min-w-4 mr-2 text-neutral-400" />
                 <p>126, SLV Green Meadows, Near IRR, Ramavarappadu, Vijayawada, NTR District, Andhra Pradesh, India</p>
               </li>

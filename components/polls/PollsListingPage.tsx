@@ -1,6 +1,7 @@
 'use client';
 
 import ElectionResults from '../home/ElectionResults';
+import Footer from '../home/Footer';
 import Navigation from '../home/Navigation';
 
 export default function PollsListingPage() {
@@ -20,6 +21,7 @@ export default function PollsListingPage() {
         </section>
         <ElectionResults showTitle={false} />
       </main>
+      <Footer />
     </div>
   );
 }
