@@ -10,7 +10,7 @@ import {
 } from '@tanstack/react-table';
 import { ReactNode, useState } from 'react';
 import { ReactSVG } from 'react-svg';
-import { CSVData } from '../types';
+import { CSVData, TotalRowConfig } from '../types';
 
 interface ResultTableProps<T> {
   title: string;
@@ -18,11 +18,19 @@ interface ResultTableProps<T> {
   columns: ColumnDef<T>[];
   scrollable?: boolean;
   subComponent?: ReactNode;
+  totalConfig?: TotalRowConfig;
 }
 
 const pageSizes = [10, 25, 50, 100];
 
-export function ResultTable<T>({ title, csvData, columns, scrollable = false, subComponent }: ResultTableProps<T>) {
+export function ResultTable<T>({
+  title,
+  csvData,
+  columns,
+  scrollable = false,
+  subComponent,
+  totalConfig,
+}: ResultTableProps<T>) {
   const { data, mergeCells } = csvData;
   const [searchQuery, setSearchQuery] = useState('');
   const [pagination, setPagination] = useState({
@@ -174,31 +182,60 @@ export function ResultTable<T>({ title, csvData, columns, scrollable = false, su
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row, rowIndex) => (
-                <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
-                  {row.getVisibleCells().map((cell) => {
-                    const columnKey = cell.column.id;
-                    const hide = shouldHideCell(rowIndex, columnKey);
-                    const rowSpan = getCellRowSpan(rowIndex, columnKey);
+              <>
+                {table.getRowModel().rows.map((row, rowIndex) => (
+                  <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
+                    {row.getVisibleCells().map((cell) => {
+                      const columnKey = cell.column.id;
+                      const hide = shouldHideCell(rowIndex, columnKey);
+                      const rowSpan = getCellRowSpan(rowIndex, columnKey);
 
-                    if (hide) {
-                      return null;
-                    }
+                      if (hide) {
+                        return null;
+                      }
 
-                    return (
-                      <TableCell
-                        key={cell.id}
-                        rowSpan={rowSpan}
-                        className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'} ${
-                          rowSpan > 1 ? 'align-middle' : ''
-                        }`}
-                      >
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                      </TableCell>
-                    );
-                  })}
-                </TableRow>
-              ))
+                      return (
+                        <TableCell
+                          key={cell.id}
+                          rowSpan={rowSpan}
+                          className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'} ${
+                            rowSpan > 1 ? 'align-middle' : ''
+                          }`}
+                        >
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                ))}
+                {/* {totalConfig && (
+                  <TableRow className="bg-neutral-100 font-semibold">
+                    {table.getHeaderGroups()[0].headers.map((header, index) => {
+                      const isTitleCell = header.id === totalConfig.title.header;
+                      const startHeaderIndex = table
+                        .getHeaderGroups()[0]
+                        .headers.indexOf(
+                          table.getHeaderGroups()[0].headers.find((h) => h.id === totalConfig.columns.startHeader)!
+                        );
+                      console.log(startHeaderIndex);
+                      const isStartColumn = index === startHeaderIndex - 1;
+                      return (
+                        <TableCell
+                          key={header.id}
+                          colSpan={
+                            isTitleCell ? totalConfig.title.colSpan : isStartColumn ? totalConfig.columns.colSpan : 1
+                          }
+                          className={`border-r text-black text-lg text-center px-2 break-words whitespace-normal h-auto py-2 ${
+                            scrollable ? 'min-w-[150px]' : ''
+                          }`}
+                        >
+                          {isTitleCell ? 'Total' : isStartColumn ? `${totalConfig.columns.value}` : ''}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                )} */}
+              </>
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">

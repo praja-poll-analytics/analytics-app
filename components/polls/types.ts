@@ -38,6 +38,19 @@ export interface ElectionConfig {
   rulingParty?: string;
   partyNameColumns?: string[];
   isOngoing?: boolean;
+  totalConfig?: TotalRowConfig;
+}
+
+export interface TotalRowConfig {
+  title: {
+    header: string;
+    colSpan: number;
+  };
+  columns: {
+    startHeader: string;
+    colSpan: number;
+    value: number;
+  };
 }
 
 export interface CSVData {
@@ -45,6 +58,7 @@ export interface CSVData {
   headers: string[];
   mergeCells?: MergeCellInfo[];
   partyNameColumns?: string[];
+  totalConfig?: TotalRowConfig;
 }
 
 export interface MergeCellInfo {

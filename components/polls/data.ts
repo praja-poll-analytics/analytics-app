@@ -81,6 +81,17 @@ export const electionData: Record<string, StateElectionData> = {
           'Actual Runner-Up (after results on 16-01-26)',
         ],
         isOngoing: true,
+        totalConfig: {
+          title: {
+            header: 'Alliance',
+            colSpan: 2,
+          },
+          columns: {
+            startHeader: 'Estimated Seats (Party)',
+            colSpan: 1,
+            value: 227,
+          },
+        },
       },
     ],
   },
@@ -390,4 +401,6 @@ export const partyColorMapping: Record<string, StateColors> = {
   'NCP - Sharad Pawar': { bg: '#22C55E', fg: '#FFFFFF', border: '#16A34A' },
   MNS: { bg: '#F59E0B', fg: '#000000', border: '#D97706' },
   VBA: { bg: '#4169E1', fg: '#FFFFFF', border: '#2E5CB8' },
+  IND: { bg: '#EF4444', fg: '#FFFFFF', border: '#DC2626' },
+  'IND/OTHERS': { bg: '#EF4444', fg: '#FFFFFF', border: '#DC2626' },
 };

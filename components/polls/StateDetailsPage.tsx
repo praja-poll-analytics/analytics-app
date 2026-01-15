@@ -177,6 +177,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             csvData={partyWiseData}
             columns={getTableColumns(partyWiseData)}
             title="Party-wise Prediction Analysis"
+            totalConfig={currentElection.totalConfig}
           />
         )}
         {partyWiseData && (
