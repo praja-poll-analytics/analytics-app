@@ -191,7 +191,11 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
               csvData={currentDistrictData}
               columns={getTableColumns(currentDistrictData)}
               scrollable
-              title="Constituency-wise Survey Report"
+              title={
+                currentElection.type === ElectionType.Municipal
+                  ? 'Ward-wise Survey Report'
+                  : 'Constituency-wise Survey Report'
+              }
               subComponent={<DistrictSelector />}
             />
           )}
