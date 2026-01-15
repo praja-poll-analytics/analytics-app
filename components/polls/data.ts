@@ -63,6 +63,27 @@ export const electionData: Record<string, StateElectionData> = {
       },
     ],
   },
+  bmc: {
+    stateName: 'BMC (Mumbai)',
+    availableElections: [
+      {
+        name: 'Brihanmumbai Municipal Corporation Election 2026',
+        type: ElectionType.Municipal,
+        electionDate: '15-01-2026',
+        estimatedColumn: 'Estimated Seats (Party)',
+        actualColumn: 'Actual Seats After Results on 16-01-2026',
+        mergeColumns: ['Alliance', 'Expected Total Seats (Alliance)', 'Variation(+/-) 16/01/2026'],
+        partyNameColumns: [
+          'Party Name',
+          'Expected Winning Party (By PPA on 15-01-26)',
+          'Actual Winner (after results on 16-01-26)',
+          'Runner-Up (By PPA on 15-01-26)',
+          'Actual Runner-Up (after results on 16-01-26)',
+        ],
+        isOngoing: true,
+      },
+    ],
+  },
   tamilnadu: {
     stateName: 'Tamil Nadu',
     availableElections: [
@@ -84,27 +105,6 @@ export const electionData: Record<string, StateElectionData> = {
         estimatedColumn: 'Estimated Seats Prediction',
         actualColumn: 'Actual Seats After Results on 14-11-2025',
         isUpcoming: true,
-      },
-    ],
-  },
-  bmc: {
-    stateName: 'BMC (Mumbai)',
-    availableElections: [
-      {
-        name: 'Brihanmumbai Municipal Corporation Election 2026',
-        type: ElectionType.Municipal,
-        electionDate: '15-01-2026',
-        estimatedColumn: 'Estimated Seats (Party)',
-        actualColumn: 'Actual Seats After Results on 16-01-2026',
-        mergeColumns: ['Alliance', 'Expected Total Seats (Alliance)', 'Variation(+/-) 16/01/2026'],
-        rulingParty: 'BJP',
-        partyNameColumns: [
-          'Party Name',
-          'Expected Winning Party (By PPA on 15-01-26)',
-          'Actual Winner (after results on 16-01-26)',
-          'Runner-Up (By PPA on 15-01-26)',
-          'Actual Runner-Up (after results on 16-01-26)',
-        ],
       },
     ],
   },
@@ -384,10 +384,10 @@ export const partyColorMapping: Record<string, StateColors> = {
   AIMIM: { bg: '#C0392B', fg: '#FFFFFF', border: '#962D22' },
   Others: { bg: '#8b5cf6', fg: '#FFFFFF', border: '#6d28d9' },
   'AP-ALLIANCE': { bg: '#FDEE00', fg: '#000000', border: '#CCCC00' },
-  'Shiv Sena (Shinde)': { bg: '#F57C00', fg: '#FFFFFF', border: '#E65100' },
-  'Shiv Sena (UBT)': { bg: '#FF6F00', fg: '#FFFFFF', border: '#E65100' },
-  'NCP (Ajit Pawar)': { bg: '#00BFFF', fg: '#FFFFFF', border: '#0099CC' },
-  'NCP (Sharad Pawar)': { bg: '#0080FF', fg: '#FFFFFF', border: '#0066CC' },
-  MNS: { bg: '#8B4513', fg: '#FFFFFF', border: '#654321' },
+  'Shiv Sena Shinde': { bg: '#F57C00', fg: '#FFFFFF', border: '#E65100' },
+  'Shiv Sena - UBT': { bg: '#EC4899', fg: '#FFFFFF', border: '#BE185D' },
+  'NCP - Ajit Pawar': { bg: '#10B981', fg: '#FFFFFF', border: '#059669' },
+  'NCP - Sharad Pawar': { bg: '#22C55E', fg: '#FFFFFF', border: '#16A34A' },
+  MNS: { bg: '#F59E0B', fg: '#000000', border: '#D97706' },
   VBA: { bg: '#4169E1', fg: '#FFFFFF', border: '#2E5CB8' },
 };

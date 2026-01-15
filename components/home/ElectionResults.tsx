@@ -13,9 +13,13 @@ const MAP_COLORS = {
   upcomingElection: '#020953',
   recentElection: '#AD74DF',
   selectedState: '#EC5528',
+  ongoingElection: '#7C3AED',
 };
 
 const getStateColor = (election: ElectionConfig): StateColors => {
+  if (election.isOngoing) {
+    return { bg: MAP_COLORS.ongoingElection, fg: '#FFFFFF', border: '#5B21B6' };
+  }
   const mapping = election.rulingParty ? partyColorMapping[election.rulingParty] : null;
   return mapping || { bg: MAP_COLORS.upcomingElection, fg: '#FFFFFF', border: MAP_COLORS.upcomingElection };
 };
@@ -59,14 +63,20 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
                   key={`${key}-${index}`}
                   href={election.isUpcoming ? '#' : `/polls/states/${key}?election=${index}`}
                   style={{ backgroundColor: colors.bg, color: colors.fg, borderColor: `${colors.border}` }}
-                  className="rounded-lg overflow-hidden text-white transition-all shadow-lg hover:shadow-lg hover:scale-105 hover:-translate-y-1 min-w-[160px] border-[1.5px]"
+                  className={`rounded-lg overflow-hidden text-white transition-all shadow-lg hover:shadow-lg hover:scale-110 hover:-translate-y-1 min-w-[160px] border-[1.5px] ${
+                    election.isOngoing ? 'animate-pulse-border scale-105' : ''
+                  }`}
                 >
                   <div className="px-4 py-3 text-center">
                     <div className="text-lg font-semibold">{data.stateName}</div>
                     <div className="text-sm opacity-90">{shortName}</div>
                   </div>
-                  <div className="text-sm font-semibold py-2 bg-white text-center text-gray-800 border-t border-gray-200">
-                    {year}
+                  <div
+                    className={`text-sm font-semibold py-2 text-center border-t border-gray-200 ${
+                      election.isOngoing ? 'bg-purple-100 text-purple-800' : 'bg-white text-gray-800'
+                    }`}
+                  >
+                    {election.isOngoing ? 'Latest' : year}
                   </div>
                 </Link>
               );

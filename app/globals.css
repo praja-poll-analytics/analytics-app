@@ -362,3 +362,18 @@ body {
 .page-header {
   @apply bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 py-8 shadow-2xl;
 }
+
+/* Ongoing election pulse animation */
+@keyframes pulse-border {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(124, 58, 237, 0);
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s ease-in-out infinite;
+}

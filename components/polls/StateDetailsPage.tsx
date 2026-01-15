@@ -184,7 +184,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
             data={getChartData(partyWiseData, currentElection.estimatedColumn, currentElection.actualColumn)}
           />
         )}
-        {stateId === 'bihar' && <Methodology />}
+        {['bihar', 'bmc'].includes(stateId) && <Methodology stateId={stateId} />}
         <div className="">
           {currentDistrictData && (
             <ResultTable

@@ -37,6 +37,7 @@ export interface ElectionConfig {
   isUpcoming?: boolean;
   rulingParty?: string;
   partyNameColumns?: string[];
+  isOngoing?: boolean;
 }
 
 export interface CSVData {
