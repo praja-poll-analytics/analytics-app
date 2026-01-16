@@ -88,7 +88,7 @@ export const electionData: Record<string, StateElectionData> = {
           },
           columns: {
             startHeader: 'Estimated Seats (Party)',
-            colSpan: 1,
+            colSpan: 2,
             value: 227,
           },
         },
@@ -397,6 +397,7 @@ export const partyColorMapping: Record<string, StateColors> = {
   'AP-ALLIANCE': { bg: '#FDEE00', fg: '#000000', border: '#CCCC00' },
   'Shiv Sena Shinde': { bg: '#F57C00', fg: '#FFFFFF', border: '#E65100' },
   'Shiv Sena - UBT': { bg: '#EC4899', fg: '#FFFFFF', border: '#BE185D' },
+  UBT: { bg: '#EC4899', fg: '#FFFFFF', border: '#BE185D' },
   'NCP - Ajit Pawar': { bg: '#10B981', fg: '#FFFFFF', border: '#059669' },
   'NCP - Sharad Pawar': { bg: '#22C55E', fg: '#FFFFFF', border: '#16A34A' },
   MNS: { bg: '#F59E0B', fg: '#000000', border: '#D97706' },

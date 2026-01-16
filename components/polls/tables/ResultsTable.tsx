@@ -72,6 +72,32 @@ export function ResultTable<T>({
     },
   });
 
+  const TotalRow = () => {
+    if (!totalConfig) return null;
+    const titleStartIndex = table
+      .getHeaderGroups()[0]
+      .headers.findIndex((header) => header.column.id === totalConfig.title.header);
+    return (
+      <TableRow className="bg-neutral-100 font-semibold">
+        {Array.from({ length: titleStartIndex }).map((_, index) => {
+          return <TableCell key={index}></TableCell>;
+        })}
+        <TableCell
+          colSpan={totalConfig.title.colSpan}
+          className="border-r text-black text-lg text-center px-2 break-words whitespace-normal h-auto py-2"
+        >
+          Total
+        </TableCell>
+        <TableCell
+          colSpan={totalConfig.columns.colSpan}
+          className="border-r text-black text-lg text-center px-2 break-words whitespace-normal h-auto py-2"
+        >
+          {totalConfig.columns.value}
+        </TableCell>
+      </TableRow>
+    );
+  };
+
   return (
     <div className="w-full">
       {/* Title */}
@@ -208,33 +234,7 @@ export function ResultTable<T>({
                     })}
                   </TableRow>
                 ))}
-                {/* {totalConfig && (
-                  <TableRow className="bg-neutral-100 font-semibold">
-                    {table.getHeaderGroups()[0].headers.map((header, index) => {
-                      const isTitleCell = header.id === totalConfig.title.header;
-                      const startHeaderIndex = table
-                        .getHeaderGroups()[0]
-                        .headers.indexOf(
-                          table.getHeaderGroups()[0].headers.find((h) => h.id === totalConfig.columns.startHeader)!
-                        );
-                      console.log(startHeaderIndex);
-                      const isStartColumn = index === startHeaderIndex - 1;
-                      return (
-                        <TableCell
-                          key={header.id}
-                          colSpan={
-                            isTitleCell ? totalConfig.title.colSpan : isStartColumn ? totalConfig.columns.colSpan : 1
-                          }
-                          className={`border-r text-black text-lg text-center px-2 break-words whitespace-normal h-auto py-2 ${
-                            scrollable ? 'min-w-[150px]' : ''
-                          }`}
-                        >
-                          {isTitleCell ? 'Total' : isStartColumn ? `${totalConfig.columns.value}` : ''}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                )} */}
+                <TotalRow />
               </>
             ) : (
               <TableRow>
