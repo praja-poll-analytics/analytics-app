@@ -186,8 +186,8 @@ export function ResultTable<T>({
         )}
       </div>
 
-      <div className={`rounded-md border ${scrollable ? 'overflow-x-auto' : 'overflow-x-auto lg:overflow-hidden'}`}>
-        <Table className={scrollable ? 'w-full' : 'table-fixed w-full'}>
+      <div className="rounded-md border overflow-x-auto lg:overflow-hidden">
+        <Table className={`w-full ${scrollable ? '' : 'lg:table-fixed'}`}>
           <TableHeader className="bg-primary">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
@@ -195,8 +195,8 @@ export function ResultTable<T>({
                   return (
                     <TableHead
                       key={header.id}
-                      className={`border-r text-white text-center px-2 break-words whitespace-normal h-auto py-2 ${
-                        scrollable ? 'min-w-[150px]' : ''
+                      className={`border-r text-white text-center px-2 break-words whitespace-normal h-auto py-2 min-w-[100px] ${
+                        scrollable ? 'lg:min-w-[150px]' : 'lg:min-w-0'
                       }`}
                     >
                       {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
@@ -224,9 +224,9 @@ export function ResultTable<T>({
                         <TableCell
                           key={cell.id}
                           rowSpan={rowSpan}
-                          className={`border-r px-2 ${scrollable ? 'min-w-[150px]' : 'lg:truncate'} ${
-                            rowSpan > 1 ? 'align-middle' : ''
-                          }`}
+                          className={`border-r px-2 min-w-[100px] ${
+                            scrollable ? 'lg:min-w-[150px]' : 'lg:min-w-0 lg:truncate'
+                          } ${rowSpan > 1 ? 'align-middle' : ''}`}
                         >
                           {flexRender(cell.column.columnDef.cell, cell.getContext())}
                         </TableCell>
