@@ -25,6 +25,21 @@ export interface StateElectionData {
   availableElections: ElectionConfig[];
 }
 
+export interface ConstituencyModalConfig {
+  constituencyColumn: string;
+  districtColumn?: string;
+  predictedWinnerColumn: string;
+  actualWinnerColumn: string;
+  predictedRunnerUpColumn?: string;
+  actualRunnerUpColumn?: string;
+  predictedVotesColumn?: string;
+  actualVotesColumn?: string;
+  predictedRunnerUpVotesColumn?: string;
+  actualRunnerUpVotesColumn?: string;
+  predictedMarginColumn?: string;
+  actualMarginColumn?: string;
+}
+
 export interface ElectionConfig {
   name: string;
   type: ElectionType;
@@ -39,6 +54,7 @@ export interface ElectionConfig {
   partyNameColumns?: string[];
   isOngoing?: boolean;
   totalConfig?: TotalRowConfig;
+  constituencyModalConfig?: ConstituencyModalConfig;
 }
 
 export interface TotalRowConfig {

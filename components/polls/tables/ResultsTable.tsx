@@ -19,6 +19,7 @@ interface ResultTableProps<T> {
   scrollable?: boolean;
   subComponent?: ReactNode;
   totalConfig?: TotalRowConfig;
+  onRowClick?: (row: T) => void;
 }
 
 const pageSizes = [10, 25, 50, 100];
@@ -30,6 +31,7 @@ export function ResultTable<T>({
   scrollable = false,
   subComponent,
   totalConfig,
+  onRowClick,
 }: ResultTableProps<T>) {
   const { data, mergeCells } = csvData;
   const [searchQuery, setSearchQuery] = useState('');
@@ -210,7 +212,12 @@ export function ResultTable<T>({
             {table.getRowModel().rows?.length ? (
               <>
                 {table.getRowModel().rows.map((row, rowIndex) => (
-                  <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && 'selected'}
+                    onClick={() => onRowClick?.(row.original)}
+                    className={onRowClick ? 'cursor-pointer hover:bg-neutral-50 transition-colors' : ''}
+                  >
                     {row.getVisibleCells().map((cell) => {
                       const columnKey = cell.column.id;
                       const hide = shouldHideCell(rowIndex, columnKey);

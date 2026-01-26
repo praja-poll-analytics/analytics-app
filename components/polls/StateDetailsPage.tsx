@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { Button } from '../ui/button';
+import ConstituencyDetailModal from './ConstituencyDetailModal';
 import { ElectionSelector } from './ElectionSelector';
 import { Methodology } from './Methodology';
 import PartyPredictionGrid from './PartyPredictionGrid';
@@ -24,6 +25,8 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
   const [currentDistrictData, setCurrentDistrictData] = useState<CSVData | null>(null);
   const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [selectedConstituency, setSelectedConstituency] = useState<Record<string, string> | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const config = electionData[stateId];
   const [currentElection, setCurrentElection] = useState(
     config?.availableElections[defaultQueryElectionType ? parseInt(defaultQueryElectionType) : 0]
@@ -90,6 +93,18 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
   const handleClearDistrictSelection = () => {
     setSelectedDistrict(null);
     setCurrentDistrictData(constituencyWiseData);
+  };
+
+  const handleConstituencyClick = (row: Record<string, string>) => {
+    if (currentElection?.constituencyModalConfig) {
+      setSelectedConstituency(row);
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedConstituency(null);
   };
 
   useEffect(() => {
@@ -207,10 +222,21 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
                   : 'Constituency-wise Survey Report'
               }
               subComponent={<DistrictSelector />}
+              onRowClick={currentElection.constituencyModalConfig ? handleConstituencyClick : undefined}
             />
           )}
         </div>
         <Tooltip id="district-tooltip" />
+
+        {/* Constituency Detail Modal */}
+        {currentElection.constituencyModalConfig && (
+          <ConstituencyDetailModal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            data={selectedConstituency}
+            modalConfig={currentElection.constituencyModalConfig}
+          />
+        )}
       </div>
     </div>
   );
