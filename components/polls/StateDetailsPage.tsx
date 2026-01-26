@@ -8,6 +8,7 @@ import { Tooltip } from 'react-tooltip';
 import { Button } from '../ui/button';
 import { ElectionSelector } from './ElectionSelector';
 import { Methodology } from './Methodology';
+import PartyPredictionGrid from './PartyPredictionGrid';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
 import { electionData } from './data';
 import StateMapChart from './maps/StateMapChart';
@@ -173,10 +174,18 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
           </div>
         )}
         {partyWiseData && (
+          <PartyPredictionGrid
+            csvData={partyWiseData}
+            estimatedColumn={currentElection.estimatedColumn}
+            actualColumn={currentElection.actualColumn}
+            title="Party-wise Prediction Analysis"
+          />
+        )}
+        {partyWiseData && (
           <ResultTable
             csvData={partyWiseData}
             columns={getTableColumns(partyWiseData)}
-            title="Party-wise Prediction Analysis"
+            title="Detailed Party-wise Data"
             totalConfig={currentElection.totalConfig}
           />
         )}
