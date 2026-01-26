@@ -1,0 +1,22 @@
+{
+  "name": "Praja Poll Analytics",
+  "short_name": "Praja Poll",
+  "description": "India's trusted partner in political research and opinion polling. Get accurate election predictions, constituency-wise analysis, and comprehensive survey reports.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c9302c",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "588x580",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

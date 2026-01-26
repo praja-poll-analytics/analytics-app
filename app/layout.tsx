@@ -77,8 +77,13 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: [{ url: '/assets/logo.svg', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/icon.png', type: 'image/png', sizes: '48x48' },
+      { url: '/assets/logo.png', type: 'image/png', sizes: '588x580' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
+  manifest: '/manifest.json',
   verification: {},
 };
 
