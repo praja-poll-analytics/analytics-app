@@ -117,6 +117,21 @@ export const electionData: Record<string, StateElectionData> = {
       },
     ],
   },
+  puducherry: {
+    stateName: 'Puducherry',
+    availableElections: [
+      {
+        name: 'Puducherry Assembly Election 2026',
+        type: ElectionType.Assembly,
+        surveyDate: '19-04-2026',
+        estimatedColumn: 'Estimated Seats Prediction',
+        actualColumn: 'Actual Seats After Results',
+        mergeColumns: ['Alliance', 'District', 'Expected Total Seats'],
+        partyNameColumns: ['Party Name', 'Expected Winning Party (By PPA on 19-04-26)'],
+        isOngoing: true,
+      },
+    ],
+  },
   westbengal: {
     stateName: 'West Bengal',
     availableElections: [
@@ -426,4 +441,6 @@ export const partyColorMapping: Record<string, StateColors> = {
   TVK: { bg: '#DB2777', fg: '#FFFFFF', border: '#9D174D' },
   AITC: { bg: '#FF69B4', fg: '#FFFFFF', border: '#D84D94' },
   GJM: { bg: '#15803D', fg: '#FFFFFF', border: '#166534' },
+  AINRC: { bg: '#F26C21', fg: '#FFFFFF', border: '#C25217' },
+  LJK: { bg: '#9333EA', fg: '#FFFFFF', border: '#6B21A8' },
 };

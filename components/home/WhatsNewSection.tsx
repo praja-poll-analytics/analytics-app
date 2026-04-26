@@ -26,6 +26,12 @@ export default function WhatsNewSection() {
     },
     {
       id: 3,
+      category: 'latest',
+      title: 'Puducherry Opinion Poll 2026',
+      link: '/polls/states/puducherry',
+    },
+    {
+      id: 4,
       category: 'recent',
       title: 'BMC Election Survey Results',
       link: '/polls/states/bmc',
