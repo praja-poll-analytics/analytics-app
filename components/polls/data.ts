@@ -123,9 +123,12 @@ export const electionData: Record<string, StateElectionData> = {
       {
         name: 'West Bengal Assembly Election 2026',
         type: ElectionType.Assembly,
+        surveyDate: '19-04-2026',
         estimatedColumn: 'Estimated Seats Prediction',
-        actualColumn: 'Actual Seats After Results on 14-11-2025',
-        isUpcoming: true,
+        actualColumn: 'Actual Seats After Results',
+        mergeColumns: ['District', 'Expected Total Seats'],
+        partyNameColumns: ['Party Name', 'Expected Winning Party (By PPA on 19-04-26)'],
+        isOngoing: true,
       },
     ],
   },
@@ -421,4 +424,6 @@ export const partyColorMapping: Record<string, StateColors> = {
   AMMK: { bg: '#7C3AED', fg: '#FFFFFF', border: '#5B21B6' },
   IUML: { bg: '#16A34A', fg: '#FFFFFF', border: '#15803D' },
   TVK: { bg: '#DB2777', fg: '#FFFFFF', border: '#9D174D' },
+  AITC: { bg: '#FF69B4', fg: '#FFFFFF', border: '#D84D94' },
+  GJM: { bg: '#15803D', fg: '#FFFFFF', border: '#166534' },
 };

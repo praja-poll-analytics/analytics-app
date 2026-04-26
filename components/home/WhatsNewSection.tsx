@@ -20,15 +20,15 @@ export default function WhatsNewSection() {
     },
     {
       id: 2,
-      category: 'recent',
-      title: 'BMC Election Survey Results',
-      link: '/polls/states/bmc',
+      category: 'latest',
+      title: 'West Bengal Opinion Poll 2026',
+      link: '/polls/states/westbengal',
     },
     {
       id: 3,
-      category: 'upcoming',
-      title: 'West Bengal Election Survey Results',
-      link: null,
+      category: 'recent',
+      title: 'BMC Election Survey Results',
+      link: '/polls/states/bmc',
     },
   ];
 
