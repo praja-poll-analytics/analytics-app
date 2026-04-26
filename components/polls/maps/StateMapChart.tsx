@@ -3,7 +3,7 @@
 import { geoMercator, GeoProjection } from 'd3-geo';
 import { ExtendedFeatureCollection } from 'd3-geo';
 import React, { useEffect, useState } from 'react';
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+import { ComposableMap, Geographies, Geography, ProjectionFunction } from 'react-simple-maps';
 import { feature } from 'topojson-client';
 import { statesMapConfig } from './data';
 import { GeographiesRenderProps, Geography as GeographyType, StateMapChartProps } from './types';
@@ -66,7 +66,7 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
   }
 
   return (
-    <ComposableMap projection={() => projection} height={height} width={width}>
+    <ComposableMap projection={projection as unknown as ProjectionFunction} height={height} width={width}>
       <Geographies geography={topology}>
         {({ geographies }: GeographiesRenderProps) =>
           geographies.map((geo: GeographyType) => {
