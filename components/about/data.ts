@@ -137,4 +137,16 @@ export const mediaCoverage: MediaCoverage[] = [
     description: 'Featured in Amar Ujala for election predictions and analytical approaches',
     image: '/assets/images/coverage/newspaper2.jpeg',
   },
+  {
+    title: 'BMC Exit Poll Coverage',
+    type: 'press',
+    description: 'Featured in Dainik Jagran Delhi for BMC exit poll predicting BJP-led Mahayuti sweep',
+    image: '/assets/images/coverage/newspaper3.jpeg',
+  },
+  {
+    title: 'BMC Election Analysis',
+    type: 'press',
+    description: 'Press coverage of BMC exit poll analysis showing Mahayuti leading the Mumbai civic polls',
+    image: '/assets/images/coverage/newspaper4.jpeg',
+  },
 ];
