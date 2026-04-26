@@ -80,7 +80,6 @@ export const electionData: Record<string, StateElectionData> = {
           'Runner-Up (By PPA on 15-01-26)',
           'Actual Runner-Up (after results on 16-01-26)',
         ],
-        isOngoing: true,
         totalConfig: {
           title: {
             header: 'Alliance',
@@ -101,9 +100,20 @@ export const electionData: Record<string, StateElectionData> = {
       {
         name: 'Tamil Nadu Assembly Election 2026',
         type: ElectionType.Assembly,
+        surveyDate: '19-04-2026',
         estimatedColumn: 'Estimated Seats Prediction',
-        actualColumn: 'Actual Seats After Results on 14-11-2025',
-        isUpcoming: true,
+        actualColumn: 'Actual Seats After Results',
+        mergeColumns: ['Alliance', 'Expected Total Seats', 'District'],
+        partyNameColumns: [
+          'Party Name',
+          'Expected Winning Party (By PPA on 19-04-26)',
+          'Runner-Up (By PPA on 19-04-26)',
+        ],
+        isOngoing: true,
+        totalConfig: {
+          title: { header: 'Alliance', colSpan: 2 },
+          columns: { startHeader: 'Estimated Seats Prediction', colSpan: 1, value: 234 },
+        },
       },
     ],
   },
@@ -403,4 +413,12 @@ export const partyColorMapping: Record<string, StateColors> = {
   VBA: { bg: '#4169E1', fg: '#FFFFFF', border: '#2E5CB8' },
   IND: { bg: '#EF4444', fg: '#FFFFFF', border: '#DC2626' },
   'IND/OTHERS': { bg: '#EF4444', fg: '#FFFFFF', border: '#DC2626' },
+  DMK: { bg: '#E60000', fg: '#FFFFFF', border: '#B30000' },
+  AIDMK: { bg: '#1B7F1B', fg: '#FFFFFF', border: '#145C14' },
+  DMDK: { bg: '#FBBF24', fg: '#000000', border: '#D49B0F' },
+  VCK: { bg: '#1E40AF', fg: '#FFFFFF', border: '#1E3A8A' },
+  PMK: { bg: '#FACC15', fg: '#000000', border: '#CA8A04' },
+  AMMK: { bg: '#7C3AED', fg: '#FFFFFF', border: '#5B21B6' },
+  IUML: { bg: '#16A34A', fg: '#FFFFFF', border: '#15803D' },
+  TVK: { bg: '#DB2777', fg: '#FFFFFF', border: '#9D174D' },
 };

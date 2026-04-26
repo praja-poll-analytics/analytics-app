@@ -15,14 +15,14 @@ export default function WhatsNewSection() {
     {
       id: 1,
       category: 'latest',
-      title: 'BMC Election Survey Results',
-      link: '/polls/states/bmc',
+      title: 'Tamil Nadu Opinion Poll 2026',
+      link: '/polls/states/tamilnadu',
     },
     {
       id: 2,
-      category: 'upcoming',
-      title: 'Tamil Nadu Election Survey Results',
-      link: null,
+      category: 'recent',
+      title: 'BMC Election Survey Results',
+      link: '/polls/states/bmc',
     },
     {
       id: 3,

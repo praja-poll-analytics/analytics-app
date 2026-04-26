@@ -1,0 +1,235 @@
+District,Constituency Number,Constituency,Expected Winning Party (By PPA on 19-04-26),Expected Votes (By PPA on 19-04-26),Runner-Up (By PPA on 19-04-26),Expected Runner-Up Votes (By PPA on 19-04-26),Winning Margin (By PPA on 19-04-26)
+Thiruvallur,1,Gummidipoondi,DMK,68032,AIDMK,59415,8617
+Thiruvallur,2,Ponneri,INC,87291,AIDMK,62586,24705
+Thiruvallur,3,Tiruttani,TVK,74685,DMDK,74600,85
+Thiruvallur,4,Thiruvallur,TVK,76280,DMK,67271,9009
+Thiruvallur,5,Poonamallee,TVK,108116,DMK,99134,8982
+Thiruvallur,6,Avadi,TVK,117387,DMK,116916,471
+Thiruvallur,7,Maduravoyal,TVK,108459,DMK,105459,3000
+Thiruvallur,8,Ambattur,TVK,83912,DMK,81240,2672
+Thiruvallur,9,Madavaram,DMK,123370,TVK,101392,21978
+Chennai,10,Thiruvottiyur,CPI(M),61715,TVK,56665,5050
+Chennai,11,Dr. RadhakrishnanNagar,DMK,60335,AIDMK,57514,2821
+Chennai,12,Perambur,DMK,69738,TVK,55200,14538
+Chennai,13,Kolathur,DMK,67509,AIDMK,51502,16007
+Chennai,14,Villivakkam,DMK,47280,AIDMK,47118,162
+Chennai,15,Thiru-Vi-Ka-Nagar,DMK,49477,TVK,36117,13360
+Chennai,16,Egmore,TVK,42484,DMK,42211,273
+Chennai,17,Royapuram,DMK,43480,AIDMK,38971,4509
+Chennai,18,Harbour,DMK,38271,AIDMK,28633,9638
+Chennai,19,Chepauk-Thiruvallikeni,DMK,53813,AIDMK,40956,12857
+Chennai,20,Thousand Lights,DMK,42667,AIDMK,39129,3538
+Chennai,21,Anna Nagar,DMK,58763,AIDMK,53742,5021
+Chennai,22,Virugampakkam,TVK,58182,DMK,48844,9338
+Chennai,23,Saidapet,DMK,60213,TVK,52145,8068
+Chennai,24,Thiyagarayanagar,TVK,45416,DMK,45399,17
+Chennai,25,Mylapore,DMK,67344,BJP,48781,18563
+Chennai,26,Velachery,INC,69472,TVK,42306,27166
+Chennai,27,Sholinganallur,DMK,141401,AIDMK,108576,32825
+Chennai,28,Alandur,DMK,93569,TVK,68288,25281
+Kancheepuram,29,Sriperumbudur,INC,106364,TVK,81018,25346
+Kancheepuram,30,Pallavaram,DMDK,93929,TVK,76362,17567
+Kancheepuram,31,Tambaram,DMK,76098,AIDMK,74643,1455
+Kancheepuram,32,Chengalpattu,DMK,93152,TVK,73868,19284
+Kancheepuram,33,Thiruporur,PMK,75770,TVK,65681,10089
+Kancheepuram,34,Cheyyur,AIDMK,59000,VCK,53400,5600
+Kancheepuram,35,Madurantakam,AIDMK,60906,DMK,57751,3155
+Kancheepuram,36,Uthiramerur,PMK,70418,DMK,70046,372
+Kancheepuram,37,Kancheepuram,DMK,77712,AIDMK,71189,6523
+Vellore,38,Arakkonam,VCK,60508,TVK,55241,5267
+Vellore,39,Sholingur,PMK,74038,INC,68648,5390
+Vellore,40,Katpadi,DMK,62271,AIDMK,54245,8026
+Vellore,41,Ranipet,DMK,80301,BJP,52491,27810
+Vellore,42,Arcot,DMK,71673,AIDMK,53482,18191
+Vellore,43,Vellore,DMK,65291,TVK,53960,11331
+Vellore,44,Anaikattu,DMK,71234,AIDMK,52038,19196
+Vellore,45,Kilvaithinankuppam,AIDMK,63550,DMK,60580,2970
+Vellore,46,Gudiyatham,DMDK,73201,AIDMK,67353,5848
+Vellore,47,Vaniyambadi,IUML,71769,TVK,50284,21485
+Vellore,48,Ambur,DMK,77221,TVK,48833,28388
+Vellore,49,Jolarpet,DMK,71570,AIDMK,47307,24263
+Vellore,50,Tiruppattur,DMK,64501,AMMK,55371,9130
+Krishnagiri,51,Uthangarai,INC,63229,AIDMK,56403,6826
+Krishnagiri,52,Bargur,DMK,64267,AIDMK,56128,8139
+Krishnagiri,53,Krishnagiri,INC,74905,TVK,60540,14365
+Krishnagiri,54,Veppanahalli,DMK,78117,AIDMK,76160,1957
+Krishnagiri,55,Hosur,DMK,91101,TVK,79849,11252
+Krishnagiri,56,Thalli,CPI,65364,TVK,58613,6751
+Dharmapuri,57,Palacode,AIDMK,73879,DMK,66500,7379
+Dharmapuri,58,Pennagaram,INC,65500,PMK,64135,1365
+Dharmapuri,59,Dharmapuri,PMK,73614,DMDK,67487,6127
+Dharmapuri,60,Pappireddippatti,AIDMK,69000,DMK,65900,3100
+Dharmapuri,61,Harur,AIDMK,59236,DMK,55246,3990
+Tiruvannamalai,62,Chengam,DMK,70902,AIDMK,70680,222
+Tiruvannamalai,63,Tiruvannamalai,DMK,77192,BJP,51972,25220
+Tiruvannamalai,64,Kilpennathur,DMK,76698,TVK,51551,25147
+Tiruvannamalai,65,Kalasapakkam,DMK,65437,AIDMK,51005,14432
+Tiruvannamalai,66,Polur,DMDK,67611,PMK,59440,8171
+Tiruvannamalai,67,Arani,DMK,67410,AIDMK,66749,661
+Tiruvannamalai,68,Cheyyar,AIDMK,72660,DMK,64483,8177
+Tiruvannamalai,69,Vandavasi,AIDMK,60601,DMK,59145,1456
+Viluppuram,70,Gingee,DMK,61278,PMK,58951,2327
+Viluppuram,71,Mailam,DMDK,52298,AIDMK,51822,476
+Viluppuram,72,Tindivanam,AIDMK,56752,VCK,48852,7900
+Viluppuram,73,Vanur,AIDMK,65577,DMK,53919,11658
+Viluppuram,74,Villupuram,DMK,67461,AIDMK,57646,9815
+Viluppuram,75,Vikravandi,DMK,59934,PMK,56518,3416
+Viluppuram,76,Tirukkoyilur,DMK,42753,AIDMK,36951,5802
+Viluppuram,77,Ulundurpettai,AIDMK,76889,DMK,71289,5600
+Viluppuram,78,Rishivandiyam,DMK,73901,PMK,61149,12752
+Viluppuram,79,Sankarapuram,AIDMK,71335,DMK,67436,3899
+Viluppuram,80,Kallakurichi,AIDMK,76489,VCK,69096,7393
+Salem,81,Gangavalli,AIDMK,58753,DMK,54814,3939
+Salem,82,Attur,AIDMK,62875,INC,62091,784
+Salem,83,Yercaud,DMK,87403,TVK,72167,15236
+Salem,84,Omalur,DMDK,80117,AIDMK,77983,2134
+Salem,85,Mettur,DMK,64976,AIDMK,60805,4171
+Salem,86,Edappadi,AIDMK,94232,DMK,76037,18195
+Salem,87,Sankari,AIDMK,79655,DMDK,68637,11018
+Salem,88,Salem (West),DMDK,74418,PMK,62182,12236
+Salem,89,Salem (North),DMK,67073,PMK,61925,5148
+Salem,90,Salem (South),AIDMK,60263,DMK,54390,5873
+Salem,91,Veerapandi,AIDMK,74508,DMK,66975,7533
+Namakkal,92,Rasipuram,BJP,64678,DMK,57418,7260
+Namakkal,93,Senthamangalam,DMK,70635,AIDMK,58675,11960
+Namakkal,94,Namakkal,DMK,70878,AIDMK,69730,1148
+Namakkal,95,Paramathi Velur,DMK,62700,TVK,53782,8918
+Namakkal,96,Tiruchengodu,DMK,66227,AIDMK,55856,10371
+Namakkal,97,Kumarapalayam,AIDMK,64430,DMK,60543,3887
+Erode,98,Erode (East),INC,56132,AIDMK,44081,12051
+Erode,99,Erode (West),DMK,70299,BJP,59332,10967
+Erode,100,Modakkurichi,DMK,56771,BJP,55764,1007
+Erode,101,Dharapuram,DMK,65329,AIDMK,62710,2619
+Erode,102,Kangayam,DMK,78086,AIDMK,53042,25044
+Erode,103,Perundurai,AIDMK,71084,DMK,56359,14725
+Erode,104,Bhavani,AIDMK,64147,DMK,58355,5792
+Erode,105,Anthiyur,AIDMK,61306,DMK,50114,11192
+Erode,106,Gobichettipalayam,AIDMK,61650,DMK,58617,3033
+Erode,107,Bhavanisagar,AIDMK,66275,CPI,62079,4196
+The Nilgiris,108,Udhagamandalam,INC,45931,BJP,37441,8490
+The Nilgiris,109,Gudalur,DMK,49093,AIDMK,43606,5487
+The Nilgiris,110,Coonoor,AIDMK,44312,DMK,43093,1219
+Coimbatore,111,Mettupalayam,DMK,80862,AIDMK,72553,8309
+Coimbatore,112,Avanashi,DMK,70500,AIDMK,68109,2391
+Coimbatore,113,Tiruppur (North),DMK,88104,AIDMK,83174,4930
+Coimbatore,114,Tiruppur (South),DMK,53939,BJP,53063,876
+Coimbatore,115,Palladam,AIDMK,95524,DMK,91003,4521
+Coimbatore,116,Sulur,AIDMK,99811,DMK,84526,15285
+Coimbatore,117,Kavundampalayam,AIDMK,111283,INC,102493,8790
+Coimbatore,118,Coimbatore (North),DMK,70138,BJP,69032,1106
+Coimbatore,119,Thondamuthur,AIDMK,84635,DMK,72591,12044
+Coimbatore,120,Coimbatore (South),AIDMK,51280,DMK,38767,12513
+Coimbatore,121,Singanallur,INC,60762,AIDMK,59840,922
+Coimbatore,122,Kinathukadavu,DMK,89998,AIDMK,80811,9187
+Coimbatore,123,Pollachi,DMK,58895,AIDMK,58656,239
+Coimbatore,124,Valparai,DMK,51403,AIDMK,43216,8187
+Tiruppur,125,Udumalaipettai,DMK,77730,AIDMK,67979,9751
+Tiruppur,126,Madathukulam,DMK,64139,AMMK,50191,13948
+Dindigul,127,Palani,DMK,79066,AIDMK,60689,18377
+Dindigul,128,Oddanchatram,DMK,71601,BJP,67737,3864
+Dindigul,129,Athoor,AIDMK,77990,DMK,75002,2988
+Dindigul,130,Nilakottai,AIDMK,64304,DMK,60345,3959
+Dindigul,131,Natham,DMK,83322,AIDMK,77171,6151
+Dindigul,132,Dindigul,DMK,70041,AIDMK,62812,7229
+Dindigul,133,Vedasandur,DMK,83429,AIDMK,72554,10875
+Karur,134,Aravakurichi,DMK,61209,TVK,53115,8094
+Karur,135,Karur,DMK,76259,AIDMK,61234,15025
+Karur,136,Krishnarayapuram,DMK,60070,AIDMK,58673,1397
+Karur,137,Kulithalai,DMK,66919,AIDMK,65425,1494
+Tiruchirappalli,138,Manapaarai,DMK,72486,AIDMK,58559,13927
+Tiruchirappalli,139,Srirangam,DMK,81617,AIDMK,80174,1443
+Tiruchirappalli,140,Tiruchirappalli (West),DMK,58585,AMMK,50566,8019
+Tiruchirappalli,141,Tiruchirappalli (East),DMK,60517,AIDMK,48920,11597
+Tiruchirappalli,142,Thiruverumbur,DMK,64638,AIDMK,50902,13736
+Tiruchirappalli,143,Lalgudi,DMK,61571,AIDMK,49506,12065
+Tiruchirappalli,144,Manachanallur,DMK,66911,TVK,60256,6655
+Tiruchirappalli,145,Musiri,DMK,65356,TVK,54463,10893
+Tiruchirappalli,146,Thuraiyur,INC,57519,TVK,50470,7049
+Perambalur,147,Perambalur,AIDMK,82845,DMK,75612,7233
+Perambalur,148,Kunnam,DMK,70493,AIDMK,65192,5301
+Ariyalur,149,Ariyalur,DMK,71200,AIDMK,70115,1085
+Ariyalur,150,Jayankondam,DMK,65197,PMK,58782,6415
+Cuddalore,151,Tittakudi,DMK,57613,AIDMK,47923,9690
+Cuddalore,152,Virudhachalam,PMK,69484,DMDK,62117,7367
+Cuddalore,153,Neyveli,DMK,54584,AIDMK,49049,5535
+Cuddalore,154,Panruti,VCK,67517,AIDMK,61851,5666
+Cuddalore,155,Cuddalore,INC,65771,AIDMK,56329,9442
+Cuddalore,156,Kurinjipadi,DMK,68864,AIDMK,62177,6687
+Cuddalore,157,Bhuvanagiri,AIDMK,73768,DMK,59693,14075
+Cuddalore,158,Chidambaram,DMK,62259,AIDMK,58087,4172
+Cuddalore,159,Kattumannarkoil,VCK,63296,PMK,54888,8408
+Nagappattinam,160,Sirkazhi,DMK,63619,AIDMK,57836,5783
+Nagappattinam,161,Mayiladuturai,PMK,54633,INC,53506,1127
+Nagappattinam,162,Poompuhar,AIDMK,66650,DMK,61807,4843
+Nagappattinam,163,Nagapattinam,DMK,47688,AIDMK,45685,2003
+Nagappattinam,164,Kilvelur,PMK,49324,CPI(M),45077,4247
+Nagappattinam,165,Vedaranyam,AIDMK,57579,DMK,51373,6206
+Thiruvarur,166,Thiruthuraipoondi,CPI,61398,AIDMK,55574,5824
+Thiruvarur,167,Mannargudi,DMK,66852,AMMK,55612,11240
+Thiruvarur,168,Thiruvarur,DMK,73159,TVK,57668,15491
+Thiruvarur,169,Nannilam,AIDMK,76931,DMK,67549,9382
+Thanjavur,170,Thiruvidaimarudu,TVK,67160,DMK,58151,9009
+Thanjavur,171,Kumbakonam,DMK,66656,TVK,60764,5892
+Thanjavur,172,Papanasam,TVK,64844,IUML,62500,2344
+Thanjavur,173,Thiruvaiyaru,TVK,72001,DMK,71369,632
+Thanjavur,174,Thanjavur,DMK,67860,TVK,61773,6087
+Thanjavur,175,Orathanadu,TVK,64285,DMK,64200,85
+Thanjavur,176,Pattukkottai,DMK,66738,TVK,54369,12369
+Thanjavur,177,Peravurani,TVK,56079,AIDMK,56010,69
+Pudukkottai,178,Gandarvakottai,CPI(M),59107,BJP,52161,6946
+Pudukkottai,179,Viralimalai,AIDMK,73776,DMK,59127,14649
+Pudukkottai,180,Pudukkottai,DMK,66220,TVK,54165,12055
+Pudukkottai,181,Thirumayam,AIDMK,63637,DMK,55385,8252
+Pudukkottai,182,Alangudi,DMK,60894,AIDMK,57217,3677
+Pudukkottai,183,Aranthangi,BJP,62223,INC,51963,10260
+Sivaganga,184,Karaikudi,INC,84271,TVK,62639,21632
+Sivaganga,185,Tiruppattur,DMK,83569,BJP,70152,13417
+Sivaganga,186,Sivaganga,DMK,63824,AIDMK,60125,3699
+Sivaganga,187,Manamadurai,BJP,76201,DMK,63560,12641
+Madurai,188,Melur,AIDMK,64711,INC,55560,9151
+Madurai,189,Madurai East,DMK,89153,AIDMK,84688,4465
+Madurai,190,Sholavandan,DMK,69061,AIDMK,55502,13559
+Madurai,191,Madurai North,AIDMK,53806,DMK,48890,4916
+Madurai,192,Madurai South,DMK,56520,BJP,46900,9620
+Madurai,193,Madurai Central,DMK,54289,TVK,40178,14111
+Madurai,194,Madurai West,DMK,75562,AIDMK,67148,8414
+Madurai,195,Thiruparankundram,DMK,82559,AIDMK,73610,8949
+Madurai,196,Thirumangalam,DMK,70226,AIDMK,52131,18095
+Madurai,197,Usilampatti,INC,71359,AIDMK,70577,782
+Theni,198,Andipatti,DMK,76068,AIDMK,65322,10746
+Theni,199,Periyakulam,VCK,74998,AMMK,68715,6283
+Theni,200,Bodinayakanur,AIDMK,80397,DMK,71049,9348
+Theni,201,Cumbum,DMK,107000,AIDMK,58900,48100
+Virudunagar,202,Rajapalayam,DMK,64027,BJP,50675,13352
+Virudunagar,203,Srivilliputhur,CPI,63871,AIDMK,55561,8310
+Virudunagar,204,Sattur,DMK,67751,BJP,58034,9717
+Virudunagar,205,Sivakasi,INC,62320,AIDMK,47475,14845
+Virudunagar,206,Virudhunagar,DMDK,61187,AIDMK,51986,9201
+Virudunagar,207,Aruppukkottai,DMK,61907,AIDMK,55798,6109
+Virudunagar,208,Tiruchuli,DMK,59619,AIDMK,51151,8468
+Ramanathapuram,209,Paramakudi,AIDMK,63531,DMK,51139,12392
+Ramanathapuram,210,Tiruvadanai,AIDMK,77542,INC,62134,15408
+Ramanathapuram,211,Ramanathapuram,BJP,81900,DMK,71151,10749
+Ramanathapuram,212,Mudhukulathur,AIDMK,82179,DMK,62648,19531
+Thoothukkudi,213,Vilathikulam,AIDMK,55813,DMK,54503,1310
+Thoothukkudi,214,Thoothukkudi,DMK,66978,AIDMK,50532,16446
+Thoothukkudi,215,Tiruchendur,DMK,62756,TVK,46371,16385
+Thoothukkudi,216,Srivaikuntam,AIDMK,61698,INC,53773,7925
+Thoothukkudi,217,Ottapidaram,DMK,67972,AMMK,61329,6643
+Thoothukkudi,218,Kovilpatti,DMK,60665,AIDMK,58054,2611
+Tirunelveli,219,Sankarankovil,INC,67593,AIDMK,58309,9284
+Tirunelveli,220,Vasudevanallur,DMK,69326,BJP,57690,11636
+Tirunelveli,221,Kadayanallur,AIDMK,74157,DMK,68050,6107
+Tirunelveli,222,Tenkasi,AIDMK,78386,DMK,75043,3343
+Tirunelveli,223,Alangulam,AIDMK,81969,DMK,69573,12396
+Tirunelveli,224,Tirunelveli,DMK,75099,AIDMK,66702,8397
+Tirunelveli,225,Ambasamudram,AIDMK,64146,INC,63048,1098
+Tirunelveli,226,Palayamkottai,DMK,61600,AIDMK,54653,6947
+Tirunelveli,227,Nanguneri,AMMK,75116,INC,68216,6900
+Tirunelveli,228,Radhapuram,BJP,74289,DMK,62959,11330
+Kanniyakumari,229,Kanniyakumari,AIDMK,91537,DMK,77503,14034
+Kanniyakumari,230,Nagercoil,BJP,65028,DMK,60007,5021
+Kanniyakumari,231,Colachal,BJP,65056,INC,60718,4338
+Kanniyakumari,232,Padmanabhapuram,BJP,69518,CPI(M),58960,10558
+Kanniyakumari,233,Vilavancode,BJP,60571,INC,57104,3467
+Kanniyakumari,234,Killiyoor,INC,59663,AIDMK,54515,5148
