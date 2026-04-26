@@ -1,7 +1,15 @@
-import React from 'react';
+'use client';
+
+import { geoMercator, GeoProjection } from 'd3-geo';
+import { ExtendedFeatureCollection } from 'd3-geo';
+import React, { useEffect, useState } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+import { feature } from 'topojson-client';
 import { statesMapConfig } from './data';
 import { GeographiesRenderProps, Geography as GeographyType, StateMapChartProps } from './types';
+
+const MAP_PADDING = 8;
+const DEFAULT_WIDTH = 800;
 
 const commonStyle = {
   stroke: '#666666',
@@ -11,29 +19,55 @@ const commonStyle = {
   filter: 'drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2))',
 };
 
+interface Topology {
+  type: 'Topology';
+  objects: Record<string, unknown>;
+}
+
 const StateMapChart: React.FC<StateMapChartProps> = ({
   name,
-  width,
+  width = DEFAULT_WIDTH,
   height,
-  scale,
   defaultColorMapping,
   onHoverStateChange,
   onEntrySelected,
   selectedDistrict,
 }) => {
-  const json = `/topoJsons/states/${name}.json`;
+  const [topology, setTopology] = useState<Topology | null>(null);
+  const [projection, setProjection] = useState<GeoProjection | null>(null);
   const config = statesMapConfig[name];
-  if (!config) {
+
+  useEffect(() => {
+    if (!config) return;
+    let cancelled = false;
+    fetch(`/topoJsons/states/${name}.json`)
+      .then((r) => r.json() as Promise<Topology>)
+      .then((topo) => {
+        if (cancelled) return;
+        const objectKey = Object.keys(topo.objects)[0];
+        const featureCollection = feature(topo, topo.objects[objectKey]) as ExtendedFeatureCollection;
+        const proj = geoMercator().fitExtent(
+          [
+            [MAP_PADDING, MAP_PADDING],
+            [width - MAP_PADDING, height - MAP_PADDING],
+          ],
+          featureCollection
+        );
+        setTopology(topo);
+        setProjection(() => proj);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [name, width, height, config]);
+
+  if (!config || !topology || !projection) {
     return null;
   }
+
   return (
-    <ComposableMap
-      projection="geoMercator"
-      projectionConfig={{ scale: config.scaleMap ?? scale, center: config.centerMap }}
-      height={height}
-      width={width}
-    >
-      <Geographies geography={json}>
+    <ComposableMap projection={() => projection} height={height} width={width}>
+      <Geographies geography={topology}>
         {({ geographies }: GeographiesRenderProps) =>
           geographies.map((geo: GeographyType) => {
             const { district: districtName } = geo.properties;
@@ -44,34 +78,32 @@ const StateMapChart: React.FC<StateMapChartProps> = ({
             }
             const defaultColor = isSelected ? '#1976D2' : defaultColorMapping?.[districtName] || '#FFFFFF';
             return (
-              districtName && (
-                <React.Fragment key={geo.rsmKey}>
-                  <Geography
-                    geography={geo}
-                    onMouseEnter={() => onHoverStateChange?.(districtName)}
-                    onMouseLeave={() => onHoverStateChange?.(null)}
-                    onClick={() => {
-                      onEntrySelected?.(`${districtName}`);
-                    }}
-                    data-tooltip-id="district-tooltip"
-                    data-tooltip-content={districtName}
-                    style={{
-                      default: {
-                        fill: defaultColor,
-                        ...commonStyle,
-                      },
-                      hover: {
-                        fill: onHoverStateChange ? '#1976D2' : defaultColor,
-                        ...commonStyle,
-                      },
-                      pressed: {
-                        fill: onEntrySelected ? '#0D47A1' : defaultColor,
-                        ...commonStyle,
-                      },
-                    }}
-                  />
-                </React.Fragment>
-              )
+              <React.Fragment key={geo.rsmKey}>
+                <Geography
+                  geography={geo}
+                  onMouseEnter={() => onHoverStateChange?.(districtName)}
+                  onMouseLeave={() => onHoverStateChange?.(null)}
+                  onClick={() => {
+                    onEntrySelected?.(`${districtName}`);
+                  }}
+                  data-tooltip-id="district-tooltip"
+                  data-tooltip-content={districtName}
+                  style={{
+                    default: {
+                      fill: defaultColor,
+                      ...commonStyle,
+                    },
+                    hover: {
+                      fill: onHoverStateChange ? '#1976D2' : defaultColor,
+                      ...commonStyle,
+                    },
+                    pressed: {
+                      fill: onEntrySelected ? '#0D47A1' : defaultColor,
+                      ...commonStyle,
+                    },
+                  }}
+                />
+              </React.Fragment>
             );
           })
         }
