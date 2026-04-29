@@ -1,4 +1,4 @@
-District,Constituency Number,Constituency,Expected Winning Party (By PPA on 19-04-26)
+District,Constituency Number,Constituency,Expected Winning Party (By PPA on 29-04-26)
 Koch Bihar,1,Mekliganj,BJP
 Koch Bihar,2,Mathabhanga,BJP
 Koch Bihar,3,Coochbehar Uttar,BJP
@@ -36,7 +36,7 @@ Uttar Dinajpur,34,Kaliaganj,BJP
 Uttar Dinajpur,35,Raiganj,BJP
 Uttar Dinajpur,36,Itahar,AITC
 Dakshin Dinajpur,37,Kushmandi,BJP
-Dakshin Dinajpur,38,Kumarganj,AITC
+Dakshin Dinajpur,38,Kumarganj,BJP
 Dakshin Dinajpur,39,Balurghat,BJP
 Dakshin Dinajpur,40,Tapan,BJP
 Dakshin Dinajpur,41,Gangarampur,BJP
@@ -47,7 +47,7 @@ Maldah,45,Chanchal,AITC
 Maldah,46,Harischandrapur,AITC
 Maldah,47,Malatipur,AITC
 Maldah,48,Ratua,AITC
-Maldah,49,Manikchak,AITC
+Maldah,49,Manikchak,BJP
 Maldah,50,Maldaha,BJP
 Maldah,51,English Bazar,BJP
 Maldah,52,Mothabari,AITC
@@ -99,8 +99,8 @@ North 24 Parganas,97,Gaighata,BJP
 North 24 Parganas,98,Swarupnagar,AITC
 North 24 Parganas,99,Baduria,AITC
 North 24 Parganas,100,Habra,BJP
-North 24 Parganas,101,Ashoknagar,AITC
-North 24 Parganas,102,Amdanga,AITC
+North 24 Parganas,101,Ashoknagar,BJP
+North 24 Parganas,102,Amdanga,BJP
 North 24 Parganas,103,Bijpur,BJP
 North 24 Parganas,104,Naihati,BJP
 North 24 Parganas,105,Bhatpara,BJP
@@ -108,21 +108,21 @@ North 24 Parganas,106,Jagatdal,BJP
 North 24 Parganas,107,Noapara,BJP
 North 24 Parganas,108,Barrackpur,BJP
 North 24 Parganas,109,Khardaha,AITC
-North 24 Parganas,110,Dum Dum Uttar,AITC
-North 24 Parganas,111,Panihati,AITC
-North 24 Parganas,112,Kamarhati,AITC
+North 24 Parganas,110,Dum Dum Uttar,BJP
+North 24 Parganas,111,Panihati,BJP
+North 24 Parganas,112,Kamarhati,BJP
 North 24 Parganas,113,Baranagar,AITC
-North 24 Parganas,114,Dum Dum,AITC
+North 24 Parganas,114,Dum Dum,BJP
 North 24 Parganas,115,Rajarhat New Town,AITC
 North 24 Parganas,116,Bidhannagar,BJP
-North 24 Parganas,117,Rajarhat Gopalpur,AITC
+North 24 Parganas,117,Rajarhat Gopalpur,BJP
 North 24 Parganas,118,Madhyamgram,AITC
-North 24 Parganas,119,Barasat,AITC
+North 24 Parganas,119,Barasat,BJP
 North 24 Parganas,120,Deganga,AITC
 North 24 Parganas,121,Haroa,AITC
 North 24 Parganas,122,Minakhan,AITC
 North 24 Parganas,123,Sandeshkhali,AITC
-North 24 Parganas,124,Basirhat Dakshin,AITC
+North 24 Parganas,124,Basirhat Dakshin,BJP
 North 24 Parganas,125,Basirhat Uttar,AITC
 North 24 Parganas,126,Hingalganj,BJP
 South 24 Parganas,127,Gosaba,AITC
@@ -141,14 +141,14 @@ South 24 Parganas,139,Canning Purba,AITC
 South 24 Parganas,140,Baruipur Paschim,AITC
 South 24 Parganas,141,Magrahat Purba,AITC
 South 24 Parganas,142,Magrahat Paschim,AITC
-South 24 Parganas,143,Diamond Harbour,AITC
+South 24 Parganas,143,Diamond Harbour,BJP
 South 24 Parganas,144,Falta,AITC
-South 24 Parganas,145,Satgachhia,AITC
+South 24 Parganas,145,Satgachhia,BJP
 South 24 Parganas,146,Bishnupur,AITC
 South 24 Parganas,147,Sonarpur Dakshin,BJP
 South 24 Parganas,148,Bhangar,AITC
 South 24 Parganas,149,Kasba,AITC
-South 24 Parganas,150,Jadavpur,AITC
+South 24 Parganas,150,Jadavpur,BJP
 South 24 Parganas,151,Sonarpur Uttar,AITC
 South 24 Parganas,152,Tollyganj,AITC
 South 24 Parganas,153,Behala Purba,AITC
@@ -160,11 +160,11 @@ Kolkata,158,Kolkata Port,BJP
 Kolkata,159,Bhabanipur,AITC
 Kolkata,160,Rashbehari,BJP
 Kolkata,161,Ballygunge,AITC
-Kolkata,162,Chowrangee,AITC
+Kolkata,162,Chowrangee,BJP
 Kolkata,163,Entally,AITC
 Kolkata,164,Beleghata,AITC
 Kolkata,165,Jorasanko,BJP
-Kolkata,166,Shyampukur,AITC
+Kolkata,166,Shyampukur,BJP
 Kolkata,167,Maniktala,BJP
 Kolkata,168,Kashipur-Belgachhia,BJP
 Haora,169,Bally,BJP
@@ -175,13 +175,13 @@ Haora,173,Howrah Dakshin,AITC
 Haora,174,Sankrail,AITC
 Haora,175,Panchla,AITC
 Haora,176,Uluberia Purba,BJP
-Haora,177,Uluberia Uttar,AITC
+Haora,177,Uluberia Uttar,BJP
 Haora,178,Uluberia Dakshin,AITC
 Haora,179,Shyampur,AITC
 Haora,180,Bagnan,AITC
 Haora,181,Amta,AITC
 Haora,182,Udaynarayanpur,BJP
-Haora,183,Jagatballavpur,AITC
+Haora,183,Jagatballavpur,BJP
 Haora,184,Domjur,AITC
 Hugli,185,Uttarpara,BJP
 Hugli,186,Sreerampur,BJP
@@ -194,7 +194,7 @@ Hugli,192,Pandua,AITC
 Hugli,193,Saptagram,BJP
 Hugli,194,Chanditala,AITC
 Hugli,195,Jangipara,BJP
-Hugli,196,Haripal,AITC
+Hugli,196,Haripal,BJP
 Hugli,197,Dhanekhali,AITC
 Hugli,198,Tarakeswar,BJP
 Hugli,199,Pursurah,BJP
@@ -206,15 +206,15 @@ Purba Medinipur,204,Panskura Purba,BJP
 Purba Medinipur,205,Panskura Paschim,BJP
 Purba Medinipur,206,Moyna,BJP
 Purba Medinipur,207,Nandakumar,BJP
-Purba Medinipur,208,Mahisadal,AITC
+Purba Medinipur,208,Mahisadal,BJP
 Purba Medinipur,209,Haldia,BJP
 Purba Medinipur,210,Nandigram,BJP
 Purba Medinipur,211,Chandipur,BJP
-Purba Medinipur,212,Patashpur,AITC
-Purba Medinipur,213,Kanthi Uttar,AITC
+Purba Medinipur,212,Patashpur,BJP
+Purba Medinipur,213,Kanthi Uttar,BJP
 Purba Medinipur,214,Bhagabanpur,BJP
-Purba Medinipur,215,Khejuri,AITC
-Purba Medinipur,216,Kanthi Dakshin,AITC
+Purba Medinipur,215,Khejuri,BJP
+Purba Medinipur,216,Kanthi Dakshin,BJP
 Purba Medinipur,217,Ramnagar,BJP
 Purba Medinipur,218,Egra,BJP
 Pashchim Medinipur,219,Dantan,BJP
@@ -257,20 +257,20 @@ Bankura,255,Bishnupur,BJP
 Bankura,256,Katulpur,BJP
 Bankura,257,Indus,BJP
 Bankura,258,Sonamukhi,BJP
-Barddhaman,259,Khandaghosh,AITC
+Barddhaman,259,Khandaghosh,BJP
 Barddhaman,260,Bardhaman Dakshin,BJP
 Barddhaman,261,Raina,BJP
 Barddhaman,262,Jamalpur,BJP
-Barddhaman,263,Monteswar,AITC
+Barddhaman,263,Monteswar,BJP
 Barddhaman,264,Kalna,BJP
-Barddhaman,265,Memari,AITC
+Barddhaman,265,Memari,BJP
 Barddhaman,266,Bardhaman Uttar,BJP
 Barddhaman,267,Bhatar,BJP
 Barddhaman,268,Purbasthali Dakshin,BJP
 Barddhaman,269,Purbasthali Uttar,BJP
 Barddhaman,270,Katwa,BJP
 Barddhaman,271,Ketugram,BJP
-Barddhaman,272,Mangalkot,AITC
+Barddhaman,272,Mangalkot,BJP
 Barddhaman,273,Ausgram,BJP
 Barddhaman,274,Galsi,BJP
 Barddhaman,275,Pandabeswar,BJP
@@ -281,14 +281,14 @@ Barddhaman,279,Jamuria,BJP
 Barddhaman,280,Asansol Dakshin,BJP
 Barddhaman,281,Asansol Uttar,BJP
 Barddhaman,282,Kulti,BJP
-Barddhaman,283,Barabani,BJP
+Barddhaman,283,Barabani,AITC
 Birbhum,284,Dubrajpur,BJP
 Birbhum,285,Suri,BJP
 Birbhum,286,Bolpur,AITC
-Birbhum,287,Nanoor,AITC
-Birbhum,288,Labpur,AITC
-Birbhum,289,Sainthia,AITC
-Birbhum,290,Mayureswar,AITC
+Birbhum,287,Nanoor,BJP
+Birbhum,288,Labpur,BJP
+Birbhum,289,Sainthia,BJP
+Birbhum,290,Mayureswar,BJP
 Birbhum,291,Rampurhat,BJP
 Birbhum,292,Hansan,AITC
 Birbhum,293,Nalhati,AITC
