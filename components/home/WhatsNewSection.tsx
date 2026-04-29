@@ -15,20 +15,26 @@ export default function WhatsNewSection() {
     {
       id: 1,
       category: 'latest',
-      title: 'BMC Election Survey Results',
-      link: '/polls/states/bmc',
+      title: 'Tamil Nadu Opinion Poll 2026',
+      link: '/polls/states/tamilnadu',
     },
     {
       id: 2,
-      category: 'upcoming',
-      title: 'Tamil Nadu Election Survey Results',
-      link: null,
+      category: 'latest',
+      title: 'West Bengal Opinion Poll 2026',
+      link: '/polls/states/westbengal',
     },
     {
       id: 3,
-      category: 'upcoming',
-      title: 'West Bengal Election Survey Results',
-      link: null,
+      category: 'latest',
+      title: 'Puducherry Opinion Poll 2026',
+      link: '/polls/states/puducherry',
+    },
+    {
+      id: 4,
+      category: 'recent',
+      title: 'BMC Election Survey Results',
+      link: '/polls/states/bmc',
     },
   ];
 
