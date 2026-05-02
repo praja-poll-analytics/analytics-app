@@ -12,6 +12,15 @@ const getYouTubeVideoId = (url: string): string | null => {
   return match && match[2].length === 11 ? match[2] : null;
 };
 
+const getInstagramEmbedUrl = (url?: string): string | null => {
+  if (!url || !url.includes('instagram.com')) {
+    return null;
+  }
+
+  const cleanUrl = url.split('?')[0].replace(/\/$/, '');
+  return `${cleanUrl}/embed`;
+};
+
 const MediaCoverageSection = () => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
@@ -60,12 +69,14 @@ const MediaCoverageSection = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {videos.map((item, idx) => {
                 const videoId = item.youtubeUrl ? getYouTubeVideoId(item.youtubeUrl) : null;
+                const coverageUrl = item.youtubeUrl ?? item.externalUrl;
+                const instagramEmbedUrl = getInstagramEmbedUrl(item.externalUrl);
                 return (
                   <div
                     key={idx}
                     className="bg-teal-50/50 rounded-xl border border-teal-100 overflow-hidden hover:shadow-lg transition-shadow"
                   >
-                    {/* YouTube Embed or Placeholder */}
+                    {/* Video Embed or Placeholder */}
                     <div className="aspect-video bg-gray-900 relative">
                       {videoId ? (
                         <iframe
@@ -75,12 +86,31 @@ const MediaCoverageSection = () => {
                           allowFullScreen
                           className="w-full h-full"
                         />
+                      ) : instagramEmbedUrl ? (
+                        <iframe
+                          src={instagramEmbedUrl}
+                          title={item.title}
+                          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                          allowFullScreen
+                          className="h-full w-full bg-white"
+                        />
                       ) : (
-                        <div className="w-full h-full flex flex-col items-center justify-center text-gray-400">
+                        <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 p-4 text-center">
                           <svg className="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                           </svg>
-                          <span className="text-sm">Video coming soon</span>
+                          {coverageUrl ? (
+                            <a
+                              href={coverageUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-teal-700"
+                            >
+                              Open coverage
+                            </a>
+                          ) : (
+                            <span className="text-sm">Video coming soon</span>
+                          )}
                         </div>
                       )}
                     </div>

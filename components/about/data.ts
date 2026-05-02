@@ -72,6 +72,67 @@ export const advisoryBoard: AdvisoryMember[] = [
 
 export const mediaCoverage: MediaCoverage[] = [
   {
+    title: 'Latest Election Coverage - YouTube',
+    type: 'video',
+    description: 'Latest media coverage and election analysis',
+    youtubeUrl: 'https://www.youtube.com/watch?v=VaJBI1QF_L8',
+  },
+  {
+    title: 'Instagram Reel - Election Coverage',
+    type: 'video',
+    description: 'Latest reel featuring Praja Poll media coverage',
+    externalUrl: 'https://www.instagram.com/reel/DXt-_bykojS',
+  },
+  {
+    title: 'Zee News Poll of Polls Coverage',
+    type: 'video',
+    description: 'Zee News poll of polls coverage featuring West Bengal exit poll projections',
+    externalUrl:
+      'https://zeenews.india.com/india/poll-of-polls-west-bengal-6-out-of-8-exit-polls-predict-cm-banerjees-ouster-check-numbers-3042156.html',
+  },
+  {
+    title: 'Latest Election Analysis - YouTube',
+    type: 'video',
+    description: 'Latest media discussion and election analysis',
+    youtubeUrl: 'https://youtu.be/7R_pw18KtT4?si=fmkNbq4Fb8gSEOrA',
+  },
+  {
+    title: 'Election Survey Discussion - YouTube',
+    type: 'video',
+    description: 'Latest election survey discussion and insights',
+    youtubeUrl: 'https://youtu.be/b5zyt2le66E?si=gJkhJeM35oExmPnn',
+  },
+  {
+    title: 'Political Analysis Coverage - YouTube',
+    type: 'video',
+    description: 'Latest political analysis and media coverage',
+    youtubeUrl: 'https://youtu.be/cmwlNPsYCnE?si=N8jIHgOhoujAFwAg',
+  },
+  {
+    title: 'Election Coverage Highlights - YouTube',
+    type: 'video',
+    description: 'Latest election coverage highlights',
+    youtubeUrl: 'https://youtu.be/H5E1bNp4E80?si=OViFRgYT3HcyBUnm',
+  },
+  {
+    title: 'Exit Poll Analysis - YouTube',
+    type: 'video',
+    description: 'Latest exit poll analysis and commentary',
+    youtubeUrl: 'https://youtu.be/y2x7-R6StLg?si=GmDHMKhk4tD4Vnf_',
+  },
+  {
+    title: 'Media Panel Discussion - YouTube',
+    type: 'video',
+    description: 'Latest media panel discussion and election insights',
+    youtubeUrl: 'https://youtu.be/IVq65L1IYxE?si=2DxDhyUKXiSVP7iX',
+  },
+  {
+    title: 'Election Results Discussion - YouTube',
+    type: 'video',
+    description: 'Latest discussion on election projections and results',
+    youtubeUrl: 'https://youtu.be/k26QVy6jxls?si=iVp7ccRtxOYAfXCi',
+  },
+  {
     title: 'Bihar Election 2025 - Predictions & Analysis',
     type: 'video',
     description: 'Comprehensive election assessment covering Bihar 2025 elections',
@@ -124,6 +185,60 @@ export const mediaCoverage: MediaCoverage[] = [
     type: 'video',
     description: 'Expert commentary on political trends and election forecasting techniques',
     youtubeUrl: 'https://youtu.be/-xtVbVLCgfs',
+  },
+  {
+    title: 'Deccan Herald Exit Polls 2026',
+    type: 'press',
+    description: 'Featured in Deccan Herald exit poll coverage for West Bengal, Assam, Tamil Nadu, Kerala and Puducherry',
+    image: '/assets/images/coverage/deccan-herald-exit-polls-2026.jpeg',
+  },
+  {
+    title: 'Jagran Exit Poll 2026',
+    type: 'press',
+    description: 'Featured in Dainik Jagran exit poll coverage for the 2026 state elections',
+    image: '/assets/images/coverage/jagran-exit-poll-2026.jpeg',
+  },
+  {
+    title: 'The Hans India Exit Polls 2026',
+    type: 'press',
+    description: 'Featured in The Hans India exit poll predictions for West Bengal, Assam, Tamil Nadu and Kerala',
+    image: '/assets/images/coverage/hans-india-exit-polls-2026.jpeg',
+  },
+  {
+    title: 'The Telegraph Exit Polls 2026',
+    type: 'press',
+    description: 'Featured in The Telegraph analysis of 2026 exit poll projections across key states',
+    image: '/assets/images/coverage/telegraph-exit-polls-2026.jpeg',
+  },
+  {
+    title: 'ABP News Janhit Exit Poll 2026',
+    type: 'press',
+    description: 'Praja Poll projections featured in ABP News Janhit exit poll coverage',
+    image: '/assets/images/coverage/abp-news-janhit-exit-poll-2026.jpeg',
+  },
+  {
+    title: 'Republic Super Poll of Polls 2026',
+    type: 'press',
+    description: 'Praja Poll projections featured in Republic TV Super Poll of Polls coverage',
+    image: '/assets/images/coverage/republic-super-poll-of-polls-2026.jpeg',
+  },
+  {
+    title: 'Navbharat Times Exit Poll 2026',
+    type: 'press',
+    description: 'Featured in Navbharat Times exit poll coverage of state election projections',
+    image: '/assets/images/coverage/navbharat-times-exit-poll-2026.jpeg',
+  },
+  {
+    title: 'Amar Ujala Exit Poll 2026',
+    type: 'press',
+    description: 'Featured in Amar Ujala exit poll coverage for Bengal, Assam, Kerala and Tamil Nadu',
+    image: '/assets/images/coverage/amar-ujala-exit-poll-2026.jpeg',
+  },
+  {
+    title: 'Dainik Bhaskar Poll of Polls 2026',
+    type: 'press',
+    description: 'Featured in Dainik Bhaskar poll of polls coverage for the 2026 assembly elections',
+    image: '/assets/images/coverage/dainik-bhaskar-poll-of-polls-2026.jpeg',
   },
   {
     title: 'Press Coverage - Election Analysis',

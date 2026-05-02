@@ -18,5 +18,6 @@ export interface MediaCoverage {
   type: 'video' | 'press';
   description: string;
   youtubeUrl?: string; // For video type - YouTube video URL
+  externalUrl?: string; // For video/article links that cannot be embedded
   image?: string; // For press type - press clipping image
 }
