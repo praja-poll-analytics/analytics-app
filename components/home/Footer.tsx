@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <ReactSVG src="/assets/icons/phone.svg" className="size-4 mr-2 text-neutral-400" />
-                +91 99811 92939
+                +91 9981192939, +91 8934033633
               </li>
               <li className="flex items-start">
                 <ReactSVG src="/assets/icons/location.svg" className="min-w-4 mr-2 text-neutral-400" />
