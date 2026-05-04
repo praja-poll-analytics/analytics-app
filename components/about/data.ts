@@ -4,7 +4,7 @@ export const leadershipTeam: TeamMember[] = [
   {
     name: 'K. Rama Mohana Rao',
     position: 'IAS (Retd.) | Partner & Co-Founder',
-    bio: 'K. Rama Mohana Rao, IAS (Retd.) (1994–2023), U.P Cadre IAS officer, worked as collector in 10 districts of Uttar Pradesh including Noida, Baghpat, Hardoi, Farrukhabad, Sonebhadra, Aligarh and Bijnor. Worked as commissioner in Agra, Bareilly and Jhansi; held various positions at the secretary level.',
+    bio: 'K. Rama Mohana Rao, IAS (Retd.) (1994–2023), U.P Cadre IAS officer, worked as collector in 10 districts of Uttar Pradesh including Noida, Baghpat, Hardoi, Farrukhabad, Sonebhadra, Aligarh and Bijnor. Worked as commissioner in Agra, Bareilly and Jhansi; held various positions at the secretariat level.',
     image: '/assets/images/personnel/kmohanrao.jpeg',
     tags: [
       'Administrative Experience',
@@ -189,7 +189,8 @@ export const mediaCoverage: MediaCoverage[] = [
   {
     title: 'Deccan Herald Exit Polls 2026',
     type: 'press',
-    description: 'Featured in Deccan Herald exit poll coverage for West Bengal, Assam, Tamil Nadu, Kerala and Puducherry',
+    description:
+      'Featured in Deccan Herald exit poll coverage for West Bengal, Assam, Tamil Nadu, Kerala and Puducherry',
     image: '/assets/images/coverage/deccan-herald-exit-polls-2026.jpeg',
   },
   {

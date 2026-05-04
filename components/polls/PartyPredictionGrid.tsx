@@ -17,6 +17,15 @@ interface PartyData {
   difference: number | null;
 }
 
+const parseSeatValue = (value: string | undefined): number | null => {
+  if (!value || value.trim() === '-' || value.trim().toLowerCase() === 'nan') {
+    return null;
+  }
+
+  const parsed = parseInt(value, 10);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
 export default function PartyPredictionGrid({
   csvData,
   estimatedColumn,
@@ -29,9 +38,8 @@ export default function PartyPredictionGrid({
   const partyData: PartyData[] = data
     .filter((row) => row['Party Name'])
     .map((row) => {
-      const predicted = parseInt(row[estimatedColumn] || '0', 10) || 0;
-      const actualStr = row[actualColumn];
-      const actual = actualStr ? parseInt(actualStr, 10) : null;
+      const predicted = parseSeatValue(row[estimatedColumn]) ?? 0;
+      const actual = parseSeatValue(row[actualColumn]);
       const difference = actual !== null ? actual - predicted : null;
 
       return {

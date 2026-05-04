@@ -48,9 +48,10 @@ const PartyNameCell = ({ row, header }: { row: Row<Record<string, string>>; head
 
 const DefaultCell = ({ row, header }: { row: Row<Record<string, string>>; header: string }) => {
   const value = (row.getValue(header) as string) ?? '';
-  const isNumber = value.length > 0 && !isNaN(Number(value));
+  const normalizedValue = value.trim().toLowerCase() === 'nan' ? '-' : value;
+  const isNumber = normalizedValue.length > 0 && !isNaN(Number(normalizedValue));
   const isPositive = (value as string).startsWith('+');
-  const displayValue = isNumber ? (isPositive ? '+' : '') + formatVotes(Number(value)) : (value as string);
+  const displayValue = isNumber ? (isPositive ? '+' : '') + formatVotes(Number(normalizedValue)) : normalizedValue;
 
   const hasNewline = displayValue.includes('\\n');
   if (hasNewline) {
