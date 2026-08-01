@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-import { electionData, partyColorMapping } from '../polls/data';
+import { electionData, electionTypeLabels, partyColorMapping } from '../polls/data';
 import IndiaMapChart from '../polls/maps/IndiaMapChart';
-import { ElectionConfig, ElectionType, StateColors } from '../polls/types';
+import { ElectionConfig, StateColors } from '../polls/types';
 import StateStatsCard from './StateStatsCard';
 
 const MAP_COLORS = {
@@ -51,12 +51,7 @@ export default function ElectionResults({ showTitle = true }: { showTitle?: bool
               const year = election.isUpcoming
                 ? 'Upcoming'
                 : election.surveyDate?.split('-').pop() || election.name.match(/\d{4}/)?.[0] || '';
-              const shortName =
-                election.type === ElectionType.Assembly
-                  ? 'Assembly'
-                  : election.type === ElectionType.LokSabha
-                  ? 'Lok Sabha'
-                  : 'Municipal';
+              const shortName = electionTypeLabels[election.type];
               const colors = getStateColor(election);
               return (
                 <Link

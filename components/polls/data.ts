@@ -1,5 +1,20 @@
 import { ElectionType, StateColors, StateElectionData, StateStats } from './types';
 
+export const electionTypeLabels: Record<ElectionType, string> = {
+  [ElectionType.Assembly]: 'Assembly',
+  [ElectionType.LokSabha]: 'Lok Sabha',
+  [ElectionType.Municipal]: 'Municipal',
+  [ElectionType.ByElection]: 'By-election',
+};
+
+// Prefix of the CSVs under public/data/<stateKey>/
+export const electionTypeDataKeys: Record<ElectionType, string> = {
+  [ElectionType.Assembly]: 'assembly',
+  [ElectionType.LokSabha]: 'loksabha',
+  [ElectionType.Municipal]: 'municipal',
+  [ElectionType.ByElection]: 'byelection',
+};
+
 export const electionData: Record<string, StateElectionData> = {
   uttarpradesh: {
     stateName: 'Uttar Pradesh',
@@ -95,6 +110,30 @@ export const electionData: Record<string, StateElectionData> = {
           actualRunnerUpVotesColumn: 'Actual Runner-Up Votes (after results on 14-11-25)',
           predictedMarginColumn: 'Winning Margin (By PPA on 11-11-25)',
           actualMarginColumn: 'Actual Margin (after results on 14-11-25)',
+        },
+      },
+      {
+        name: 'Bankipur (182) By-election Exit Poll 2026',
+        type: ElectionType.ByElection,
+        surveyDate: '30-07-2026',
+        estimatedColumn: 'Estimated Seats Prediction',
+        actualColumn: 'Actual Seats After Results',
+        mergeColumns: ['District'],
+        rulingParty: 'JSP',
+        partyNameColumns: [
+          'Party Name',
+          'Expected Winning Party (By PPA on 30-07-26)',
+          'Actual Winner (after results)',
+          'Runner-Up (By PPA on 30-07-26)',
+          'Actual Runner-Up (after results)',
+        ],
+        constituencyModalConfig: {
+          constituencyColumn: 'Constituency',
+          districtColumn: 'District',
+          predictedWinnerColumn: 'Expected Winning Party (By PPA on 30-07-26)',
+          actualWinnerColumn: 'Actual Winner (after results)',
+          predictedRunnerUpColumn: 'Runner-Up (By PPA on 30-07-26)',
+          actualRunnerUpColumn: 'Actual Runner-Up (after results)',
         },
       },
     ],
@@ -465,6 +504,7 @@ export const partyColorMapping: Record<string, StateColors> = {
   'LJP(RV)': { bg: '#7E57C2', fg: '#FFFFFF', border: '#5E3F9E' },
   LJP: { bg: '#7E57C2', fg: '#FFFFFF', border: '#5E3F9E' },
   RJD: { bg: '#5B9BD5', fg: '#FFFFFF', border: '#4A7CAB' },
+  JSP: { bg: '#EAB308', fg: '#000000', border: '#A16207' },
   RLM: { bg: '#E91E8E', fg: '#FFFFFF', border: '#B81570' },
   HAMS: { bg: '#E8973D', fg: '#FFFFFF', border: '#C07A2E' },
   VIP: { bg: '#8B5CF6', fg: '#FFFFFF', border: '#6D47C5' },

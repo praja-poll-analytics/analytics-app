@@ -64,7 +64,7 @@ URL  /polls/states/<id>?election=<n>
         │
         │  config = electionData[stateId]
         │  currentElection = config.availableElections[?election]
-        │  electionKey = 'assembly' | 'loksabha' | 'municipal'
+        │  electionKey = electionTypeDataKeys[currentElection.type]
         │
         ├── axios.get(`/data/${stateId}/${electionKey}-party-wise.csv`)
         │     → mapCSV(text, currentElection) → CSVData
@@ -110,11 +110,16 @@ District / Expected Total Seats columns.
 `ElectionType` (numeric enum) drives both URL conventions and CSV file
 naming:
 
-| Type      | electionKey   | Constituency file suffix       |
-| --------- | ------------- | ------------------------------ |
-| Assembly  | `assembly`    | `assembly-constituency-wise`   |
-| LokSabha  | `loksabha`    | `loksabha-constituency-wise`   |
-| Municipal | `municipal`   | `municipal-ward-wise`          |
+| Type       | electionKey   | Constituency file suffix        |
+| ---------- | ------------- | ------------------------------- |
+| Assembly   | `assembly`    | `assembly-constituency-wise`    |
+| LokSabha   | `loksabha`    | `loksabha-constituency-wise`    |
+| Municipal  | `municipal`   | `municipal-ward-wise`           |
+| ByElection | `byelection`  | `byelection-constituency-wise`  |
+
+`electionTypeDataKeys` and `electionTypeLabels` in `components/polls/data.ts`
+are the single source for the file prefix and the human label — add an entry
+to both when adding a type.
 
 The `ElectionSelector` only renders if a state has more than one configured
 election (e.g. AP has both Assembly 2024 and LokSabha 2024).

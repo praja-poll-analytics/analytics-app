@@ -11,7 +11,7 @@ import { ElectionSelector } from './ElectionSelector';
 import { Methodology } from './Methodology';
 import PartyPredictionGrid from './PartyPredictionGrid';
 import PartyVoteDistributionChart from './charts/PartyVoteDistributionChart';
-import { electionData } from './data';
+import { electionData, electionTypeDataKeys } from './data';
 import StateMapChart from './maps/StateMapChart';
 import { ResultTable } from './tables/ResultsTable';
 import { getTableColumns } from './tables/columns';
@@ -31,13 +31,7 @@ export default function StateDetailPage({ stateId }: { stateId: string }) {
   const [currentElection, setCurrentElection] = useState(
     config?.availableElections[defaultQueryElectionType ? parseInt(defaultQueryElectionType) : 0]
   );
-  const electionKey = !!currentElection
-    ? currentElection.type === ElectionType.Assembly
-      ? 'assembly'
-      : currentElection.type === ElectionType.LokSabha
-      ? 'loksabha'
-      : 'municipal'
-    : null;
+  const electionKey = !!currentElection ? electionTypeDataKeys[currentElection.type] : null;
 
   const fetchPartyWiseData = useCallback(async () => {
     try {

@@ -18,6 +18,7 @@ export enum ElectionType {
   Assembly,
   LokSabha,
   Municipal,
+  ByElection,
 }
 
 export interface StateElectionData {

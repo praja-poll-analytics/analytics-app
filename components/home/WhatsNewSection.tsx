@@ -15,23 +15,29 @@ export default function WhatsNewSection() {
     {
       id: 1,
       category: 'latest',
+      title: 'Bankipur By-election Exit Poll 2026',
+      link: '/polls/states/bihar?election=1',
+    },
+    {
+      id: 2,
+      category: 'latest',
       title: 'Tamil Nadu Opinion Poll 2026',
       link: '/polls/states/tamilnadu',
     },
     {
-      id: 2,
+      id: 3,
       category: 'latest',
       title: 'West Bengal Opinion Poll 2026',
       link: '/polls/states/westbengal',
     },
     {
-      id: 3,
+      id: 4,
       category: 'latest',
       title: 'Puducherry Opinion Poll 2026',
       link: '/polls/states/puducherry',
     },
     {
-      id: 4,
+      id: 5,
       category: 'recent',
       title: 'BMC Election Survey Results',
       link: '/polls/states/bmc',

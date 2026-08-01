@@ -47,8 +47,9 @@ The repeated pattern across Bihar, BMC, TN, WB, Puducherry:
 1. **CSVs** under `public/data/<stateKey>/`:
    - `<electionType>-party-wise.csv` — alliance/party seat predictions
    - `<electionType>-constituency-wise.csv` (or `-ward-wise.csv` for Municipal)
-   - `electionType` is `assembly`, `loksabha`, or `municipal` — must match the
-     `ElectionType` chosen in config.
+   - `electionType` is `assembly`, `loksabha`, `municipal`, or `byelection` —
+     must match `electionTypeDataKeys[ElectionType]` in
+     `components/polls/data.ts` for the `ElectionType` chosen in config.
    - Include a `District` column when you want map clicks to filter the
      constituency table. Values must `startsWith` a district name from the
      state's topojson (`properties.district`). See "Maps" below.
